@@ -4,7 +4,11 @@
 - **Deploy with `deploy.sh` to S3/CloudFront at maxmautner.com/rtm-tracker/**, like the siblings
   (chosen over GitHub Pages, 2026-11-04). GitHub Actions validates and builds on every push, but
   doesn't publish.
-- **No Google Analytics**, unlike the siblings: the spec rules out tracking scripts.
+- **Google Analytics, same property as the blog** (added 2026-11-05 at Max's request, reversing the
+  original spec's "no tracking scripts"). `google_analytics_key` in `site/config.json`; remove it to
+  turn analytics off. `static/analytics.js` sends `rtm_`-prefixed events: source_clicked (host, entry),
+  download, feed_clicked, correction_email_clicked, agency_suggestion_clicked, other_agencies_opened,
+  entry_opened, milestone_opened, filter_changed. The Methodology page discloses it.
 - **One entry per recommended action** in the report's agency sections (35), not per strategy
   heading as MTC counts them (32). The Methodology page explains the difference.
 - **`status: null` displays as "Unverified"** rather than "Not started," so the site never states a
@@ -23,7 +27,7 @@
   toggle, Newsreader + IBM Plex Sans, and warm tokens. `site/static/rtm.css` loads before the blog's
   `/assets/css/site.css`, and its rules are all `.rt-*`, the same arrangement as `crashes.css` and
   `speeds.css`. Fonts come from the blog's self-hosted `/resources/fonts/`, not Google Fonts, so a page
-  makes no third-party requests.
+  makes no requests to Google Fonts (Google Analytics is the only third party; see above).
 - **Status colors use the blog's amber accent**, getting stronger from adopted to implemented. "Missed"
   is solid text color, as prominent as "implemented" and not red, so it can't be confused with an
   agency's color.
