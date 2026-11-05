@@ -60,14 +60,39 @@
 <script>(function(){var t=document.getElementById('darkModeToggle'),r=document.documentElement;function sync(){t.setAttribute('aria-pressed',r.getAttribute('data-theme')==='dark'?'true':'false')}sync();t.addEventListener('click',function(){var d=r.getAttribute('data-theme')!=='dark';r.setAttribute('data-theme',d?'dark':'light');try{localStorage.setItem('theme',d?'dark':'light')}catch(e){}sync()});})();</script>
 
 <div class="rt">
-  <nav class="rt-nav" aria-label="Tracker">
+  {% set nav = namespace(agency=none) %}{% for a in agencies %}{% if a.slug == current %}{% set nav.agency = a %}{% endif %}{% endfor %}
+  {% set cur_agency = nav.agency %}
+  <nav class="rt-nav{{ ' rt-nav--dd' if cfg.nav_agency_dropdown }}" aria-label="Tracker">
     <a class="rt-nav-title" href="{{ base }}">{{ cfg.site_title }}</a>
     <ul>
       <li><a href="{{ base }}"{% if current == "" %} aria-current="page"{% endif %}>Overview</a></li>
       <li><a href="{{ base }}how-it-works/"{% if current == "how-it-works" %} aria-current="page"{% endif %}>How it works</a></li>
+      {% if cfg.nav_agency_dropdown %}
+      <li class="rt-dd-li">
+        <details class="rt-dd" id="agency-menu">
+          <summary{% if cur_agency %} class="is-current" style="--agency: {{ cur_agency.color }}"{% endif %}>
+            {% if cur_agency %}<span class="rt-dot" aria-hidden="true"></span>{{ cur_agency.display }}{% else %}Agencies{% endif %}
+            <span class="rt-dd-caret" aria-hidden="true"></span>
+          </summary>
+          <ul class="rt-dd-menu">
+            {% for a in agencies %}
+            <li><a href="{{ base }}{{ a.slug }}/" style="--agency: {{ a.color }}"{% if current == a.slug %} aria-current="page"{% endif %}>
+              <span class="rt-dot" aria-hidden="true"></span>
+              <span class="rt-dd-name">{{ a.display }}</span>
+              <span class="rt-dd-meta">{{ a.total }} recommendations</span></a></li>
+            {% endfor %}
+            <li class="rt-dd-sep" role="separator"></li>
+            <li><a href="{{ base }}#other-agencies" class="rt-dd-other">
+              <span class="rt-dd-name">Don't see your agency?</span>
+              <span class="rt-dd-meta">{{ out_of_scope | length }} other agencies get tax money but aren't reviewed</span></a></li>
+          </ul>
+        </details>
+      </li>
+      {% else %}
       {% for a in agencies %}
       <li><a href="{{ base }}{{ a.slug }}/" style="--agency: {{ a.color }}"{% if current == a.slug %} aria-current="page"{% endif %}><span class="rt-dot" aria-hidden="true"></span>{{ a.display }}</a></li>
       {% endfor %}
+      {% endif %}
       <li><a href="{{ base }}oversight/"{% if current == "oversight" %} aria-current="page"{% endif %}>Oversight</a></li>
       <li><a href="{{ base }}methodology/"{% if current == "methodology" %} aria-current="page"{% endif %}>Methodology</a></li>
       <li><a href="{{ base }}changelog/"{% if current == "changelog" %} aria-current="page"{% endif %}>Changelog</a></li>
@@ -97,5 +122,6 @@
 </main>
 {% block scripts %}{% endblock %}
 <script src="{{ base }}static/print.js?v={{ ver }}" defer></script>
+{% if cfg.nav_agency_dropdown %}<script src="{{ base }}static/nav.js?v={{ ver }}" defer></script>{% endif %}
 </body>
 </html>

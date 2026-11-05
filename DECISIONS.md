@@ -71,3 +71,4 @@
   decides the kind; `adopted_wording` quotes it and `action_type_source: adopted`. Where a board adopted
   by reference or title only (most of AC Transit's), or didn't adopt, the report's wording decides. Result:
   13 action, 20 study or plan, 2 advocacy; Caltrain 3 and 3.
+- **Agencies in a nav dropdown** (2026-11-05). The four agency tabs became one menu ("Agencies ▾", or the current agency) that also holds "Don't see your agency?". A `<details>` element, so it works without JS, by keyboard and on touch; `static/nav.js` adds outside-click/Escape closing. On phones the nav wraps instead of scrolling sideways. Toggle: `nav_agency_dropdown` in `site/config.json`.

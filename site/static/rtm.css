@@ -94,6 +94,42 @@ header nav a { font-size: 16px; color: var(--text-2); text-decoration: none; }
   .rt-nav ul { -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); padding-right: 24px; }
 }
 @media (min-width: 45.01rem) { .rt-nav ul { gap: 2px 15px; } .rt-nav a { font-size: 14.5px; } }
+/* agency dropdown (cfg.nav_agency_dropdown) */
+.rt-nav--dd ul { overflow: visible; }
+@media (max-width: 45rem) {
+  .rt-nav--dd ul { flex-wrap: wrap; -webkit-mask-image: none; mask-image: none; padding-right: 0; gap: 0 13px; }
+  .rt-nav--dd > ul > li > a, .rt-nav--dd .rt-dd > summary { font-size: 14.5px; }
+}
+.rt-dd-li { position: relative; }
+.rt-dd > summary { display: inline-flex; align-items: center; gap: 7px; min-height: 40px; font-size: inherit; color: var(--text-2);
+  cursor: pointer; list-style: none; border-bottom: 2px solid transparent; white-space: nowrap; }
+.rt-dd > summary::-webkit-details-marker { display: none; }
+.rt-dd > summary:hover, .rt-dd[open] > summary { color: var(--text); }
+.rt-dd > summary.is-current { color: var(--text); font-weight: 600; border-bottom-color: var(--accent); }
+.rt-dd > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+.rt-dd-caret { width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px); transition: transform 120ms ease; margin-left: 2px; }
+.rt-dd[open] .rt-dd-caret { transform: rotate(-135deg) translateY(-2px); }
+.rt-nav .rt-dd-menu { position: absolute; top: calc(100% + 6px); left: -12px; z-index: 20; display: block; min-width: 19rem;
+  margin: 0 !important; padding: 6px !important; list-style: none; background: var(--surface); border: 1px solid var(--hairline);
+  border-radius: var(--radius-md); box-shadow: 0 10px 30px rgba(0,0,0,.35); overflow: visible; -webkit-mask-image: none; mask-image: none; }
+.rt-dd-menu li { margin: 0; }
+.rt-dd-menu a { display: grid !important; grid-template-columns: 14px 1fr; column-gap: 8px; row-gap: 1px; align-items: center; padding: 8px 10px;
+  min-height: 44px; border-radius: var(--radius-sm); border-bottom: 0 !important; white-space: normal; font-size: 15px; }
+.rt-dd-menu a:hover, .rt-dd-menu a:focus-visible { background: var(--surface-sunken); }
+.rt-dd-menu a[aria-current="page"] { background: var(--surface-sunken); }
+.rt-dd-name { color: var(--text); font-weight: 500; }
+.rt-dd-meta { grid-column: 2; font-size: 12.5px; color: var(--text-3); font-weight: 400; }
+.rt-dd-menu a.rt-dd-other { display: block !important; padding-left: 32px; }
+.rt-dd-other .rt-dd-meta { display: block; margin-top: 1px; }
+.rt-dd-sep { height: 1px; background: var(--hairline) !important; margin: 6px 4px !important; }
+.rt-dd-menu * { background-color: transparent; }
+.rt-dd-menu a:hover, .rt-dd-menu a[aria-current="page"] { background-color: var(--surface-sunken); }
+@media (max-width: 45rem) {
+  .rt-nav--dd { position: relative; }
+  .rt-nav--dd .rt-dd-li { position: static; }
+  .rt-nav .rt-dd-menu { left: 0; right: 0; top: auto; margin-top: 6px !important; min-width: 0; }
+}
 .rt-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--agency); flex: none; }
 
 /* agency logos: on a backing tile so every logo reads in light and dark mode */
@@ -366,7 +402,7 @@ header nav a { font-size: 16px; color: var(--text-2); text-decoration: none; }
   :root, [data-theme] { --bg: #fff; --surface: #fff; --surface-sunken: #f2f2f2; --text: #000; --text-2: #222; --text-3: #444;
     --accent: #000; --accent-ink: #fff; --hairline: #bbb; }
   body { font-size: 11pt; }
-  header[role="banner"], .rt-nav ul, .rt-filters, .rt-skip, .rt-toc, .rt-card-link, .rt-notlisted { display: none !important; }
+  header[role="banner"], .rt-nav ul, .rt-dd-menu, .rt-filters, .rt-skip, .rt-toc, .rt-card-link, .rt-notlisted { display: none !important; }
   .rt-item[hidden] { display: block !important; }
   .rt-item, .rt-card, .rt-ms { break-inside: avoid; }
   .rt-item > details > summary::after, .rt-more > summary::before { display: none; }
