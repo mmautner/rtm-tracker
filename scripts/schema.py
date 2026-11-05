@@ -98,9 +98,19 @@ SOURCE_TYPES = {
 
 MILESTONE_RESPONSIBLE = ["MTC", "oversight committee", "operators", "voters", "county elections officials"]
 
-# What a recommendation commits the agency to do, classified only from its wording (action_type_basis
-# quotes the words, and the validator checks they appear in the recommendation). Where a recommendation
-# has both a study verb and an action verb ("examine schedules and adjust"), the action decides it.
+# What a recommendation commits the agency to do, classified only from wording, never from judgment about
+# intent. Source of the wording (action_type_source):
+#   adopted: the board's adoption document restates the strategy with an instruction (adopted_wording
+#            quotes it). This is the commitment the board voted for, so it decides.
+#   report:  the board adopted the strategy by reference or by heading only, or didn't adopt it; the
+#            report's wording (recommendation) decides.
+# action_type_basis quotes the deciding words; the validator checks they appear in that wording. An item's
+# instruction decides it, not its title. Where wording has both a study verb and an action verb ("examine
+# schedules and adjust"), the action decides it.
+ACTION_TYPE_SOURCES = {
+    "adopted": "the board's adopted wording",
+    "report": "the report's wording",
+}
 ACTION_TYPES = {
     "action": {
         "label": "Direct action",
@@ -120,6 +130,7 @@ ACTION_TYPES = {
 
 COMMITMENT_FIELDS = [
     "id", "agency", "phase", "recommendation", "category", "action_type", "action_type_basis",
+    "action_type_source", "adopted_wording",
     "estimated_savings_usd", "savings_basis", "required_by",
     "target_completion", "target_completion_basis",
     "board_action", "status", "status_as_of", "sources", "notes",

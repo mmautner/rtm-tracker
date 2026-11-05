@@ -222,6 +222,7 @@ header nav a { font-size: 16px; color: var(--text-2); text-decoration: none; }
 .rt-item > details[open] > summary::after { transform: rotate(45deg); }
 .rt-item > details > summary:hover .rt-item-rec { text-decoration: underline; text-decoration-color: var(--hairline); }
 .rt-item-rec { display: block; font-family: var(--font-serif); font-size: 18px; line-height: 1.35; color: var(--text); }
+.rt-item-adopted { display: block; font-size: 14px; color: var(--text-2); margin-top: 4px; }
 .rt-item-meta { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; margin-top: 8px; }
 .rt-tag { font-size: 12.5px; color: var(--text-2); background: var(--surface-sunken); border-radius: 4px; padding: 1px 7px; }
 .rt-verified { font-size: 12.5px; color: var(--text-3); }
@@ -300,6 +301,7 @@ header nav a { font-size: 16px; color: var(--text-2); text-decoration: none; }
 .rt-kind { color: var(--text); border: 1px solid var(--text-3); background: transparent !important; }
 .rt-kind-study { border-style: dashed; }
 .rt-kind-advocacy { border-style: dotted; }
+.rt-quote { quotes: "“" "”"; font-family: var(--font-serif); font-size: 16px; color: var(--text); }
 .rt-kinds-line { font-size: 15px; color: var(--text); margin: 4px 0 8px !important; }
 .rt-kinds-line .rt-tag { margin-right: 4px; }
 .rt-kinds-k { color: var(--text-3); margin-right: 6px; }

@@ -65,3 +65,9 @@
   in `action_type_basis` and checked by the validator. Prompted by a reader's (partly inaccurate)
   observation that Caltrain's six commitments are revenue measures and studies; the counts let readers
   make that kind of point accurately. 35 entries: 12 action, 21 study or plan, 2 advocacy.
+- **Kind follows the board's adopted wording** (2026-11-05, Max's call). Where a board's adoption document
+  restates a strategy with an instruction (SFMTA Res. 260616-052, BART's Executive Decision Document,
+  Caltrain Res. 2026-28, AC Transit's EasyPass item and the motion's added scheduling study), that wording
+  decides the kind; `adopted_wording` quotes it and `action_type_source: adopted`. Where a board adopted
+  by reference or title only (most of AC Transit's), or didn't adopt, the report's wording decides. Result:
+  13 action, 20 study or plan, 2 advocacy; Caltrain 3 and 3.

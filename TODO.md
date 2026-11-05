@@ -16,6 +16,12 @@ Checked 2026-11-04. Each item names the entry or file it affects.
 
 ## Decisions for you
 
+- [x] **Classify "kind" by the board's adopted wording, or the report's?** Done: adopted wording decides (see DECISIONS.md). Caltrain's Resolution
+  2026-28 rewords its six items (e.g., parking becomes "Evaluate opportunities"; the O&M contract item
+  becomes "Incorporate cost efficiencies"; BayPass becomes "Implement strategies"). The site currently
+  classifies from the report's wording and shows the adopted wording in notes. BART (Executive Decision
+  Document), SFMTA (Resolution 260616-052, items A-J), and AC Transit (staff report) may differ too.
+
 - [ ] **New status `not_adopted`** (not in your original list). It is used for 2 entries:
   `ac-transit-p1-retail-amenity-study` and `sfmta-p1-retail-amenity-study`. Both strategies were
   added by the IOC on May 22 and left out of the agencies' board actions. SB 63 lets agencies
@@ -47,10 +53,10 @@ Checked 2026-11-04. Each item names the entry or file it affects.
 
 ## Missing primary documents
 
-- [ ] **Caltrain Resolution No. 2026-28** (June 4, 2026). The adoption is sourced to the minutes,
-  the staff slides, and MTC Res. 4743, but the resolution text has not been found. The strategy
-  wording in the slides differs slightly from the report.
-- [ ] **BART Board minutes for June 11, 2026.** These were not in Legistar as of Nov. 4 (draft
+- [x] **Caltrain Resolution No. 2026-28.** Found as the draft (revised June 3) in the June 4, 2026
+  agenda packet, item 12, pp. 100-102 (caltrain.com/media/37123); adopted wording now in each Caltrain
+  entry's notes.
+- [ ] **BART Board minutes for June 11, 2026.** Still "Draft" with no file in Legistar on Nov. 5 (item 26-249 has no recorded vote). These were not in Legistar as of Nov. 4 (draft
   status). Adoption is sourced to the Executive Decision Document, BART's news release, BART's
   grand jury response, and MTC Res. 4743. The vote count is unknown.
 - [ ] **BART grand jury response.** It is hosted on contracosta.courts.ca.gov, which is on the
@@ -77,15 +83,13 @@ Checked 2026-11-04. Each item names the entry or file it affects.
 
 ## Oversight page (data/oversight.yaml)
 
-- [ ] **Steve Heminger's seat.** Caltrain's board page lists him as "Appointed by San Francisco MTA."
-  Confirm whether he holds SFMTA's or Caltrain's committee seat (Jeff Gee is also on Caltrain's
-  board) and whether he sits on the SFMTA Board. SFMTA's board page didn't load for the check.
-- [ ] **Ex officio members.** Confirm which of Teresa Calvert and James Hacker represents CalSTA and
-  which the Department of Finance.
+- [x] **Steve Heminger's seat.** SFMTA's designee (MTC item 7b, Jan. 28, 2026, Attachment A).
+- [x] **Ex officio members.** Teresa Calvert: Department of Finance (item 7b). CalSTA seat: vacant
+  Jan. 28, then James Hacker, now Anthony Serna (Oct. 21 roster).
 - [ ] **BART seat change.** The March 6 roster has Melissa Hernandez; May 22 has Matthew Rinn. Find
   the BART board action or MTC note that made the change.
-- [ ] **April 17 and May 22 meetings.** Read the April 17 draft minutes (May 22 agenda, item 3a) and
-  the May 22 minutes once approved; record actions and vote counts.
+- [x] **April 17 and May 22 meetings.** Recorded from draft minutes (6-0 consent; 7-0 adoption).
+- [ ] **October 21 meeting minutes.** Add the vote record when posted (next committee meeting).
 
 ## Setup
 
@@ -100,7 +104,7 @@ Checked 2026-11-04. Each item names the entry or file it affects.
   red, Muni red). Check them against each agency's brand guide. Caltrain and Muni are both red; the
   agency name always appears next to the color, so the colors are never the only identifier.
 
-- [ ] Create the GitHub repo `mmautner/rtm-tracker` (assumed in `site/config.json` → `repo_url`)
+- [x] Create the GitHub repo `mmautner/rtm-tracker` (assumed in `site/config.json` → `repo_url`)
   and push. The changelog and the "view edit" links need it.
-- [ ] Add `^rtm-tracker/` to `ignore_on_server` in the blog's `s3_website.yml` before the next
+- [x] Add `^rtm-tracker/` to `ignore_on_server` in the blog's `s3_website.yml` before the next
   blog deploy.

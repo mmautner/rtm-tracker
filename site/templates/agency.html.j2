@@ -65,6 +65,7 @@
     <details>
       <summary>
         <span class="rt-item-rec">{{ c.recommendation }}</span>
+        {% if c.action_type_source == "adopted" %}<span class="rt-item-adopted">Adopted as: “{{ c.action_type_basis }}…”</span>{% endif %}
         <span class="rt-item-meta">
           {{ badge(c.skey) }}
           <span class="rt-tag rt-kind rt-kind-{{ c.action_type }}">{{ action_types[c.action_type].label }}</span>
@@ -76,7 +77,8 @@
       <div class="rt-item-body">
         <dl class="rt-facts">
           <dt>Status</dt><dd>{{ badge(c.skey) }} as of {{ c.status_as_of | date }}</dd>
-          <dt>Kind</dt><dd>{{ action_types[c.action_type].label }} <span class="rt-cite">(based on the words “{{ c.action_type_basis }}”; <a href="{{ base }}methodology/#kinds">how this is classified</a>)</span></dd>
+          {% if c.adopted_wording %}<dt>Adopted wording</dt><dd><q class="rt-quote">{{ c.adopted_wording }}</q></dd>{% endif %}
+          <dt>Kind</dt><dd>{{ action_types[c.action_type].label }} <span class="rt-cite">(from {{ action_type_sources[c.action_type_source] }}: “{{ c.action_type_basis }}”; <a href="{{ base }}methodology/#kinds">how this is classified</a>)</span></dd>
           <dt>Board action</dt>
           <dd>{% if c.board_action %}{% if c.board_action.date %}{{ c.board_action.date | date }}: {% else %}Date not recorded: {% endif %}{{ c.board_action.description }}{% else %}None recorded{% endif %}</dd>
           <dt>Required by</dt>

@@ -16,7 +16,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from scripts.schema import (  # noqa: E402
-    ACTION_TYPES, AGENCIES, CATEGORIES, COMMITMENT_FIELDS, FINDING_BASES, IOC_SEATS, MILESTONE_RESPONSIBLE,
+    ACTION_TYPE_SOURCES, ACTION_TYPES, AGENCIES, CATEGORIES, COMMITMENT_FIELDS, FINDING_BASES, IOC_SEATS, MILESTONE_RESPONSIBLE,
     OPTIONAL_FIELDS, OVERSIGHT_FIELDS, OVERSIGHT_KINDS, PHASES, SOURCE_TYPES, STATUSES,
 )
 
@@ -143,9 +143,19 @@ def validate(commitments, milestones, hosts, today=None):
         if c.get("action_type") not in ACTION_TYPES:
             errors.append(f"{where}: action_type must be one of {list(ACTION_TYPES)}")
         basis = " ".join(str(c.get("action_type_basis") or "").split())
+        src = c.get("action_type_source")
+        adopted = " ".join(str(c.get("adopted_wording") or "").split())
+        if src not in ACTION_TYPE_SOURCES:
+            errors.append(f"{where}: action_type_source must be one of {list(ACTION_TYPE_SOURCES)}")
+        if c.get("adopted_wording") is not None and not adopted:
+            errors.append(f"{where}: adopted_wording must be text or null")
+        if src == "adopted" and not adopted:
+            errors.append(f"{where}: action_type_source is adopted, so adopted_wording must quote the board's text")
         if not basis:
             errors.append(f"{where}: action_type_basis must quote the words the action_type rests on")
-        elif basis not in " ".join(str(c.get("recommendation") or "").split()):
+        elif src == "adopted" and adopted and basis not in adopted:
+            errors.append(f"{where}: action_type_basis must be words copied from adopted_wording")
+        elif src == "report" and basis not in " ".join(str(c.get("recommendation") or "").split()):
             errors.append(f"{where}: action_type_basis must be words copied from the recommendation")
         sv = c.get("estimated_savings_usd")
         if sv is not None and (isinstance(sv, bool) or not isinstance(sv, (int, float))):

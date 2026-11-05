@@ -54,16 +54,30 @@
 <section class="rt-section" id="kinds">
   <h2>Kind of commitment</h2>
   <p>Each recommendation is also classified by what it commits the agency to do. The classification comes only
-    from the recommendation's own wording, not from a judgment about intent or likely results. Each entry shows the
-    words it was classified from, and the data checks require those words to appear in the recommendation.</p>
+    from wording, never from a judgment about intent or likely results.</p>
   <dl class="rt-status-defs">
     {% for k, t in action_types.items() %}
     <dt><span class="rt-tag rt-kind rt-kind-{{ k }}">{{ t.label }}</span></dt>
     <dd>{{ t.definition }} <span class="rt-cite">{{ kind_totals[k] }} of {{ n_total }} tracked recommendations.</span></dd>
     {% endfor %}
   </dl>
-  <p>When a recommendation contains both a study verb and an action verb (for example, “examine schedules and adjust
-    how operator shifts are structured”), the commitment to act decides it. A study can still lead to savings, and a
+  <h3>Which wording decides</h3>
+  <ul>
+    <li><strong>The board's adopted wording, where there is one.</strong> A board's resolution or decision document
+      can restate a strategy differently from the report; that is what the board voted to commit to. Caltrain's
+      Resolution 2026-28, for example, turns the report's “increase parking revenue” into “evaluate opportunities
+      to increase parking revenue.” SFMTA's resolution and BART's decision document restate each strategy, and
+      Caltrain's resolution rewords all six.</li>
+    <li><strong>The report's wording otherwise.</strong> Where a board adopted strategies by reference or by title only,
+      as AC Transit did for most of its strategies, or did not adopt a strategy, the report's wording decides.</li>
+    <li><strong>The instruction, not the title.</strong> When an item has a short title and an instruction (“Identify and
+      Capture Cost Savings in Larger Contract Renewals: Conduct a review of high-spend contracts…”), the instruction
+      decides it.</li>
+    <li><strong>Action over study.</strong> When the deciding wording has both a study verb and an action verb (“identify
+      and enact scheduling efficiencies”), the commitment to act decides it.</li>
+  </ul>
+  <p>Each entry shows the adopted wording, which wording was used, and the exact words the classification rests
+    on. The data checks require those words to appear in that wording. A study can still lead to savings, and a
     direct action can still produce none; the classification describes the commitment, not its value.</p>
   <p>“Aimed at revenue” counts recommendations in the revenue category: measures to raise fare, parking, leasing, or
     other income rather than to reduce costs.</p>

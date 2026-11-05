@@ -10,7 +10,7 @@
 #
 # seat: mtc_chair | operator_board | expert | ex_officio   (the categories in Gov. Code §67764(a)-(d))
 
-# ---------------------------------------------------------------- members (roster of May 22, 2026)
+# ---------------------------------------------------------------- members (roster of Oct. 21, 2026)
 
 - id: ioc-member-sue-noack
   kind: member
@@ -22,15 +22,15 @@
   board_agency: null
   status_as_of: 2026-11-05
   sources:
-    - &may_agenda
-      title: "Oversight Committee agenda, May 22, 2026 (roster)"
-      url: https://mtc.ca.gov/sites/default/files/meetings/agendas/6632_A_SB_63_Financial_Efficiency_Review_Independent_Oversight_Committee_26_05_22_Generic_2.pdf
+    - &oct_agenda
+      title: "Oversight Committee agenda, October 21, 2026 (roster)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/agendas/2602_2.pdf
       page: 2
       type: agency_document
-    - &jan28_minutes
-      title: "MTC Commission draft minutes, January 28, 2026 (roster and item 7b)"
-      url: https://www.mtc.ca.gov/sites/default/files/meetings/attachments/6545/7a_26_0198_January_28_2026_Draft_Commission_Minutes.pdf
-      page: "1, 3"
+    - &jan28_roster
+      title: "MTC Commission, January 28, 2026, item 7b: Appointment of SB 63 Financial Efficiency Review Oversight Committee Members (staff report and Attachment A roster)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6514/7b_26_0147_Appointment_to_Oversight_Committeex.pdf
+      page: "3-4"
       type: board_item
   notes: null
 
@@ -40,11 +40,12 @@
   committee_role: Vice Chair (elected March 6, 2026)
   seat: operator_board
   voting: true
-  public_role: Member, Caltrain (Peninsula Corridor Joint Powers Board) Board of Directors, appointed by the San Mateo County City Selection Committee
+  public_role: Caltrain's designee; Director, Caltrain (Peninsula Corridor Joint Powers Board) Board of Directors
   board_agency: Caltrain
   status_as_of: 2026-11-05
   sources:
-    - *may_agenda
+    - *oct_agenda
+    - *jan28_roster
     - &caltrain_board
       title: "Caltrain Board of Directors (caltrain.com), checked Nov. 5, 2026"
       url: https://www.caltrain.com/about-caltrain/board-directors
@@ -58,15 +59,18 @@
   committee_role: Member
   seat: operator_board
   voting: true
-  public_role: Member, Caltrain Board of Directors, appointed by the San Francisco MTA
-  board_agency: Caltrain
+  public_role: SFMTA's designee; Director, SFMTA Board of Directors. Also a Caltrain board member, appointed by SFMTA.
+  board_agency: SFMTA
   status_as_of: 2026-11-05
   sources:
-    - *may_agenda
+    - *oct_agenda
+    - *jan28_roster
+    - title: "Accessible SFMTA Organization Chart (October 2026)"
+      url: https://www.sfmta.com/reports/sfmta-organization-chart/accessible-sfmta-organization-chart
+      page: null
+      type: agency_document
     - *caltrain_board
-  notes: >-
-    Needs verification: which agency's seat he holds on the committee (Caltrain's or SFMTA's), and
-    whether he also sits on the SFMTA Board. SFMTA's board page could not be read on Nov. 5, 2026.
+  notes: null
 
 - id: ioc-member-murphy-mccalley
   kind: member
@@ -74,11 +78,12 @@
   committee_role: Member
   seat: operator_board
   voting: true
-  public_role: Vice President (Ward 4), AC Transit Board of Directors
+  public_role: AC Transit's designee; Vice President (Ward 4), AC Transit Board of Directors
   board_agency: AC Transit
   status_as_of: 2026-11-05
   sources:
-    - *may_agenda
+    - *oct_agenda
+    - *jan28_roster
     - title: "AC Transit Board of Directors (actransit.org), checked Nov. 5, 2026"
       url: https://www.actransit.org/board-of-directors
       page: null
@@ -91,24 +96,25 @@
   committee_role: Member
   seat: operator_board
   voting: true
-  public_role: Director (District 1), BART Board of Directors
+  public_role: BART's representative; Director (District 1), BART Board of Directors
   board_agency: BART
   status_as_of: 2026-11-05
   sources:
-    - *may_agenda
-    - &bart_board
-      title: "BART Board of Directors (bart.gov), checked Nov. 5, 2026"
+    - *oct_agenda
+    - title: "BART Board of Directors (bart.gov), checked Nov. 5, 2026"
       url: https://www.bart.gov/about/bod
       page: null
       type: agency_document
-    - &mar_minutes
-      title: "Oversight Committee draft minutes, March 6, 2026 (roster and votes)"
-      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6607/3a_26_0477_March_6_2026_Draft_Meeting_Minutes.pdf
+    - *jan28_roster
+    - &may22_minutes
+      title: "Oversight Committee draft minutes, May 22, 2026 (on the Oct. 21, 2026 agenda for approval)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/2539/3a_26_2095_May_22_2026_Draft_SB63_FER_IOC_Meeting_Minutes.pdf
       page: "1-2"
       type: agency_document
   notes: >-
-    The March 6, 2026 roster lists BART Board President Melissa Hernandez in this seat; the May 22, 2026
-    roster lists Matthew Rinn. No source found explaining the change.
+    BART originally designated its board president, Melissa Hernandez (Jan. 28, 2026 roster). She is on
+    the March 6 and April 17 rosters; Matthew Rinn is on the roster from May 22. Needs verification: no
+    source found for when or how BART changed its designee.
 
 - id: ioc-member-debra-johnson
   kind: member
@@ -116,11 +122,13 @@
   committee_role: Member
   seat: expert
   voting: true
-  public_role: Appointed by the Commission on Jan. 28, 2026 (vote 17-0)
+  public_role: General Manager and CEO, Denver Regional Transportation District; former Chief Operating Officer, LA Metro; former Director of Administration, SFMTA
   board_agency: null
   status_as_of: 2026-11-05
-  sources: [*may_agenda, *jan28_minutes]
-  notes: null
+  sources: [*oct_agenda, *jan28_roster]
+  notes: >-
+    Appointed by the Commission on Jan. 28, 2026 (17-0). MTC staff report that candidates were screened
+    for "recent ties to subject operators" (item 7b, p. 2).
 
 - id: ioc-member-nancy-whelan
   kind: member
@@ -128,11 +136,11 @@
   committee_role: Member
   seat: expert
   voting: true
-  public_role: Appointed by the Commission on Jan. 28, 2026 (vote 17-0)
+  public_role: Former General Manager, Marin Transit; former owner of a transit financial planning and management consulting firm
   board_agency: null
   status_as_of: 2026-11-05
-  sources: [*may_agenda, *jan28_minutes]
-  notes: null
+  sources: [*oct_agenda, *jan28_roster]
+  notes: Appointed by the Commission on Jan. 28, 2026 (17-0).
 
 - id: ioc-member-lou-thompson
   kind: member
@@ -140,11 +148,11 @@
   committee_role: Member
   seat: expert
   voting: true
-  public_role: Appointed by the Commission on Jan. 28, 2026 (vote 17-0)
+  public_role: Member, California High-Speed Rail Peer Review Group; former leadership roles at the World Bank and Federal Railroad Administration
   board_agency: null
   status_as_of: 2026-11-05
-  sources: [*may_agenda, *jan28_minutes]
-  notes: null
+  sources: [*oct_agenda, *jan28_roster]
+  notes: Appointed by the Commission on Jan. 28, 2026 (17-0).
 
 - id: ioc-member-ben-rosenfield
   kind: member
@@ -152,11 +160,11 @@
   committee_role: Member
   seat: expert
   voting: true
-  public_role: Appointed by the Commission on Jan. 28, 2026 (vote 17-0)
+  public_role: Former Controller, City and County of San Francisco
   board_agency: null
   status_as_of: 2026-11-05
-  sources: [*may_agenda, *jan28_minutes]
-  notes: null
+  sources: [*oct_agenda, *jan28_roster]
+  notes: Appointed by the Commission on Jan. 28, 2026 (17-0).
 
 - id: ioc-member-teresa-calvert
   kind: member
@@ -164,27 +172,32 @@
   committee_role: Non-voting member
   seat: ex_officio
   voting: false
-  public_role: null
+  public_role: Program Budget Manager, California Department of Finance (the Department of Finance seat)
   board_agency: null
   status_as_of: 2026-11-05
-  sources: [*may_agenda]
-  notes: >-
-    The statute's two ex officio seats are for the California State Transportation Agency and the
-    Department of Finance (§67764(d)). Needs verification: which seat this member holds.
+  sources: [*oct_agenda, *jan28_roster]
+  notes: null
 
-- id: ioc-member-james-hacker
+- id: ioc-member-anthony-serna
   kind: member
-  name: James Hacker
+  name: Anthony Serna
   committee_role: Non-voting member
   seat: ex_officio
   voting: false
-  public_role: null
+  public_role: Deputy Secretary for Rail and Transit, California State Transportation Agency (appointed June 26, 2026)
   board_agency: null
   status_as_of: 2026-11-05
-  sources: [*may_agenda]
+  sources:
+    - *oct_agenda
+    - title: "Governor Newsom announces appointments, June 26, 2026"
+      url: https://www.gov.ca.gov/2026/06/26/governor-newsom-announces-appointments-6-26-2026/
+      page: null
+      type: agency_document
+    - *jan28_roster
   notes: >-
-    The statute's two ex officio seats are for the California State Transportation Agency and the
-    Department of Finance (§67764(d)). Needs verification: which seat this member holds.
+    The rosters don't name his seat. The other ex officio seat is the Department of Finance's, held by
+    Teresa Calvert, so this is the California State Transportation Agency seat. That seat was vacant on
+    Jan. 28, 2026; James Hacker held it on the rosters of March 6 through May 22, 2026.
 
 # ---------------------------------------------------------------- meetings
 
@@ -197,38 +210,66 @@
     and timeline, and the consultant team.
   vote_record: "Chair and Vice Chair each elected 9-0 (all voting members present)."
   status_as_of: 2026-11-05
-  sources: [*mar_minutes]
-  notes: The minutes cited are the draft posted for approval at the next meeting.
+  sources:
+    - title: "Oversight Committee draft minutes, March 6, 2026 (approved April 17, 2026)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6607/3a_26_0477_March_6_2026_Draft_Meeting_Minutes.pdf
+      page: "1-2"
+      type: agency_document
+  notes: null
 
 - id: ioc-meeting-2026-04-17
   kind: meeting
   date: 2026-04-17
-  title: Second meeting
-  actions: null
-  vote_record: null
+  title: Draft Phase 1 report presented
+  actions: >-
+    Received the consultant's draft Phase 1 report and gave initial feedback; no action was required.
+    Approved the March 6 minutes. Written comments came from committee member Lou Thompson, SPUR, the Bay
+    Area Council, and MTC Commissioner Gina Papan.
+  vote_record: "Consent calendar (March 6 minutes) approved 6-0. Absent: Hernandez, Thompson, Whelan."
   status_as_of: 2026-11-05
-  sources: [*may_agenda]
-  notes: >-
-    Needs verification: the meeting's actions. Its draft minutes were item 3a on the May 22, 2026 agenda
-    but have not been reviewed for this tracker.
+  sources:
+    - title: "Oversight Committee draft minutes, April 17, 2026 (approved May 22, 2026)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6632/3a_26_0625_April_17_2026_Draft_Meeting_Minutes.pdf
+      page: "1-2"
+      type: agency_document
+  notes: null
 
 - id: ioc-meeting-2026-05-22
   kind: meeting
   date: 2026-05-22
-  title: Adoption of the final Phase 1 report
+  title: Final Phase 1 report adopted
   actions: >-
-    Adopted the final Phase 1 analysis by motion, directed staff to make minor revisions, and added one
-    early action strategy. Written comments from Gina Papan and from committee member Lou Thompson were
-    attached to the agenda item.
-  vote_record: null
+    Adopted the final Phase 1 analysis. MTC's release says the committee also directed staff to make minor
+    revisions and add one early action strategy. Approved the April 17 minutes. Written comments came from
+    MTC Commissioner Gina Papan and committee member Lou Thompson.
+  vote_record: "Final Phase 1 analysis adopted 7-0 (motion Noack, second McCalley). Absent: Rosenfield, Whelan."
   status_as_of: 2026-11-05
   sources:
-    - *may_agenda
+    - *may22_minutes
     - title: "MTC news release: Independent Oversight Committee Approves Transit Agencies' Financial Efficiency Review (May 27, 2026)"
       url: https://mtc.ca.gov/news/independent-oversight-committee-approves-transit-agencies-financial-efficiency-review
       page: null
       type: news_release
-  notes: Minutes are normally approved at the committee's following meeting.
+  notes: The minutes cited are the draft placed on the Oct. 21, 2026 agenda for approval.
+
+- id: ioc-meeting-2026-10-21
+  kind: meeting
+  date: 2026-10-21
+  title: Phase 2 scope and approach discussed
+  actions: >-
+    Information and discussion item: MTC staff presented a proposed approach for Phase 2 (contingent on the
+    measure passing), covering process, deliverables, timeline, and consultant qualifications, and asked
+    for the committee's input before writing the consultant scope of work and request for proposals. The
+    May 22 minutes were on the consent calendar.
+  vote_record: null
+  status_as_of: 2026-11-05
+  sources:
+    - *oct_agenda
+    - title: "Oversight Committee, Oct. 21, 2026, item 4a: Phase Two Financial Efficiency Review, Scope and Approach Discussion (summary sheet)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/2539/4a_26_2068_1_Summary_Sheet_Phase_Two_Financial_Efficiency_Review_Scope_Approach.pdf
+      page: "1-3"
+      type: agency_document
+  notes: Minutes not yet posted; they are normally approved at the committee's next meeting.
 
 # ---------------------------------------------------------------- written findings (§67766(f)(3))
 # None yet. An agency can adopt one only when its board adopts a final implementation plan, which comes

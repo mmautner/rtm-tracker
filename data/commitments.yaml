@@ -16,6 +16,9 @@
   category: revenue
   action_type: study
   action_type_basis: "Study fare compliance and enforcement"
+  action_type_source: report
+  adopted_wording: >-
+    Improve fare compliance and enforcement
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -57,6 +60,8 @@
   category: revenue
   action_type: study
   action_type_basis: "Study the benefits, challenges, and opportunities"
+  action_type_source: report
+  adopted_wording: null
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -102,6 +107,9 @@
   category: capital
   action_type: advocacy
   action_type_basis: "seek a deferral of the state's zero-emission bus transition requirements"
+  action_type_source: report
+  adopted_wording: >-
+    Evaluate zero-emission bus (ZEB) transition program for cost efficiency
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -143,6 +151,9 @@
   category: labor/overtime
   action_type: action
   action_type_basis: "Extend operator attendance incentives"
+  action_type_source: report
+  adopted_wording: >-
+    Offer incentives to improve attendance
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -185,6 +196,9 @@
   category: service planning
   action_type: study
   action_type_basis: "Develop a bus speed and reliability vision"
+  action_type_source: report
+  adopted_wording: >-
+    Improve speed and reliability of service
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -228,6 +242,9 @@
   category: service planning
   action_type: study
   action_type_basis: "Study the costs, benefits, and need to expand all-door boarding pilots"
+  action_type_source: report
+  adopted_wording: >-
+    Improve speed and reliability of service
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -271,6 +288,9 @@
   category: service planning
   action_type: study
   action_type_basis: "Study where bus stop spacing or location slows service"
+  action_type_source: report
+  adopted_wording: >-
+    Improve speed and reliability of service
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -312,8 +332,12 @@
     Examine schedules and adjust how operator shifts are structured, to maintain reliability and
     minimize operating costs without affecting service to riders.
   category: labor/overtime
-  action_type: action
-  action_type_basis: "adjust how operator shifts are structured"
+  action_type: study
+  action_type_basis: "adopting the schedule efficiencies study that benefits riders"
+  action_type_source: adopted
+  adopted_wording: >-
+    [Board motion, Master Minute Order 26-209:] with the addition of adopting the schedule
+    efficiencies study that benefits riders.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -363,8 +387,14 @@
     In consultation with MTC, identify the internal resources and supporting policies needed to
     expand EasyPass and/or Clipper BayPass to more institutions and employers.
   category: ridership/customer experience
-  action_type: study
-  action_type_basis: "identify the internal resources and supporting policies needed"
+  action_type: action
+  action_type_basis: "focus efforts on expanding the District's EasyPass program"
+  action_type_source: adopted
+  adopted_wording: >-
+    Expand EasyPass and/or Clipper BayPass with more institutions and employers (adopted in part):
+    District staff will focus efforts on expanding the District's EasyPass program which will
+    require additional staff to grow the program. The BayPass program is led by MTC and the District
+    does not receive additional resources to help promote or expand this program.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -410,7 +440,11 @@
     the station hardening program.
   category: revenue
   action_type: action
-  action_type_basis: "Optimize the performance of the new fare gates"
+  action_type_basis: "optimize fare gate performance"
+  action_type_source: adopted
+  adopted_wording: >-
+    Improve fare compliance and enforcement: optimize fare gate performance to further reduce fare
+    evasion and continue the station hardening program.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -458,7 +492,12 @@
     changes, more enforcement, and leasing or permitting parking at under-used facilities.
   category: revenue
   action_type: action
-  action_type_basis: "Increase parking revenue"
+  action_type_basis: "pursue measures such as expanded days or hours of paid parking"
+  action_type_source: adopted
+  adopted_wording: >-
+    Enhance parking revenue: pursue measures such as expanded days or hours of paid parking, rate
+    adjustments, increased enforcement, and leasing or permitted parking at under-utilized
+    facilities.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -506,7 +545,11 @@
     leasing.
   category: revenue
   action_type: action
-  action_type_basis: "Earn more revenue from fiber-optic and other communications assets"
+  action_type_basis: "further monetize fiber and other communications assets"
+  action_type_source: adopted
+  adopted_wording: >-
+    Lease fiber and communications assets: further monetize fiber and other communications assets,
+    primarily through additional leasing opportunities.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -554,7 +597,11 @@
     at stations.
   category: revenue
   action_type: study
-  action_type_basis: "Study the benefits, challenges, and opportunities"
+  action_type_basis: "conduct a study to assess the benefits, challenges, and opportunities"
+  action_type_source: adopted
+  adopted_wording: >-
+    Expand retail and/or amenity partnerships: conduct a study to assess the benefits, challenges,
+    and opportunities of expanding retail and/or amenity partnerships at stations.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -603,7 +650,12 @@
     operations, or investment in new systems or capital projects.
   category: service planning
   action_type: study
-  action_type_basis: "Identify more ways to improve travel time and reliability"
+  action_type_basis: "identify additional opportunities to improve transit travel time and reliability"
+  action_type_source: adopted
+  adopted_wording: >-
+    Improve speed and reliability of service: identify additional opportunities to improve transit
+    travel time and reliability through changes to scheduling, operations, and/or investment in new
+    systems or capital projects.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -651,7 +703,12 @@
     revenue it generates at different times and days.
   category: service planning
   action_type: action
-  action_type_basis: "Run shorter trains during lower-demand periods"
+  action_type_basis: "run shorter trains during lower-demand periods"
+  action_type_source: adopted
+  adopted_wording: >-
+    Right-size fleet to serve demand: run shorter trains during lower-demand periods to better match
+    the cost of delivering service to the fare revenues generated at different times of the day and
+    days of the week.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -701,7 +758,13 @@
     incentives, and risks of BART service to the airport for both parties.
   category: procurement
   action_type: study
-  action_type_basis: "Explore renegotiating the SFO lease payment"
+  action_type_basis: "exploring terms of the San Francisco International Airport (SFO) Lease Agreement for possible renegotiation"
+  action_type_source: adopted
+  adopted_wording: >-
+    Examine contracts for opportunities to reduce costs: pursue one or all of the following:
+    exploring terms of the San Francisco International Airport (SFO) Lease Agreement for possible
+    renegotiation in order to more accurately reflect the benefits, costs, incentives, and risks to
+    both parties with respect to BART service to/from the airport;
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -752,7 +815,13 @@
     flexibility and achieve one-time or long-term savings.
   category: procurement
   action_type: study
-  action_type_basis: "Identify opportunities to renegotiate contracts"
+  action_type_basis: "identification of opportunities for renegotiation of various contracts"
+  action_type_source: adopted
+  adopted_wording: >-
+    Examine contracts for opportunities to reduce costs: pursue one or all of the following: [...]
+    identification of opportunities for renegotiation of various contracts such as insurance and
+    paratransit contracts to improve contracting flexibility and achieve one-off and/or long-term
+    cost savings.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -803,7 +872,12 @@
     expand Clipper BayPass to more institutions and employers.
   category: ridership/customer experience
   action_type: study
-  action_type_basis: "identify the internal resources and supporting policies needed"
+  action_type_basis: "identify internal resource requirements and supportive policies"
+  action_type_source: adopted
+  adopted_wording: >-
+    Expand Clipper BayPass to more institutions and employers: in consultation with MTC, identify
+    internal resource requirements and supportive policies required or desired to expand Clipper
+    BayPass to more institutions and employers.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -852,8 +926,13 @@
     Increase parking revenue through measures such as expanded days or hours of paid parking, rate
     changes, more enforcement, and leasing or permitting parking at under-used lots.
   category: revenue
-  action_type: action
-  action_type_basis: "Increase parking revenue"
+  action_type: study
+  action_type_basis: "Evaluate opportunities to increase parking revenue"
+  action_type_source: adopted
+  adopted_wording: >-
+    Enhance parking revenue. Evaluate opportunities to increase parking revenue through measures
+    like rate adjustments, expanded enforcement, and leasing or permitting parking at under-utilized
+    facilities.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -867,6 +946,10 @@
   status: adopted
   status_as_of: 2026-11-04
   sources:
+    - title: "Caltrain Board agenda packet, June 4, 2026, item 12: staff report and draft resolution (revised June 3, 2026)"
+      url: https://www.caltrain.com/media/37123/download
+      page: 101
+      type: board_item
     - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
       url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
       page: 60
@@ -887,9 +970,7 @@
       url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
       page: 11
       type: board_item
-  notes: >-
-    The text of Resolution No. 2026-28 has not been located; the strategy wording is taken from
-    the staff presentation, which differs slightly from the report.
+  notes: null
 
 - id: caltrain-p1-fiber-leasing
   agency: Caltrain
@@ -899,7 +980,12 @@
     leasing.
   category: revenue
   action_type: action
-  action_type_basis: "Earn more revenue from fiber-optic and other communications assets"
+  action_type_basis: "Advance monetization of Caltrain's fiber optic and communications assets"
+  action_type_source: adopted
+  adopted_wording: >-
+    Lease fiber and communications assets. Advance monetization of Caltrain's fiber optic and
+    communications assets, including developing a leasing strategy and recommending procurement
+    approach to the Board.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -913,6 +999,10 @@
   status: adopted
   status_as_of: 2026-11-04
   sources:
+    - title: "Caltrain Board agenda packet, June 4, 2026, item 12: staff report and draft resolution (revised June 3, 2026)"
+      url: https://www.caltrain.com/media/37123/download
+      page: 101
+      type: board_item
     - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
       url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
       page: 60
@@ -933,9 +1023,7 @@
       url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
       page: 11
       type: board_item
-  notes: >-
-    The text of Resolution No. 2026-28 has not been located; the strategy wording is taken from
-    the staff presentation, which differs slightly from the report.
+  notes: null
 
 - id: caltrain-p1-retail-amenity-study
   agency: Caltrain
@@ -945,7 +1033,12 @@
     at stations.
   category: revenue
   action_type: study
-  action_type_basis: "Study the benefits, challenges, and opportunities"
+  action_type_basis: "Conduct a study to assess benefits, challenges, and opportunities"
+  action_type_source: adopted
+  adopted_wording: >-
+    Identify opportunities for retail and/or amenities at Caltrain stations. Conduct a study to
+    assess benefits, challenges, and opportunities to expanding retail and/or amenity partnerships,
+    including estimated cost and revenue impacts and recommended priority.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -959,6 +1052,10 @@
   status: adopted
   status_as_of: 2026-11-04
   sources:
+    - title: "Caltrain Board agenda packet, June 4, 2026, item 12: staff report and draft resolution (revised June 3, 2026)"
+      url: https://www.caltrain.com/media/37123/download
+      page: 102
+      type: board_item
     - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
       url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
       page: 60
@@ -981,8 +1078,7 @@
       type: board_item
   notes: >-
     The Oversight Committee added this strategy by motion on May 22, 2026 (report p. 60, footnote
-    20). The text of Resolution No. 2026-28 has not been located; the strategy wording is taken
-    from the staff presentation, which differs slightly from the report.
+    20).
 
 - id: caltrain-p1-operator-contract-study
   agency: Caltrain
@@ -991,8 +1087,13 @@
     Study where administration of the train operations contract, work practices, or other
     processes could be made more efficient without affecting safety, reliability, or compliance.
   category: procurement
-  action_type: study
-  action_type_basis: "Study where administration of the train operations contract"
+  action_type: action
+  action_type_basis: "Incorporate cost efficiencies and improvements to the Operations and Maintenance contract"
+  action_type_source: adopted
+  adopted_wording: >-
+    Examine contracts for opportunities to reduce costs. Incorporate cost efficiencies and
+    improvements to the Operations and Maintenance contract, contract administration, work
+    practices, or other processes without compromising safety, reliability, or compliance.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1006,6 +1107,10 @@
   status: adopted
   status_as_of: 2026-11-04
   sources:
+    - title: "Caltrain Board agenda packet, June 4, 2026, item 12: staff report and draft resolution (revised June 3, 2026)"
+      url: https://www.caltrain.com/media/37123/download
+      page: 101
+      type: board_item
     - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
       url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
       page: 60
@@ -1028,9 +1133,7 @@
       type: board_item
   notes: >-
     The report gives the operator contract's annual value as $100-150 million (p. 60); that is the
-    contract's value, not a savings estimate. The text of Resolution No. 2026-28 has not been
-    located; the strategy wording is taken from the staff presentation, which differs slightly
-    from the report.
+    contract's value, not a savings estimate.
 
 - id: caltrain-p1-energy-storage-study
   agency: Caltrain
@@ -1040,7 +1143,12 @@
     value of the energy, how it could be collected, and costs and benefits.
   category: energy
   action_type: study
-  action_type_basis: "Study the feasibility of storing electricity"
+  action_type_basis: "Conduct a study about the feasibility of energy storage"
+  action_type_source: adopted
+  adopted_wording: >-
+    Explore feasibility of energy storage project. Conduct a study about the feasibility of energy
+    storage to further utilize the electricity being returned to the grid from regenerative braking
+    and generate cost efficiencies. Provide the report findings to the Board upon completion.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1054,6 +1162,10 @@
   status: adopted
   status_as_of: 2026-11-04
   sources:
+    - title: "Caltrain Board agenda packet, June 4, 2026, item 12: staff report and draft resolution (revised June 3, 2026)"
+      url: https://www.caltrain.com/media/37123/download
+      page: 101
+      type: board_item
     - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
       url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
       page: 60
@@ -1074,9 +1186,7 @@
       url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
       page: 12
       type: board_item
-  notes: >-
-    The text of Resolution No. 2026-28 has not been located; the strategy wording is taken from
-    the staff presentation, which differs slightly from the report.
+  notes: null
 
 - id: caltrain-p1-gopass-baypass-expansion
   agency: Caltrain
@@ -1085,8 +1195,13 @@
     In consultation with MTC, identify the internal resources and supporting policies needed to
     expand Clipper BayPass or GoPass to more institutions and employers.
   category: ridership/customer experience
-  action_type: study
-  action_type_basis: "identify the internal resources and supporting policies needed"
+  action_type: action
+  action_type_basis: "Implement strategies to further expand GoPass and/or Clipper BayPass enrollment"
+  action_type_source: adopted
+  adopted_wording: >-
+    Expand GoPass and/or Clipper BayPass to more institutions and employers. Implement strategies to
+    further expand GoPass and/or Clipper BayPass enrollment to more institutions and employers that
+    will support ridership and revenue for Caltrain.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1100,6 +1215,10 @@
   status: adopted
   status_as_of: 2026-11-04
   sources:
+    - title: "Caltrain Board agenda packet, June 4, 2026, item 12: staff report and draft resolution (revised June 3, 2026)"
+      url: https://www.caltrain.com/media/37123/download
+      page: 102
+      type: board_item
     - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
       url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
       page: 61
@@ -1120,11 +1239,7 @@
       url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
       page: "12-13"
       type: board_item
-  notes: >-
-    The text of Resolution No. 2026-28 has not been located; the strategy wording is taken from
-    the staff presentation, which differs slightly from the report.
-
-# ---------------------------------------------------------------- SFMTA
+  notes: null
 
 - id: sfmta-p1-fare-compliance-study
   agency: SFMTA
@@ -1135,7 +1250,15 @@
     implementation plan.
   category: revenue
   action_type: study
-  action_type_basis: "Study fare compliance and enforcement"
+  action_type_basis: "Conduct a fare compliance and enforcement study"
+  action_type_source: adopted
+  adopted_wording: >-
+    Improve Fare Compliance and Enforcement: Conduct a fare compliance and enforcement study to
+    measure fare compliance; understand reasons for non-compliance; identify staffing, technology,
+    and administrative resources required to improve fare compliance (e.g., installation of fare
+    validators on both sides of rear and middle doors, faster mobile fare validators, enforcement
+    officers and administrative staff for processing); and develop a funding and implementation
+    plan.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1176,7 +1299,12 @@
     changes, more enforcement, and leasing or permitting parking at under-used facilities.
   category: revenue
   action_type: action
-  action_type_basis: "Increase parking revenue"
+  action_type_basis: "Enhance parking revenue through measures like"
+  action_type_source: adopted
+  adopted_wording: >-
+    Enhance parking revenue: Enhance parking revenue through measures like expanded days or hours of
+    paid parking, rate adjustments, increased enforcement, and leasing or permitting parking at
+    under-utilized facilities.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1218,6 +1346,8 @@
   category: revenue
   action_type: study
   action_type_basis: "Study the benefits, challenges, and opportunities"
+  action_type_source: report
+  adopted_wording: null
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1263,7 +1393,11 @@
     zero-emission bus transition requirements.
   category: capital
   action_type: advocacy
-  action_type_basis: "seek a deferral of the state's zero-emission bus transition requirements"
+  action_type_basis: "seek deferral of ZEB transition requirements"
+  action_type_source: adopted
+  adopted_wording: >-
+    Evaluate Zero-Emission Bus (ZEB) Transition program for Cost Efficiency: Coordinate with peer
+    agencies in the Bay Area to seek deferral of ZEB transition requirements.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1304,7 +1438,13 @@
     changing how operator shifts are structured.
   category: labor/overtime
   action_type: action
-  action_type_basis: "Identify and carry out scheduling efficiencies"
+  action_type_basis: "Identify and enact scheduling efficiencies"
+  action_type_source: adopted
+  adopted_wording: >-
+    Examine Schedules for Efficiencies: Identify and enact scheduling efficiencies that do not
+    impact service to the rider. These may include, but are not necessarily limited to, adjusting
+    how operator shifts are structured and/or balancing scheduling practices to maintain reliability
+    while controlling operating costs.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1343,7 +1483,11 @@
   recommendation: "Offer operator attendance incentives on high-priority routes."
   category: labor/overtime
   action_type: action
-  action_type_basis: "Offer operator attendance incentives"
+  action_type_basis: "Offer incentives for attendance"
+  action_type_source: adopted
+  adopted_wording: >-
+    Offer incentives to improve attendance: Offer incentives for attendance for high-priority
+    routes.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1384,7 +1528,13 @@
     develop a funding and implementation plan.
   category: service planning
   action_type: study
-  action_type_basis: "Study where bus stop spacing or location slows service"
+  action_type_basis: "Conduct a bus stop optimization study"
+  action_type_source: adopted
+  adopted_wording: >-
+    Improve Speed and Reliability of Service: Conduct a bus stop optimization study to identify
+    where stop spacing or location contributes to slow or unreliable service, identify opportunities
+    to improve bus stop spacing; quantify the benefits of optimizing bus stop location and spacing;
+    and develop a funding and implementation plan.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1423,7 +1573,11 @@
   recommendation: "Continue reinvesting savings from transit priority projects back into service."
   category: service planning
   action_type: action
-  action_type_basis: "Continue reinvesting savings from transit priority projects back into service"
+  action_type_basis: "Continue reinvestment of transit priority savings into service"
+  action_type_source: adopted
+  adopted_wording: >-
+    Improve Speed and Reliability of Service: Continue reinvestment of transit priority savings into
+    service.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1463,7 +1617,12 @@
     Identify more opportunities to run shorter light-rail trains during lower-demand periods.
   category: service planning
   action_type: study
-  action_type_basis: "Identify more opportunities to run shorter light-rail trains"
+  action_type_basis: "Identify more opportunities to run shorter trains"
+  action_type_source: adopted
+  adopted_wording: >-
+    Right-Size Fleet to Match Demand: Identify more opportunities to run shorter trains during
+    lower-demand periods to better match the cost of delivering service to the fare revenue
+    generated at different periods.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1503,7 +1662,11 @@
     Review high-spend contracts to determine whether the services can be provided at lower cost.
   category: procurement
   action_type: study
-  action_type_basis: "Review high-spend contracts"
+  action_type_basis: "Conduct a review of high-spend contracts"
+  action_type_source: adopted
+  adopted_wording: >-
+    Identify and Capture Cost Savings in Larger Contract Renewals: Conduct a review of high-spend
+    contracts to determine whether the services can be provided at lower costs.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1544,7 +1707,12 @@
     adopt or expand pass programs like Clipper BayPass with more institutions and employers.
   category: ridership/customer experience
   action_type: study
-  action_type_basis: "identify the internal resources and supporting policies needed"
+  action_type_basis: "identify internal resource requirements and supportive policies"
+  action_type_source: adopted
+  adopted_wording: >-
+    Expand Clipper BayPass with Institutions and Employers: In consultation with MTC, identify
+    internal resource requirements and supportive policies required or desired to adopt or expand
+    pass programs like Clipper BayPass to more institutions and employers.
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption

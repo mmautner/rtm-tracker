@@ -20,7 +20,8 @@
     "actransit.legistar1.com",
     "caltrain.com",
     "sfmta.com",
-    "contracosta.courts.ca.gov"
+    "contracosta.courts.ca.gov",
+    "gov.ca.gov"
   ],
   "site_css": "/assets/css/site.css",
   "blog_fonts": "/resources/fonts/",
