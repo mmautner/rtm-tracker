@@ -63,7 +63,7 @@ echo "==> Staging (gzip text files, as the blog does; CloudFront does not compre
 STAGE=.deploy
 rm -rf "$STAGE"
 cp -R "dist/$PREFIX" "$STAGE"
-find "$STAGE" -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.json' -o -name '*.csv' -o -name '*.xml' \) -print0 |
+find "$STAGE" -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.json' -o -name '*.csv' -o -name '*.xml' -o -name '*.svg' \) -print0 |
   while IFS= read -r -d '' f; do gzip -9 -n -c "$f" > "$f.gz" && mv "$f.gz" "$f"; done
 
 echo "==> Comparing with what's live"
@@ -104,6 +104,12 @@ up() { # pattern content-type cache-seconds [gzip]
   local enc=(); [[ "${4:-}" == gzip ]] && enc=(--content-encoding gzip)
   "${SYNC[@]}" --exclude '*' --include "$1" --content-type "$2" --cache-control "max-age=$3" ${enc[@]+"${enc[@]}"}
 }
+# Every staged file must match one of the up() patterns below, or it would silently never upload.
+UNCOVERED="$(find "$STAGE" -type f ! -name '*.pdf' ! -name '*.csv' ! -name '*.json' ! -name '*.css' ! -name '*.js' \
+  ! -name '*.html' ! -name '*.xml' ! -name '*.png' ! -name '*.svg')"
+if [[ -n "$UNCOVERED" ]]; then
+  echo "refusing: no upload rule for these files (add a line to up() below):" >&2; echo "$UNCOVERED" >&2; exit 1
+fi
 echo "==> Uploading $N_UPLOAD files to $DEST"
 up '*.pdf'  'application/pdf'                 86400
 up '*.csv'  'text/csv; charset=utf-8'          3600 gzip
@@ -113,6 +119,7 @@ up '*.js'   'text/javascript; charset=utf-8'   3600 gzip
 up '*.html' 'text/html; charset=utf-8'          300 gzip
 up '*.xml'  'application/atom+xml; charset=utf-8' 300 gzip
 up '*.png'  'image/png'                        3600
+up '*.svg'  'image/svg+xml'                    3600 gzip
 
 if [[ $PRUNE == 1 ]]; then
   echo "==> Objects under $DEST that the build no longer produces:"
