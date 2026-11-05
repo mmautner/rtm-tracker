@@ -33,6 +33,9 @@ def collect():
     for c in yaml.safe_load((ROOT / "data" / "commitments.yaml").read_text()) or []:
         for s in c.get("sources") or []:
             urls.setdefault(s["url"], set()).add(c["id"])
+    for r in yaml.safe_load((ROOT / "data" / "oversight.yaml").read_text()) or []:
+        for s in r.get("sources") or []:
+            urls.setdefault(s["url"], set()).add(r["id"])
     for m in yaml.safe_load((ROOT / "data" / "milestones.yaml").read_text()) or []:
         for s in m.get("sources") or []:
             urls.setdefault(s["url"], set()).add(m["id"])

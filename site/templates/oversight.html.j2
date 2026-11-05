@@ -1,0 +1,147 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import source_list %}
+{% macro law(section, page) -%}
+<a class="rt-cite-link" href="{{ cfg.statute_url }}" title="SB 63 (Stats. 2025, Ch. 740), PDF page {{ page }}">§{{ section }}</a>
+{%- endmacro %}
+{% block title %}Oversight · {{ cfg.site_title }}{% endblock %}
+{% block description %}Who sits on SB 63's Independent Oversight Committee, what it can and cannot require of BART, Muni, AC Transit, and Caltrain, and every recommendation an agency rejects.{% endblock %}
+{% block main %}
+{% set n_voting = committee.voting | length %}
+{% set n_board = committee.by_seat["operator_board"] | length %}
+{% set n_expert = committee.by_seat["expert"] | length %}
+{% set n_chair = committee.by_seat["mtc_chair"] | length %}
+<span class="rt-eyebrow">Who checks the agencies</span>
+<h1>Oversight: who reviews the agencies, and what can be enforced</h1>
+<p class="rt-lede">SB 63 puts the efficiency review under an oversight committee that includes board members of the
+  agencies being reviewed, and leaves enforcement to MTC. This page shows who is on the committee, what it has
+  done, what it can and cannot require, and every recommendation an agency formally rejects.</p>
+
+<nav aria-label="On this page" class="rt-toc">
+  <ul>
+    <li><a href="#committee">The committee's members</a></li>
+    <li><a href="#powers">What the committee can and cannot do</a></li>
+    <li><a href="#findings">Recommendations agencies reject</a></li>
+    <li><a href="#savings">Savings estimates</a></li>
+    <li><a href="#meetings">Meetings and votes</a></li>
+  </ul>
+</nav>
+
+<section class="rt-section" id="committee">
+  <h2>The committee's members</h2>
+  <p>The law sets the committee's makeup ({{ law("67764", "13–14") }}). Of its {{ n_voting }} voting members on the
+    current roster:</p>
+  <div class="rt-seats" aria-hidden="true">
+    {% for s in ["operator_board", "expert", "mtc_chair"] %}{% for m in committee.by_seat[s] %}<span class="rt-seat rt-seat-{{ s }}" title="{{ m.name }}"></span>{% endfor %}{% endfor %}
+  </div>
+  <ul class="rt-seat-key">
+    <li><span class="rt-seat rt-seat-operator_board"></span><strong>{{ n_board }}</strong> serve on the boards of the agencies under review</li>
+    <li><span class="rt-seat rt-seat-expert"></span><strong>{{ n_expert }}</strong> are independent experts appointed by MTC</li>
+    <li><span class="rt-seat rt-seat-mtc_chair"></span><strong>{{ n_chair }}</strong> is MTC's chair</li>
+  </ul>
+  <p class="rt-meta">Two more members represent the state and do not vote. A quorum is 5 voting members.
+    Roster: MTC's agenda for the May 22, 2026 meeting.</p>
+
+  <div class="rt-table-wrap" tabindex="0" role="region" aria-label="Committee members">
+  <table class="rt-table">
+    <thead><tr><th scope="col">Member</th><th scope="col">Seat under the law</th><th scope="col">Other public role</th></tr></thead>
+    <tbody>
+    {% for m in committee.members %}
+    <tr id="{{ m.id }}">
+      <th scope="row">{{ m.name }}<span>{{ m.committee_role }}</span></th>
+      <td>{{ ioc_seats[m.seat] }}</td>
+      <td>{{ m.public_role or "Not recorded" }}
+        {% if m.notes %}<p class="rt-table-note">{{ m.notes }}</p>{% endif %}
+        <details class="rt-more"><summary>Sources ({{ m.sources | length }})</summary>{{ source_list(m.sources) }}</details>
+      </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  <p class="rt-meta">Last verified {{ committee.last_verified | date }}.</p>
+</section>
+
+<section class="rt-section" id="powers">
+  <h2>What the committee can and cannot do</h2>
+  <div class="rt-two">
+    <div class="rt-card rt-plain-card">
+      <h3>It can</h3>
+      <ul>
+        <li>Review the consultant's Phase 1 and Phase 2 analyses, direct revisions, and adopt the final versions. {{ law("67766(a), (c)(1)", 14) }}</li>
+        <li>Specify what information each agency must give for every cost-saving measure in its implementation plan. {{ law("67766(c)(2)", 14) }}</li>
+        <li>Approve each agency's draft implementation plan or recommend revisions. {{ law("67766(e)", 14) }}</li>
+      </ul>
+    </div>
+    <div class="rt-card rt-plain-card">
+      <h3>It cannot</h3>
+      <ul>
+        <li>Make an agency adopt a recommendation. A board may reject one by adopting a written finding, listed <a href="#findings">below</a>. {{ law("67766(f)(3)", 15) }}</li>
+        <li>Decide whether an agency complies or withhold its funds. MTC does both. {{ law("67766(h)", "15–16") }}</li>
+        <li>Continue after the plans are adopted. It ends once every agency adopts a final implementation plan. {{ law("67766(g)", 15) }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="rt-section" id="findings">
+  <h2>Recommendations agencies reject</h2>
+  <p>An agency's board can reject an oversight committee recommendation only by adopting a written finding that it
+    would have “an unacceptable impact on transit service or safety” or conflicts with other documented local
+    policies. MTC must notify the Legislature within 10 business days, and each finding expires after 12 months unless
+    the board renews it with an updated assessment. {{ law("67766(f)(3)", 15) }}</p>
+  {% if committee.findings %}
+  <div class="rt-table-wrap" tabindex="0" role="region" aria-label="Written findings">
+  <table class="rt-table">
+    <thead><tr><th scope="col">Agency and recommendation</th><th scope="col">Basis</th><th scope="col">Adopted</th><th scope="col">Expires</th><th scope="col">Renewed</th><th scope="col">MTC notice to Legislature</th></tr></thead>
+    <tbody>
+    {% for f in committee.findings %}
+    <tr id="{{ f.id }}">
+      <th scope="row">{{ f.agency }}<span>{{ f.recommendation }}</span>
+        <details class="rt-more"><summary>Sources ({{ f.sources | length }})</summary>{{ source_list(f.sources) }}</details></th>
+      <td>{{ finding_bases[f.basis] }}</td>
+      <td>{{ f.adopted_on | date }}</td>
+      <td>{{ f.expires_on | date }}</td>
+      <td>{{ f.renewed_on | date if f.renewed_on else "No" }}</td>
+      <td>{{ f.notice_to_legislature_on | date if f.notice_to_legislature_on else "Not found" }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% else %}
+  <p class="rt-empty"><strong>None so far.</strong> A finding can be adopted only when an agency's board adopts its final
+    implementation plan, which comes after Phase 2. Each one will be listed here with its basis, expiration, renewals,
+    and MTC's notice to the Legislature.</p>
+  {% endif %}
+</section>
+
+<section class="rt-section" id="savings">
+  <h2>Savings estimates</h2>
+  <dl class="rt-tiles rt-tiles-2">
+    <div><dt>Recommendations with a savings estimate</dt><dd>{{ savings.n_estimated }} <small>of {{ n_total }}</small></dd></div>
+    <div><dt>Estimated savings, total</dt><dd>{% if savings.total %}{{ savings.total | usd }}{% else %}None{% endif %}</dd></div>
+  </dl>
+  <p>The Phase 1 report does not estimate savings for individual strategies, so no tracked recommendation has a
+    dollar figure yet. Phase 2 must evaluate cost-saving measures with metrics such as cost per passenger mile and
+    subsidy per passenger mile, reported so that “results are quantifiable and actionable.” {{ law("67762(c)(1)", 13) }}
+    When Phase 2 or an agency document gives a figure for a tracked measure, it will appear on that entry and in
+    this total.</p>
+</section>
+
+<section class="rt-section" id="meetings">
+  <h2>Meetings and votes</h2>
+  <ol class="rt-meetings">
+    {% for r in committee.meetings | reverse %}
+    <li id="{{ r.id }}">
+      <p class="rt-ms-when">{{ r.date | date }}</p>
+      <h3>{{ r.title }}</h3>
+      <p>{{ r.actions or "Actions not yet recorded here." }}</p>
+      <p class="rt-meta"><strong>Vote:</strong> {{ r.vote_record or "Not yet published in a source reviewed here." }}</p>
+      {% if r.notes %}<p class="rt-meta">{{ r.notes }}</p>{% endif %}
+      <details class="rt-more"><summary>Sources ({{ r.sources | length }})</summary>{{ source_list(r.sources) }}</details>
+    </li>
+    {% endfor %}
+  </ol>
+  <p class="rt-meta">Agendas, minutes, and video of every meeting are on <a href="https://mtc.ca.gov/meetings-events">MTC's meetings page</a>.</p>
+</section>
+{% endblock %}

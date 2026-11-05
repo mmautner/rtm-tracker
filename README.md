@@ -61,6 +61,16 @@ Copy an existing entry for the same agency and change every field. Pick a new `i
 use `phase: 2`; for implementation-plan commitments use `phase: implementation_plan`. Set
 `required_by` to a milestone id from `data/milestones.yaml` or to a date.
 
+## Oversight records
+
+`data/oversight.yaml` holds three kinds of record, each with sources like any entry:
+
+- `member`: one per committee member. Update when MTC's roster changes; set `status_as_of`.
+- `meeting`: one per committee meeting, with actions and the vote record once minutes are approved.
+- `finding`: one per written finding an agency adopts to reject a committee recommendation
+  (§67766(f)(3)). Copy the template at the bottom of the file. Record `expires_on` (12 months unless
+  renewed), `renewed_on`, and the date of MTC's notice to the Legislature.
+
 ## Update a milestone
 
 Edit `data/milestones.yaml`. A milestone with a `deadline_rule` ("N days after milestone X") gets a
@@ -73,6 +83,7 @@ appears on the site.
 ```
 data/commitments.yaml       all tracked recommendations (edit this)
 data/milestones.yaml        statutory deadlines (edit this)
+data/oversight.yaml         oversight committee members and meetings; findings rejecting its recommendations (edit this)
 site/config.json            site settings, contact, allowed source hosts, deploy target
 site/templates/*.j2         page templates (Jinja2)
 site/static/                CSS and two small scripts (filters, print expansion)

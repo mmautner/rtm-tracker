@@ -75,6 +75,18 @@ Checked 2026-11-04. Each item names the entry or file it affects.
   titles say "posted May 27, 2026."
 - **No Phase 1 entry has a savings estimate**, because the report gives none per strategy.
 
+## Oversight page (data/oversight.yaml)
+
+- [ ] **Steve Heminger's seat.** Caltrain's board page lists him as "Appointed by San Francisco MTA."
+  Confirm whether he holds SFMTA's or Caltrain's committee seat (Jeff Gee is also on Caltrain's
+  board) and whether he sits on the SFMTA Board. SFMTA's board page didn't load for the check.
+- [ ] **Ex officio members.** Confirm which of Teresa Calvert and James Hacker represents CalSTA and
+  which the Department of Finance.
+- [ ] **BART seat change.** The March 6 roster has Melissa Hernandez; May 22 has Matthew Rinn. Find
+  the BART board action or MTC note that made the change.
+- [ ] **April 17 and May 22 meetings.** Read the April 17 draft minutes (May 22 agenda, item 3a) and
+  the May 22 minutes once approved; record actions and vote counts.
+
 ## Setup
 
 - [ ] **Review the wording of `site/templates/how.html.j2`.** It is prose, not data, so the validator

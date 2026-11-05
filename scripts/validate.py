@@ -1,4 +1,4 @@
-"""Check data/commitments.yaml and data/milestones.yaml. Exit 1 on any error.
+"""Check data/commitments.yaml, data/milestones.yaml, and data/oversight.yaml. Exit 1 on any error.
 
     .venv/bin/python scripts/validate.py
 
@@ -16,8 +16,8 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from scripts.schema import (  # noqa: E402
-    AGENCIES, CATEGORIES, COMMITMENT_FIELDS, MILESTONE_RESPONSIBLE, OPTIONAL_FIELDS,
-    PHASES, SOURCE_TYPES, STATUSES,
+    AGENCIES, CATEGORIES, COMMITMENT_FIELDS, FINDING_BASES, IOC_SEATS, MILESTONE_RESPONSIBLE,
+    OPTIONAL_FIELDS, OVERSIGHT_FIELDS, OVERSIGHT_KINDS, PHASES, SOURCE_TYPES, STATUSES,
 )
 
 ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
@@ -181,6 +181,66 @@ def validate(commitments, milestones, hosts, today=None):
     return errors
 
 
+def validate_oversight(records, hosts, ids_taken=(), today=None):
+    today = today or datetime.date.today()
+    errors = []
+    if not isinstance(records, list):
+        return ["data/oversight.yaml: must be a list"]
+    seen = set(ids_taken)
+    for i, r in enumerate(records):
+        where = f"oversight.yaml[{i}]"
+        if not isinstance(r, dict):
+            errors.append(f"{where}: must be a mapping")
+            continue
+        rid = r.get("id")
+        where = f"oversight.yaml {rid or f'[{i}]'}"
+        if not isinstance(rid, str) or not ID_RE.match(rid):
+            errors.append(f"{where}: id must be lowercase words joined by hyphens")
+        elif rid in seen:
+            errors.append(f"{where}: duplicate id")
+        seen.add(rid)
+        kind = r.get("kind")
+        if kind not in OVERSIGHT_KINDS:
+            errors.append(f"{where}: kind must be one of {sorted(OVERSIGHT_KINDS)}")
+            continue
+        fields = OVERSIGHT_FIELDS[kind]
+        for k in fields:
+            if k not in r:
+                errors.append(f"{where}: missing field {k} (use null if unknown)")
+        for k in r:
+            if k not in fields:
+                errors.append(f"{where}: unknown field {k}")
+        if not is_date(r.get("status_as_of")):
+            errors.append(f"{where}: status_as_of must be a date (YYYY-MM-DD)")
+        elif r["status_as_of"] > today:
+            errors.append(f"{where}: status_as_of is in the future")
+        check_sources(where, r.get("sources"), hosts, errors)
+        if kind == "member":
+            if not str(r.get("name") or "").strip():
+                errors.append(f"{where}: missing name")
+            if r.get("seat") not in IOC_SEATS:
+                errors.append(f"{where}: seat must be one of {sorted(IOC_SEATS)}")
+            if not isinstance(r.get("voting"), bool):
+                errors.append(f"{where}: voting must be true or false")
+            if r.get("seat") == "operator_board" and r.get("board_agency") not in AGENCIES:
+                errors.append(f"{where}: board_agency must be one of {sorted(AGENCIES)} for an operator_board seat")
+        elif kind == "meeting":
+            if not is_date(r.get("date")):
+                errors.append(f"{where}: date must be a date")
+        elif kind == "finding":
+            if r.get("agency") not in AGENCIES:
+                errors.append(f"{where}: agency must be one of {sorted(AGENCIES)}")
+            if r.get("basis") not in FINDING_BASES:
+                errors.append(f"{where}: basis must be one of {sorted(FINDING_BASES)}")
+            for k in ("adopted_on", "expires_on"):
+                if not is_date(r.get(k)):
+                    errors.append(f"{where}: {k} must be a date")
+            for k in ("renewed_on", "notice_to_legislature_on"):
+                if r.get(k) is not None and not is_date(r.get(k)):
+                    errors.append(f"{where}: {k} must be a date or null")
+    return errors
+
+
 def main():
     cfg = json.loads((ROOT / "site" / "config.json").read_text())
     errors = validate(
@@ -188,6 +248,7 @@ def main():
         load(ROOT / "data" / "milestones.yaml"),
         cfg["primary_source_hosts"],
     )
+    errors += validate_oversight(load(ROOT / "data" / "oversight.yaml") or [], cfg["primary_source_hosts"])
     if errors:
         print(f"{len(errors)} problem(s) in data/:", file=sys.stderr)
         for e in errors:

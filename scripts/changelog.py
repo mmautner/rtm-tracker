@@ -14,7 +14,7 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-FILES = ["data/commitments.yaml", "data/milestones.yaml"]
+FILES = ["data/commitments.yaml", "data/milestones.yaml", "data/oversight.yaml"]
 
 
 def git(*args):

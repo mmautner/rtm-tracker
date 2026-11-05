@@ -21,6 +21,9 @@
   <div><dt>{{ badge("implemented") }}</dt><dd>{{ totals["implemented"] }}</dd>{% if target %}<p class="rt-tile-note">MTC target: {{ target.text }}</p>{% endif %}</div>
   <div><dt>{{ badge("missed") }}</dt><dd>{{ totals["missed"] }}</dd></div>
 </dl>
+<p class="rt-meta"><strong>Savings estimated so far:</strong> {{ savings.n_estimated }} of {{ n_total }} recommendations
+  have a dollar estimate; the Phase 1 report gives none. <a href="{{ base }}oversight/">Who oversees the agencies, and what
+  they can enforce →</a></p>
 {% if target %}
 <p class="rt-meta">MTC lists an estimated completion date of {{ target.text }} for every adopted strategy
   (<a href="{{ cfg.pip_url }}">MTC Res. 4743</a>). An entry is marked missed when a statutory deadline, or a completion

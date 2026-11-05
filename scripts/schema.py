@@ -105,3 +105,24 @@ COMMITMENT_FIELDS = [
     "board_action", "status", "status_as_of", "sources", "notes",
 ]
 OPTIONAL_FIELDS = {"target_completion", "target_completion_basis"}
+
+
+# data/oversight.yaml
+OVERSIGHT_KINDS = {"member", "meeting", "finding"}
+IOC_SEATS = {
+    "mtc_chair": "MTC chair or designee (§67764(a))",
+    "operator_board": "Board member of a reviewed agency (§67764(b))",
+    "expert": "Independent expert appointed by MTC (§67764(c))",
+    "ex_officio": "State ex officio, non-voting (§67764(d))",
+}
+FINDING_BASES = {
+    "service_or_safety": "Unacceptable impact on transit service or safety",
+    "local_policy": "Inconsistent with other documented local policies and procedures",
+}
+OVERSIGHT_FIELDS = {
+    "member": ["id", "kind", "name", "committee_role", "seat", "voting", "public_role", "board_agency",
+               "status_as_of", "sources", "notes"],
+    "meeting": ["id", "kind", "date", "title", "actions", "vote_record", "status_as_of", "sources", "notes"],
+    "finding": ["id", "kind", "agency", "recommendation", "adopted_on", "basis", "expires_on", "renewed_on",
+                "notice_to_legislature_on", "status_as_of", "sources", "notes"],
+}

@@ -68,6 +68,7 @@
       {% for a in agencies %}
       <li><a href="{{ base }}{{ a.slug }}/" style="--agency: {{ a.color }}"{% if current == a.slug %} aria-current="page"{% endif %}><span class="rt-dot" aria-hidden="true"></span>{{ a.display }}</a></li>
       {% endfor %}
+      <li><a href="{{ base }}oversight/"{% if current == "oversight" %} aria-current="page"{% endif %}>Oversight</a></li>
       <li><a href="{{ base }}methodology/"{% if current == "methodology" %} aria-current="page"{% endif %}>Methodology</a></li>
       <li><a href="{{ base }}changelog/"{% if current == "changelog" %} aria-current="page"{% endif %}>Changelog</a></li>
     </ul>
@@ -81,7 +82,8 @@
     <p><strong>Download the data:</strong>
       <a href="{{ base }}data/commitments.csv">commitments.csv</a> ·
       <a href="{{ base }}data/commitments.json">commitments.json</a> ·
-      <a href="{{ base }}data/milestones.json">milestones.json</a></p>
+      <a href="{{ base }}data/milestones.json">milestones.json</a> ·
+      <a href="{{ base }}data/oversight.json">oversight.json</a></p>
     <p><strong>Follow changes:</strong> <a href="{{ base }}changelog.xml">RSS/Atom feed</a> of every status change and correction ·
       <a href="/subscribe/">get Max's posts by email</a></p>
     <p>Most recent check of any entry: {{ last_verified | date }}. Each entry shows its own “last verified” date.</p>

@@ -54,3 +54,9 @@
 - **Templates are autoescaped.** `select_autoescape()` keys off the file extension, and `*.html.j2`
   didn't match, so escaping was off until 2026-11-05.
 - **Agencies are listed by annual ridership, FY 2024-25** (Muni, BART, AC Transit, Caltrain), from the Phase 1 report's agency profiles (pp. 38, 24, 17, 32), on every page and in the overview preview image (2026-11-05). Sentences that paraphrase the statute keep its order (AC Transit, BART, Caltrain, Muni).
+- **Oversight page** (2026-11-05), prompted by public criticism that SB 63's oversight lacks
+  independence and enforceability. Rather than argue the point, the page records the facts a reader
+  needs to judge it: the committee's members by statutory seat (4 of 9 voting members sit on the boards
+  of the agencies under review), what it can and cannot require under §67766, every written finding
+  rejecting its recommendations (§67766(f)(3)), meetings and votes, and how many recommendations carry
+  a dollar savings estimate (none yet). Data in `data/oversight.yaml`, validated and in the changelog.

@@ -28,8 +28,10 @@ ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT))
 from scripts import changelog  # noqa: E402
 from scripts import og  # noqa: E402
-from scripts.schema import AGENCIES, CATEGORIES, PHASES, SOURCE_TYPES, STATUSES  # noqa: E402
-from scripts.validate import validate  # noqa: E402
+from scripts.schema import (  # noqa: E402
+    AGENCIES, CATEGORIES, FINDING_BASES, IOC_SEATS, PHASES, SOURCE_TYPES, STATUSES,
+)
+from scripts.validate import validate, validate_oversight  # noqa: E402
 
 SITE = ROOT / "site"
 CFG = json.loads((SITE / "config.json").read_text())
@@ -219,7 +221,9 @@ def main():
     args = ap.parse_args()
     commitments = load("commitments.yaml")
     milestones = load("milestones.yaml")
+    oversight = load("oversight.yaml") or []
     errors = validate(commitments, milestones, CFG["primary_source_hosts"])
+    errors += validate_oversight(oversight, CFG["primary_source_hosts"])
     if errors:
         print("Build stopped; fix data/ first:", file=sys.stderr)
         for e in errors:
@@ -270,6 +274,22 @@ def main():
     if len(targets) == 1 and None not in targets:
         target = {"month": next(iter(targets)), "text": fmt_date(next(iter(targets)))}
     out_of_scope = [{"name": n, "basis": b, "moe": moe_applies(b)} for n, b in OUT_OF_SCOPE]
+    # savings: how many entries carry a dollar estimate from a source
+    est = [c["estimated_savings_usd"] for c in commitments if c["estimated_savings_usd"] is not None]
+    savings = {"n_estimated": len(est), "total": sum(est) if est else None}
+    # oversight committee
+    members = [r for r in oversight if r["kind"] == "member"]
+    seat_order = list(IOC_SEATS)
+    members.sort(key=lambda m: (seat_order.index(m["seat"]), m["name"].split()[-1]))
+    voting = [m for m in members if m["voting"]]
+    committee = {
+        "members": members,
+        "voting": voting,
+        "by_seat": {s: [m for m in voting if m["seat"] == s] for s in seat_order},
+        "meetings": sorted((r for r in oversight if r["kind"] == "meeting"), key=lambda r: r["date"]),
+        "findings": sorted((r for r in oversight if r["kind"] == "finding"), key=lambda r: r["adopted_on"]),
+        "last_verified": max((r["status_as_of"] for r in oversight), default=None),
+    }
     entry_agency = {c["id"]: AGENCIES[c["agency"]] for c in commitments}
 
     env = Environment(loader=FileSystemLoader(SITE / "templates"), autoescape=select_autoescape(enabled_extensions=("html.j2", "xml.j2"),
@@ -280,7 +300,8 @@ def main():
     env.globals.update(
         cfg=CFG, base=BASE, ver=static_version(), statuses=statuses, status_meta={status_key(k): v for k, v in STATUSES.items()},
         source_types=SOURCE_TYPES, categories=CATEGORIES, phases=PHASES, agencies=agencies,
-        last_verified=last_verified, totals=totals, target=target, out_of_scope=out_of_scope, n_total=len(commitments), build_date=datetime.date.today(),
+        last_verified=last_verified, totals=totals, target=target, out_of_scope=out_of_scope, savings=savings,
+        committee=committee, ioc_seats=IOC_SEATS, finding_bases=FINDING_BASES, n_total=len(commitments), build_date=datetime.date.today(),
         status_label=lambda s: STATUSES[None if s in (None, "unverified") else s]["label"],
     )
 
@@ -310,6 +331,7 @@ def main():
                          key=lambda x: -x[1])
     page("how.html.j2", "how-it-works", by_category=[x for x in by_category if x[1]],
          ms_by_id=ms_by_id)
+    page("oversight.html.j2", "oversight")
     page("methodology.html.j2", "methodology",
          n_commitments=len(commitments))
     page("changelog.html.j2", "changelog", history=history, entry_agency=entry_agency)
@@ -324,6 +346,9 @@ def main():
         json.dumps({"generated": str(datetime.date.today()), "commitments": clean},
                    indent=2, default=str, ensure_ascii=False), encoding="utf-8")
     ms_clean = [{k: v for k, v in m.items() if k not in ("deadline_text",)} for m in milestones]
+    (OUT / "data" / "oversight.json").write_text(
+        json.dumps({"generated": str(datetime.date.today()), "records": oversight},
+                   indent=2, default=str, ensure_ascii=False), encoding="utf-8")
     (OUT / "data" / "milestones.json").write_text(
         json.dumps({"generated": str(datetime.date.today()), "milestones": ms_clean},
                    indent=2, default=str, ensure_ascii=False), encoding="utf-8")
