@@ -1,0 +1,80 @@
+{
+  "site_title": "Measure RTM Efficiency Tracker",
+  "site_url": "https://maxmautner.com",
+  "base": "/rtm-tracker/",
+  "repo_url": "https://github.com/mmautner/rtm-tracker",
+  "contact_email": "movesanmateo@gmail.com",
+  "s3_bucket": "maxmautner.com",
+  "cloudfront_distribution_id": "EXXGWO0M0CEXA",
+  "statute_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB63",
+  "statute_local_copy": "sources/sb63-chaptered.pdf",
+  "primary_source_hosts": [
+    "mtc.ca.gov",
+    "bayareametro.gov",
+    "leginfo.legislature.ca.gov",
+    "bart.gov",
+    "bart.legistar.com",
+    "bart.legistar1.com",
+    "actransit.org",
+    "actransit.legistar.com",
+    "actransit.legistar1.com",
+    "caltrain.com",
+    "sfmta.com",
+    "contracosta.courts.ca.gov"
+  ],
+  "site_css": "/assets/css/site.css",
+  "blog_fonts": "/resources/fonts/",
+  "agency_colors": {
+    "_note": "Wayfinding stripes only, never used to encode data. Approximate brand colors; check against each agency's brand guide.",
+    "AC Transit": "#00a160",
+    "BART": "#0099d8",
+    "Caltrain": "#e31837",
+    "SFMTA": "#a6192e"
+  },
+  "report_url": "https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf",
+  "pip_url": "https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf",
+  "maintainer": "Max Mautner",
+  "maintainer_url": "/about/",
+  "agency_logos": {
+    "_note": "Official logos, downloaded 2026-11-05 from each agency's own website, used only to identify the agency (nominative use). Shown on a light tile; Muni's white logo on its red. Not used in link-preview images.",
+    "AC Transit": {
+      "file": "ac-transit.png",
+      "tile": "#ffffff",
+      "source": "https://www.actransit.org/themes/actransit_theme/images/logo.png"
+    },
+    "BART": {
+      "file": "bart.svg",
+      "tile": "#ffffff",
+      "source": "https://www.bart.gov/themes/custom/bart/logo.svg (cropped to the mark)"
+    },
+    "Caltrain": {
+      "file": "caltrain.svg",
+      "tile": "#ffffff",
+      "source": "https://www.caltrain.com/ (header logo)"
+    },
+    "SFMTA": {
+      "file": "muni.svg",
+      "tile": "#a6192e",
+      "source": "https://www.sfmta.com/themes/custom/fp_theme/logo.svg"
+    }
+  },
+  "agency_ridership": {
+    "_note": "Annual ridership, FY 2024-25, from the Phase 1 report's agency profiles (PDF pages). Sets the order agencies appear in.",
+    "SFMTA": {
+      "millions": 168.4,
+      "page": 38
+    },
+    "BART": {
+      "millions": 58.4,
+      "page": 24
+    },
+    "AC Transit": {
+      "millions": 40.7,
+      "page": 17
+    },
+    "Caltrain": {
+      "millions": 11.0,
+      "page": 32
+    }
+  }
+}

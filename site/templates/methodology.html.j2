@@ -1,0 +1,147 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import badge %}
+{% block title %}Methodology · {{ cfg.site_title }}{% endblock %}
+{% block description %}How the Measure RTM Efficiency Tracker defines statuses, chooses sources, checks data, and handles corrections.{% endblock %}
+{% block main %}
+<span class="rt-eyebrow">How this tracker works</span>
+<h1>Methodology</h1>
+
+<nav aria-label="On this page" class="rt-toc">
+  <ul>
+    <li><a href="#tracked">What is tracked</a></li>
+    <li><a href="#statuses">Status definitions</a></li>
+    <li><a href="#adopted-implemented">Adopted versus implemented</a></li>
+    <li><a href="#sources">Sources and evidence rules</a></li>
+    <li><a href="#checking">How often the data is checked</a></li>
+    <li><a href="#scope">Agencies outside the review</a></li>
+    <li><a href="#corrections">Corrections policy</a></li>
+    <li><a href="#about">Who maintains this site</a></li>
+  </ul>
+</nav>
+
+<section class="rt-section" id="tracked">
+  <h2>What is tracked</h2>
+  <p>SB 63 (Stats. 2025, Ch. 740) requires MTC to conduct a two-phase financial efficiency review of four
+    transit agencies: AC Transit, BART, Caltrain, and Muni (Gov. Code §67762). By July 1, 2026, each agency
+    had to identify the Phase 1 strategies it commits to and adopt them as formal policy or budget actions
+    (§67766(b)). If voters approve the regional measure, a second review follows, and each agency must adopt
+    and follow an implementation plan as a condition of continued funding (§67766(c)-(h)).</p>
+  <p>This site tracks {{ n_commitments }} Phase 1 recommendations: one entry for each “Early Action Strategy”
+    action listed in an agency's section of the Phase 1 report (pp. 56-63). Phase 2 recommendations and
+    implementation-plan commitments will be added when those documents are published.</p>
+  <p><strong>How the count compares with MTC's.</strong> MTC reports 32 Early Action Strategies, 29 of
+    them adopted in whole or in part. MTC counts by strategy heading. This site lists each action
+    separately, so AC Transit's speed-and-reliability strategy appears as three entries and SFMTA's as two.
+    Those three extra entries account for the difference between 32 and {{ n_commitments }}.</p>
+  <p>The report's “Strategies for Future Consideration” are not tracked. The report states they “are not
+    considered Early Action Strategies for the purposes of Operator adoption under Senate Bill 63” (p. 49).
+    Where an agency section lists an action that the report's summary tables label as a strategy for future
+    consideration, the entry is tracked and its notes say so.</p>
+</section>
+
+<section class="rt-section" id="statuses">
+  <h2>Status definitions</h2>
+  <p>Each entry has exactly one status. Badges always show a text label; color is only a secondary cue.</p>
+  <dl class="rt-status-defs">
+    {% for s in statuses %}
+    <dt>{{ badge(s.key) }}</dt>
+    <dd>{{ s.definition }}</dd>
+    {% endfor %}
+  </dl>
+</section>
+
+<section class="rt-section" id="adopted-implemented">
+  <h2>Adopted versus implemented</h2>
+  <p><strong>Adopted</strong> means the agency's governing board voted to commit to the recommendation.
+    It is a statement of intent. Most Phase 1 recommendations are studies or plans, so adoption alone
+    produces no savings.</p>
+  <p><strong>Implemented</strong> requires a primary source showing the recommended action is complete.
+    For a recommended study, that means the study has been delivered to the board or published. For a
+    recommended policy, price, or operating change, it means the change is in effect. A study that is
+    complete is marked implemented even if the agency then decides not to act on its findings; the notes
+    record what the agency decided.</p>
+  <p><strong>In progress</strong> sits between them. It requires documented work, such as an awarded
+    contract, a launched pilot, or an approved rate change that has not fully taken effect. Staff
+    statements that work is “underway,” without more detail, are noted but do not change the status by
+    themselves.</p>
+  <p>MTC has added the adopted Phase 1 strategies to its Productivity Improvement Program (MTC Res. 4743,
+    revised Aug. 26, 2026), with an estimated completion date of June 2029 for each. Agencies report
+    progress in their annual Transportation Development Act and State Transit Assistance funding claims.
+    Those reports are a primary source for status changes.</p>
+</section>
+
+<section class="rt-section" id="sources">
+  <h2>Sources and evidence rules</h2>
+  <ul>
+    <li>Every entry and milestone links to at least one primary source: the statute, the review report,
+      or a document published by MTC or the agency (board agendas, staff reports, resolutions, minutes,
+      official news releases, and other agency documents). News media coverage is not used as a source.</li>
+    <li>The review report alone cannot establish a status. Any status other than “Unverified” requires a
+      board item or other agency or MTC document.</li>
+    <li>Statuses are not inferred. If sources conflict or are unclear, the entry stays “Unverified” and its
+      notes describe the conflict.</li>
+    <li>Dollar figures appear only where a source states them. The Phase 1 report does not estimate
+      savings for individual strategies, so Phase 1 entries show “Not estimated.” Figures the report gives
+      for past savings are not reused as estimates.</li>
+    <li>Page numbers refer to the page of the PDF file, which can differ from the number printed on the page.</li>
+    <li>A copy of the chaptered statute is kept at
+      <a href="{{ base }}{{ cfg.statute_local_copy }}">{{ cfg.statute_local_copy }}</a>, because the
+      Legislature's website sometimes blocks automated access.</li>
+  </ul>
+</section>
+
+<section class="rt-section" id="checking">
+  <h2>How often the data is checked</h2>
+  <ul>
+    <li>Each entry shows a “last verified” date: the last date someone re-read its sources and confirmed
+      its status.</li>
+    <li>Entries are re-checked at least monthly, and after any MTC, oversight committee, or agency board
+      meeting with an SB 63 item on its agenda.</li>
+    <li>An automated check runs weekly. It tests every source link and opens a public issue in the
+      <a href="{{ cfg.repo_url }}/issues">project repository</a> when a link breaks.</li>
+    <li>Every change to the data is recorded in the <a href="{{ base }}changelog/">changelog</a>, which is
+      generated from the version history of the data files.</li>
+  </ul>
+</section>
+
+<section class="rt-section" id="scope">
+  <h2>Agencies outside the review</h2>
+  <p>The efficiency review covers 4 of the 15 agencies that receive a direct share of measure revenue
+    under Gov. Code §67750(b)(2)-(16). The other 11 are outside the review and outside this tracker's
+    scope; SB 63's efficiency-review requirements do not apply to them. (MTC's fare, accessibility, and
+    wayfinding programs, §67750(b)(10)-(12), are also not tracked.)</p>
+  <ul>
+    {% for o in out_of_scope %}
+    <li>{{ o.name }} <span class="rt-cite">({{ o.basis }}{% if o.moe %}; maintenance of effort applies, §67770{% endif %})</span></li>
+    {% endfor %}
+  </ul>
+  <p class="rt-meta">Source: <a href="{{ cfg.statute_url }}">SB 63</a>, Gov. Code §67700(b), (h) (PDF p. 4)
+    and §67750(b) (PDF pp. 9-12).</p>
+</section>
+
+<section class="rt-section" id="corrections">
+  <h2>Corrections policy</h2>
+  <p>If you believe an entry is wrong or out of date, email
+    <a href="mailto:{{ cfg.contact_email }}?subject=Correction%3A%20RTM%20tracker">{{ cfg.contact_email }}</a>
+    or <a href="{{ cfg.repo_url }}/issues/new">open an issue</a>. Please include the entry ID, shown at the
+    bottom of each expanded entry, and a link to the primary source.</p>
+  <ul>
+    <li>Requests are reviewed within five business days.</li>
+    <li>Agencies and MTC are held to the same standard as everyone else: a correction needs a primary source.</li>
+    <li>When a correction changes a status, the entry's notes say what was corrected and when. Earlier
+      versions are never deleted; the changelog shows the old and new values.</li>
+  </ul>
+</section>
+
+<section class="rt-section" id="about">
+  <h2>Who maintains this site</h2>
+  <p>This tracker is made by <a href="{{ cfg.maintainer_url }}">{{ cfg.maintainer }}</a>, who lives in San Mateo and
+    writes about transportation and housing at maxmautner.com. He supports public transit, and his essays on that
+    site take positions. This tracker does not: it is not affiliated with or funded by MTC, any transit agency, or
+    any campaign, and it takes no position on the measure.</p>
+  <p>To keep it reliable, every status is held to the same evidence rule whether it reflects well or poorly on an
+    agency: a primary source, linked, with a page number. The data and every edit to it are
+    <a href="{{ cfg.repo_url }}">public</a>, so anyone can check the work, and corrections follow the
+    <a href="#corrections">policy above</a>.</p>
+</section>
+{% endblock %}

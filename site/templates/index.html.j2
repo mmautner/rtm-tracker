@@ -1,0 +1,123 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import badge, status_bar, source_list, logo %}
+{% block main %}
+<span class="rt-eyebrow">SB 63 · Regional Transit Measure</span>
+<h1>The cost-saving commitments of Muni, BART, AC Transit, and Caltrain, tracked against primary sources</h1>
+<p class="rt-lede">In November 2026, voters in five Bay Area counties decided on a 14-year sales tax for transit.
+  The state law behind it, <a href="{{ cfg.statute_url }}">SB 63</a>, also requires four of the region's largest
+  transit agencies to commit to savings found by an independent review, and ties their share of the tax money to
+  following through. This site tracks each commitment against public records.</p>
+
+<section class="rt-section" aria-labelledby="how-h">
+  <h2 id="how-h" class="rt-h-small">How it works</h2>
+  {% with compact=true, link_base=base ~ "how-it-works/" %}{% include "_steps.html.j2" %}{% endwith %}
+  <p class="rt-meta"><a href="{{ base }}how-it-works/">Read how the review, implementation plans, and funding condition work →</a></p>
+</section>
+
+<h2 class="rt-h-small">Where things stand</h2>
+<dl class="rt-tiles" aria-label="All agencies" style="margin-top: 12px">
+  <div><dt>Recommendations tracked</dt><dd>{{ n_total }}</dd></div>
+  <div><dt>{{ badge("adopted") }}</dt><dd>{{ totals["adopted"] }}</dd></div>
+  <div><dt>{{ badge("implemented") }}</dt><dd>{{ totals["implemented"] }}</dd>{% if target %}<p class="rt-tile-note">MTC target: {{ target.text }}</p>{% endif %}</div>
+  <div><dt>{{ badge("missed") }}</dt><dd>{{ totals["missed"] }}</dd></div>
+</dl>
+{% if target %}
+<p class="rt-meta">MTC lists an estimated completion date of {{ target.text }} for every adopted strategy
+  (<a href="{{ cfg.pip_url }}">MTC Res. 4743</a>). An entry is marked missed when a statutory deadline, or a completion
+  date set by the agency or MTC, passes with no source showing the action was taken.</p>
+{% endif %}
+
+{% if next_deadline or next_milestone %}
+<div class="rt-callout">
+  {% if next_milestone %}
+  <p><span class="rt-callout-k">Next step</span> <a href="#{{ next_milestone.id }}">{{ next_milestone.title }}</a>
+    ({{ next_milestone.responsible }}): {% if next_milestone.computed_deadline %}due {{ next_milestone.computed_deadline | date }}{% else %}{{ next_milestone.deadline_text }}{% endif %}.</p>
+  {% endif %}
+  {% if next_deadline %}
+  <p><span class="rt-callout-k">Next deadline for the agencies</span> <a href="#{{ next_deadline.id }}">{{ next_deadline.title }}</a>:
+    {% if next_deadline.computed_deadline %}{{ next_deadline.computed_deadline | date }}{% else %}{{ next_deadline.deadline_text }}{% endif %}.</p>
+  {% endif %}
+</div>
+{% endif %}
+
+<section class="rt-section" aria-labelledby="scorecard-h">
+  <h2 id="scorecard-h">Scorecard</h2>
+  <p class="rt-meta">Number of tracked recommendations in each status, by agency, listed from most to fewest annual
+    riders (FY 2024–25, <a href="{{ cfg.report_url }}">Phase 1 report</a>, pp. 17, 24, 32, 38). Status definitions are
+    on the <a href="{{ base }}methodology/#statuses">Methodology</a> page.</p>
+  <ul class="rt-cards">
+    {% for a in agencies %}
+    <li class="rt-card rt-agency-card" style="--agency: {{ a.color }}">
+      <h3>{{ logo(a, "md") }}<a href="{{ base }}{{ a.slug }}/">{{ a.display }}</a></h3>
+      <p class="rt-card-sub">{{ a.total }} recommendations{% if a.actions and a.actions[0][0] %} · board action {{ a.actions[0][0] | date }}{% endif %}</p>
+      {% if a.ridership %}<p class="rt-card-sub">{{ "%.1f" | format(a.ridership.millions) }} million annual riders (FY 2024–25)</p>{% endif %}
+      {{ status_bar(a.bar) }}
+      <dl class="rt-counts">
+        {% for s in statuses %}
+        <div class="{{ 'is-zero' if not a.counts[s.key] }}"><dt>{{ badge(s.key) }}</dt><dd>{{ a.counts[s.key] }}</dd></div>
+        {% endfor %}
+      </dl>
+      <p class="rt-card-next"><span>Next deadline:</span>
+        {% if next_deadline %}<a href="#{{ next_deadline.id }}">{{ next_deadline.short_title }}</a>,
+        {% if next_deadline.computed_deadline %}{{ next_deadline.computed_deadline | date }}{% else %}date not yet set{% endif %}{% else %}none recorded{% endif %}</p>
+      <a class="rt-card-link" href="{{ base }}{{ a.slug }}/">See all {{ a.total }} <span aria-hidden="true">→</span><span class="visually-hidden"> {{ a.display }} recommendations</span></a>
+    </li>
+    {% endfor %}
+  </ul>
+  <details class="rt-notlisted" id="other-agencies">
+    <summary>Don't see your agency?</summary>
+    <div class="rt-notlisted-body">
+      <p>SB 63's efficiency review covers only these four agencies: AC Transit, BART, Caltrain, and Muni
+        (<a class="rt-cite-link" href="{{ cfg.statute_url }}">Gov. Code §67762(a)</a>). Eleven other agencies receive a share of
+        the tax but are not part of the review, so they have no efficiency commitments to track.</p>
+      <p>Some of them must still show MTC that they are keeping up their own funding for operations instead of
+        replacing it with tax money (the “maintenance of effort” rule, §67770). This tracker does not cover that requirement.</p>
+      <ul class="rt-notlisted-list">
+        {% for o in out_of_scope %}
+        <li><span>{{ o.name }}</span>{% if o.moe %}<span class="rt-tag">Maintenance of effort applies</span>{% endif %}</li>
+        {% endfor %}
+      </ul>
+      <p class="rt-meta">SamTrans and VTA receive money through their counties' shares (§67750(b)(15)-(16)). Details: <a href="{{ base }}methodology/#scope">agencies outside the review</a>.
+        Think an agency should be added? <a href="mailto:{{ cfg.contact_email }}?subject=RTM%20tracker%3A%20agency%20suggestion">Email {{ cfg.contact_email }}</a>.</p>
+    </div>
+  </details>
+  <p class="rt-meta">“Unverified” means no primary source has been found for the entry's status. The
+    tracker makes no claim about those entries.</p>
+</section>
+
+<section class="rt-section" aria-labelledby="timeline-h">
+  <h2 id="timeline-h">Timeline</h2>
+  <p class="rt-meta">Deadlines set by SB 63. Where MTC or an agency has published its own expected timing, it is
+    listed separately as an estimate, with its source.</p>
+  <ol class="rt-timeline">
+    {% for m in milestones %}
+    <li class="rt-ms {{ 'is-done' if m.completed_on else 'is-pending' }}" id="{{ m.id }}">
+      <p class="rt-ms-when">
+        {% if m.completed_on %}<span class="rt-ms-state">Completed</span> {{ m.completed_on | date }}
+        {% else %}<span class="rt-ms-state">Due</span> {% if m.computed_deadline %}{{ m.computed_deadline | date }}{% else %}{{ m.deadline_text }}{% endif %}{% endif %}
+      </p>
+      <h3>{{ m.title }}</h3>
+      <p class="rt-ms-who">{{ m.responsible | capitalize }} · <span class="rt-cite">{{ m.statute }}</span></p>
+      {% if m.outcome %}<p class="rt-ms-outcome">{{ m.outcome }}</p>{% endif %}
+      <details class="rt-more">
+        <summary>Details and sources ({{ m.sources | length }})</summary>
+        <dl class="rt-facts">
+          <dt>Deadline</dt><dd>{{ m.deadline_text }} <span class="rt-cite">({{ m.statute }})</span></dd>
+          <dt>Status</dt><dd>{% if m.completed_on %}Completed {{ m.completed_on | date }}{% else %}Not yet completed{% endif %}</dd>
+          {% if m.estimates %}
+          <dt>Published estimates</dt>
+          <dd><ul>
+            {% for e in m.estimates %}
+            <li>{{ e.text }} <a href="{{ e.source.url }}">{{ e.source.title }}</a>{% if e.source.page is not none %}, p. {{ e.source.page }}{% endif %}.</li>
+            {% endfor %}
+          </ul></dd>
+          {% endif %}
+          <dt>Last verified</dt><dd>{{ m.status_as_of | date }}</dd>
+          <dt>Sources</dt><dd>{{ source_list(m.sources) }}</dd>
+        </dl>
+      </details>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endblock %}

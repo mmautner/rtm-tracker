@@ -1,0 +1,157 @@
+{% extends "base.html.j2" %}
+{% macro law(section, page) -%}
+<a class="rt-cite-link" href="{{ cfg.statute_url }}" title="SB 63 (Stats. 2025, Ch. 740), PDF page {{ page }}">Gov. Code §{{ section }}</a>
+{%- endmacro %}
+{% macro rpt(page) -%}
+<a class="rt-cite-link" href="{{ cfg.report_url }}" title="Bay Area Financial Efficiency Review, Final Report (Phase 1), PDF page {{ page }}">Phase 1 report, p. {{ page }}</a>
+{%- endmacro %}
+{% block title %}How it works · {{ cfg.site_title }}{% endblock %}
+{% block description %}What SB 63's financial efficiency review is, what the transit agencies have to do, and how their regional tax funding depends on it.{% endblock %}
+{% block main %}
+<span class="rt-eyebrow">Background</span>
+<h1>How SB 63's efficiency requirements work</h1>
+<p class="rt-lede">The state law that created the Bay Area's 2026 regional transit tax also requires four of the
+  largest transit agencies to look for savings. Their share of the tax money depends on following through.</p>
+
+<div class="rt-box">
+  <h2>In short</h2>
+  <ul>
+    <li><strong>The tax.</strong> SB 63 authorized a 14-year sales tax for transit: 0.5% in Alameda, Contra
+      Costa, San Mateo, and Santa Clara counties, and 1% in San Francisco, subject to voter approval on
+      November 3, 2026. <span class="rt-cite">{{ law("67730(c)", 6) }}</span></li>
+    <li><strong>The review.</strong> MTC, the regional transportation agency, had to hire an outside consultant
+      to review the finances of AC Transit, BART, Caltrain, and Muni (SFMTA) in two phases.
+      <span class="rt-cite">{{ law("67762", 12) }}, {{ law("67764", 13) }}</span></li>
+    <li><strong>The commitments.</strong> After Phase 1, each agency had to adopt the strategies it commits to.
+      If the tax passes, Phase 2 follows, and each agency must adopt and follow an implementation plan.
+      <span class="rt-cite">{{ law("67766", 14) }}</span></li>
+    <li><strong>The consequence.</strong> An agency that is not in compliance can have its tax funds withheld,
+      and eventually given to other transit in the same counties. <span class="rt-cite">{{ law("67766(h)", 15) }}</span></li>
+  </ul>
+</div>
+
+{% with compact=false, link_base="" %}{% include "_steps.html.j2" %}{% endwith %}
+
+<section class="rt-section" id="review">
+  <h2>1. The independent review, Phase 1</h2>
+  <p><strong>Who did it.</strong> MTC hired the consulting firm Nelson\Nygaard. The law requires the consultant
+    to work with the agencies and with an oversight committee made up of an MTC commissioner, a board member from
+    each of the four agencies, four independent experts in transit operations and finance appointed by MTC, and
+    nonvoting representatives of the state Transportation Agency and Department of Finance.
+    <span class="rt-cite">{{ law("67764", "13–14") }}; {{ rpt(1) }}</span></p>
+  <p><strong>What it covered.</strong> The law limits Phase 1 to three things: cost-saving measures the agencies
+    had already taken since 2020, “early action strategies” that would help them deliver more or better service
+    and a better rider experience with existing resources, and an inventory of each agency's real estate.
+    <span class="rt-cite">{{ law("67762(b)", "12–13") }}</span></p>
+  <p><strong>What it found about past savings.</strong> For fiscal years 2020 to 2025, the report says AC Transit
+    saved almost $200 million in operating costs (7%), BART $516 million (9%), Caltrain more than $76 million
+    (7%), and SFMTA nearly $300 million (4%). <span class="rt-cite">{{ rpt(3) }}</span></p>
+  <p><strong>What an early action strategy is.</strong> The report describes them as actions agencies “can
+    implement or study in the near term, within the next one to three years.” Many are studies or plans rather
+    than changes that save money by themselves. Phase 1 deliberately left out strategies that would need new
+    upfront revenue, major service changes, changes to labor agreements, long-term restructuring, or new legal
+    authority; those are reserved for Phase 2. <span class="rt-cite">{{ rpt(45) }}; {{ rpt("4–5") }}</span></p>
+  <p>The oversight committee adopted the final Phase 1 report on {{ ms_by_id["m-2026-05-22-phase1-final"].completed_on | date }}.
+    <a href="{{ cfg.report_url }}">Read the Phase 1 report (PDF)</a>.</p>
+</section>
+
+<section class="rt-section" id="commit">
+  <h2>2. The agencies commit</h2>
+  <p>By July 1, 2026, each agency had to “identify the specific strategies in the final adopted phase one analysis
+    that it commits to implementing” and adopt them as formal policy or budget actions.
+    <span class="rt-cite">{{ law("67766(b)", 14) }}</span></p>
+  <p>The law lets each agency choose which strategies to commit to. All four boards voted before the deadline;
+    the <a href="{{ base }}">scorecard</a> shows what each adopted. MTC has since added the adopted strategies to
+    its Productivity Improvement Program, with an estimated completion date of June 2029, and agencies report
+    progress in their annual funding claims. <span class="rt-cite"><a class="rt-cite-link" href="{{ cfg.pip_url }}">MTC Res. 4743</a></span></p>
+  <p><strong>Adopting a strategy is a commitment, not a result.</strong> This tracker records separately whether
+    each one is later carried out. See <a href="{{ base }}methodology/#adopted-implemented">adopted versus implemented</a>.</p>
+</section>
+
+<section class="rt-section" id="phase2">
+  <h2>3. The independent review, Phase 2 (only if the tax passes)</h2>
+  <p>If certified election results show voters approved the tax, Phase 2 must be finished no later than 480 days
+    after certification. <span class="rt-cite">{{ law("67766(c)", 14) }}</span></p>
+  <p>Phase 2 must identify “a menu of cost-saving measures that, if implemented, would reduce one-time and ongoing
+    fixed and variable costs,” measured with figures such as cost per passenger mile and subsidy per passenger
+    mile. It also includes a regional strategy for developing the agencies' real estate. Both phases must clearly
+    separate recommendations that would not affect service from those that would require service changes or cuts.
+    <span class="rt-cite">{{ law("67762(c)–(d)", 13) }}</span></p>
+  {% set cert = ms_by_id["m-election-certified"] %}
+  <p class="rt-note">{% if cert.completed_on %}Election results were certified {{ cert.completed_on | date }}.
+    {% else %}As of {{ cert.status_as_of | date }}, the election results have not been certified, so the Phase 2
+    deadline has no date yet. See the <a href="{{ base }}#m-2026-11-03-election">timeline</a>.{% endif %}</p>
+</section>
+
+<section class="rt-section" id="plans">
+  <h2>4. Implementation plans</h2>
+  <ol class="rt-plain-ol">
+    <li>Within 120 days after Phase 2 is complete, each agency submits a draft implementation plan describing all
+      the cost-saving measures it plans to carry out. The law says the plan must “balance financial efficiency,
+      service, and system safety.” <span class="rt-cite">{{ law("67766(d)", 14) }}</span></li>
+    <li>The oversight committee approves each draft or recommends revisions. <span class="rt-cite">{{ law("67766(e)", 14) }}</span></li>
+    <li>Within 60 days of the committee's action, the agency's board adopts a final plan that incorporates the
+      committee's recommendations. <span class="rt-cite">{{ law("67766(f)", 15) }}</span></li>
+    <li>A board may reject a recommendation only by adopting a written finding that it would have “an unacceptable
+      impact on transit service or safety” or conflicts with other documented local policies. MTC must notify the
+      Legislature within 10 business days. Each finding expires after 12 months unless renewed, and the agency
+      must report on it annually. <span class="rt-cite">{{ law("67766(f)(3)", 15) }}</span></li>
+    <li>Each agency must then follow its final plan until the tax expires, unless circumstances beyond its control
+      make that infeasible, in which case it must make a good faith effort. <span class="rt-cite">{{ law("67766(g)", 15) }}</span></li>
+  </ol>
+</section>
+
+<section class="rt-section" id="funding">
+  <h2>5. Funding depends on compliance</h2>
+  <p>To keep receiving money from the tax, each agency must verify with MTC that it is complying with these
+    requirements. Before withholding funds, MTC must give the agency 90 days to comply. If the agency still has not
+    complied by the time MTC makes its final allocations, the withheld money goes to other public transit in the
+    county or counties the agency serves. <span class="rt-cite">{{ law("67766(h)", "15–16") }}</span></p>
+  <p>MTC, not this tracker, decides whether an agency is in compliance. This site reports what the public record
+    shows about each commitment.</p>
+</section>
+
+<section class="rt-section" id="covered">
+  <h2>What the tracked recommendations cover</h2>
+  <p>The {{ n_total }} Phase 1 recommendations tracked here, by category:</p>
+  <ul class="rt-cat-list">
+    {% for cat, n in by_category %}<li><span>{{ cat | capitalize }}</span> <strong>{{ n }}</strong></li>{% endfor %}
+  </ul>
+  <p>Examples: studying fare evasion and enforcement, running shorter trains when fewer people ride, leasing
+    fiber-optic lines, raising parking revenue, and expanding Clipper BayPass. Each agency page lists every
+    recommendation with its sources.</p>
+</section>
+
+<section class="rt-section" id="questions">
+  <h2>Common questions</h2>
+  <dl class="rt-faq">
+    <dt>Does “adopted” mean money has been saved?</dt>
+    <dd>No. It means the agency's board voted to commit to the strategy. Most Phase 1 strategies are studies or
+      plans, and the Phase 1 report does not estimate savings for individual strategies.</dd>
+    <dt>Why only these four agencies?</dt>
+    <dd>SB 63 names AC Transit, BART, Caltrain, and Muni as the agencies subject to the review. Other agencies that
+      receive money from the tax are outside the efficiency review; they are listed on the
+      <a href="{{ base }}methodology/#scope">Methodology</a> page. <span class="rt-cite">{{ law("67762(a)", 12) }}</span></dd>
+    <dt>What happens if the tax was not approved?</dt>
+    <dd>Phase 2 and the implementation plans are required only if certified results show the tax passed. The
+      Phase 1 commitments were due either way. <span class="rt-cite">{{ law("67766(b)–(c)", 14) }}</span></dd>
+    <dt>Will Phase 2 and the implementation plans be tracked here?</dt>
+    <dd>Yes. They will be added when the documents are published, with the same sourcing rules.</dd>
+    <dt>Who runs this site?</dt>
+    <dd>It is independent and not affiliated with MTC or any agency. See <a href="{{ base }}methodology/#about">who
+      maintains this site</a> and the <a href="{{ base }}methodology/#corrections">corrections policy</a>.</dd>
+  </dl>
+</section>
+
+<section class="rt-section" id="terms">
+  <h2>Terms</h2>
+  <dl class="rt-facts">
+    <dt>MTC</dt><dd>Metropolitan Transportation Commission, the Bay Area's regional transportation planning and funding agency. It runs the review and allocates the tax revenue.</dd>
+    <dt>Oversight committee</dt><dd>The Financial Efficiency Review Independent Oversight Committee described above. It ends once every agency adopts its final implementation plan. <span class="rt-cite">{{ law("67766(g)", 15) }}</span></dd>
+    <dt>Subject operators</dt><dd>The law's term for the four agencies under review.</dd>
+    <dt>RTM</dt><dd>Regional Transit Measure, the name MTC uses for the tax on the November 2026 ballot.</dd>
+  </dl>
+  <p class="rt-meta">Statute citations link to SB 63 (Stats. 2025, Ch. 740); hover for the PDF page. A copy is kept at
+    <a href="{{ base }}{{ cfg.statute_local_copy }}">{{ cfg.statute_local_copy }}</a>.</p>
+</section>
+{% endblock %}

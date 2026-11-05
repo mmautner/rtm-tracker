@@ -1,0 +1,62 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import badge, entry_link with context %}
+{% block title %}Changelog · {{ cfg.site_title }}{% endblock %}
+{% block description %}Every change to the tracker's data, generated from the version history of the data files.{% endblock %}
+{% block main %}
+<span class="rt-eyebrow">Edit history</span>
+<h1>Changelog</h1>
+<p class="rt-lede">Every change to <code>data/commitments.yaml</code> and <code>data/milestones.yaml</code>,
+  newest first. This page is generated from the files' version history, so it cannot be edited separately.
+  Each change links to the exact edit in the <a href="{{ cfg.repo_url }}">public repository</a>.</p>
+
+<p class="rt-meta">Follow along: <a href="{{ base }}changelog.xml">subscribe to this changelog</a> in any feed reader.</p>
+
+{% if not history %}
+<p>No recorded changes yet.</p>
+{% endif %}
+
+{% for commit in history %}
+<article class="rt-change" id="c-{{ commit.sha[:7] }}">
+  <h2><time datetime="{{ commit.date }}">{{ commit.date }}</time>: {{ commit.subject }}</h2>
+  <p class="rt-meta"><a href="{{ cfg.repo_url }}/commit/{{ commit.sha }}">View edit {{ commit.sha[:7] }}</a></p>
+  {% set status_changes = commit.changes | selectattr("status_change") | list %}
+  {% if status_changes %}
+  <h3>Status changes</h3>
+  <ul>
+    {% for ch in status_changes %}
+    <li>{{ entry_link(ch) }}: {{ badge(ch.status_change.old or "unverified") }} → {{ badge(ch.status_change.new or "unverified") }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% set added = commit.changes | selectattr("kind", "equalto", "added") | list %}
+  {% set removed = commit.changes | selectattr("kind", "equalto", "removed") | list %}
+  {% set changed = commit.changes | selectattr("kind", "equalto", "changed") | list %}
+  {% if added %}
+  <details>
+    <summary>Added ({{ added | length }})</summary>
+    <ul>{% for ch in added %}<li>{{ entry_link(ch) }}{% if ch.file.endswith("commitments.yaml") %} ({{ status_label(ch.status) }}){% endif %}</li>{% endfor %}</ul>
+  </details>
+  {% endif %}
+  {% if removed %}
+  <h3>Removed</h3>
+  <ul>{% for ch in removed %}<li><code>{{ ch.id }}</code></li>{% endfor %}</ul>
+  {% endif %}
+  {% if changed %}
+  <details{% if changed | length <= 3 %} open{% endif %}>
+    <summary>Edited ({{ changed | length }})</summary>
+    {% for ch in changed %}
+    <h4>{{ entry_link(ch) }}</h4>
+    <table class="rt-diff">
+      <thead><tr><th scope="col">Field</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
+      <tbody>
+      {% for f in ch.fields %}
+      <tr><th scope="row">{{ f.field }}</th><td>{{ f.old }}</td><td>{{ f.new }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% endfor %}
+  </details>
+  {% endif %}
+</article>
+{% endfor %}
+{% endblock %}

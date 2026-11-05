@@ -1,0 +1,1507 @@
+# Commitments tracked for SB 63 / Measure RTM.
+# One entry per recommended action. See README.md for how to add or update an entry,
+# and the Methodology page for what each status means.
+# status: null | not_adopted | not_started | adopted | in_progress | implemented | missed | superseded
+
+# ---------------------------------------------------------------- AC Transit
+
+- id: ac-transit-p1-fare-compliance-study
+  agency: AC Transit
+  phase: 1
+  recommendation: >-
+    Study fare compliance and enforcement: measure how many riders do not pay and why, identify
+    the staff, technology, and administrative resources needed to improve compliance, and develop
+    a funding and implementation plan.
+  category: revenue
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-10
+    description: >-
+      Board motion (Shaw/McCalley; 6 ayes, 1 absent) to receive the Phase 1 report and adopt the
+      early action strategies as recommended by staff, with the addition of adopting the schedule
+      efficiencies study that benefits riders.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 56
+      type: report
+    - title: "AC Transit Board of Directors, Master Minute Order, Report ID 26-209 (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/28a6060f-8654-4daa-976c-c838ece127de.pdf
+      page: 1
+      type: board_item
+    - title: "AC Transit Staff Report No. 26-209, Bay Area Financial Efficiency Review Phase 1 Report (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/7994623e-315a-4bac-8dda-a1db9d79df61.pdf
+      page: 3
+      type: board_item
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: "5-6"
+      type: board_item
+  notes: "Staff Report 26-209 recommended adopting this strategy in whole."
+
+- id: ac-transit-p1-retail-amenity-study
+  agency: AC Transit
+  phase: 1
+  recommendation: >-
+    Study the benefits, challenges, and opportunities of expanding retail and amenity partnerships
+    at bus stops and stations.
+  category: revenue
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: null
+  target_completion_basis: null
+  board_action:
+    date: 2026-06-10
+    description: >-
+      Board action on the Phase 1 early action strategies (Report ID 26-209). This strategy was
+      not among those adopted.
+  status: not_adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 56
+      type: report
+    - title: "AC Transit Staff Report No. 26-209, Bay Area Financial Efficiency Review Phase 1 Report (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/7994623e-315a-4bac-8dda-a1db9d79df61.pdf
+      page: 3
+      type: board_item
+    - title: "AC Transit Board of Directors, Master Minute Order, Report ID 26-209 (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/28a6060f-8654-4daa-976c-c838ece127de.pdf
+      page: 1
+      type: board_item
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: "5-7"
+      type: board_item
+  notes: >-
+    The Oversight Committee added this strategy by motion on May 22, 2026 (report p. 56, footnote
+    18). It is not among the seven strategies listed in Staff Report 26-209, it is not named in
+    the Board motion, and MTC Res. 4743 does not list it among AC Transit's adopted strategies.
+    The staff report cites pages 49-52 of its Attachment 1; in the final report posted May 27,
+    2026, AC Transit's strategies are on pp. 56-57.
+
+- id: ac-transit-p1-zeb-deferral
+  agency: AC Transit
+  phase: 1
+  recommendation: >-
+    Coordinate with other Bay Area transit agencies to seek a deferral of the state's
+    zero-emission bus transition requirements.
+  category: capital
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-10
+    description: >-
+      Board motion (Shaw/McCalley; 6 ayes, 1 absent) to receive the Phase 1 report and adopt the
+      early action strategies as recommended by staff, with the addition of adopting the schedule
+      efficiencies study that benefits riders.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 56
+      type: report
+    - title: "AC Transit Board of Directors, Master Minute Order, Report ID 26-209 (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/28a6060f-8654-4daa-976c-c838ece127de.pdf
+      page: 1
+      type: board_item
+    - title: "AC Transit Staff Report No. 26-209, Bay Area Financial Efficiency Review Phase 1 Report (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/7994623e-315a-4bac-8dda-a1db9d79df61.pdf
+      page: 3
+      type: board_item
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 6
+      type: board_item
+  notes: "Staff Report 26-209 recommended adopting this strategy in whole."
+
+- id: ac-transit-p1-attendance-incentives
+  agency: AC Transit
+  phase: 1
+  recommendation: >-
+    Extend operator attendance incentives to other high-priority routes, such as school trippers
+    and transbay routes.
+  category: labor/overtime
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-10
+    description: >-
+      Board motion (Shaw/McCalley; 6 ayes, 1 absent) to receive the Phase 1 report and adopt the
+      early action strategies as recommended by staff, with the addition of adopting the schedule
+      efficiencies study that benefits riders.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 56
+      type: report
+    - title: "AC Transit Board of Directors, Master Minute Order, Report ID 26-209 (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/28a6060f-8654-4daa-976c-c838ece127de.pdf
+      page: 1
+      type: board_item
+    - title: "AC Transit Staff Report No. 26-209, Bay Area Financial Efficiency Review Phase 1 Report (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/7994623e-315a-4bac-8dda-a1db9d79df61.pdf
+      page: 3
+      type: board_item
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 6
+      type: board_item
+  notes: "Staff Report 26-209 recommended adopting this strategy in whole."
+
+- id: ac-transit-p1-bus-speed-vision
+  agency: AC Transit
+  phase: 1
+  recommendation: >-
+    Develop a bus speed and reliability vision with roadway owners: identify where buses are slow
+    or unreliable, identify and quantify bus priority measures, and develop a funding and
+    implementation plan.
+  category: service planning
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-10
+    description: >-
+      Board motion (Shaw/McCalley; 6 ayes, 1 absent) to receive the Phase 1 report and adopt the
+      early action strategies as recommended by staff, with the addition of adopting the schedule
+      efficiencies study that benefits riders.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 57
+      type: report
+    - title: "AC Transit Board of Directors, Master Minute Order, Report ID 26-209 (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/28a6060f-8654-4daa-976c-c838ece127de.pdf
+      page: 1
+      type: board_item
+    - title: "AC Transit Staff Report No. 26-209, Bay Area Financial Efficiency Review Phase 1 Report (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/7994623e-315a-4bac-8dda-a1db9d79df61.pdf
+      page: 3
+      type: board_item
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 7
+      type: board_item
+  notes: >-
+    One of three actions under "Improve speed and reliability of service," which Staff Report
+    26-209 recommended adopting in whole.
+
+- id: ac-transit-p1-all-door-boarding-study
+  agency: AC Transit
+  phase: 1
+  recommendation: >-
+    Study the costs, benefits, and need to expand all-door boarding pilots to more routes,
+    including staffing, technology, risks, and possible funding sources.
+  category: service planning
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-10
+    description: >-
+      Board motion (Shaw/McCalley; 6 ayes, 1 absent) to receive the Phase 1 report and adopt the
+      early action strategies as recommended by staff, with the addition of adopting the schedule
+      efficiencies study that benefits riders.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 57
+      type: report
+    - title: "AC Transit Board of Directors, Master Minute Order, Report ID 26-209 (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/28a6060f-8654-4daa-976c-c838ece127de.pdf
+      page: 1
+      type: board_item
+    - title: "AC Transit Staff Report No. 26-209, Bay Area Financial Efficiency Review Phase 1 Report (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/7994623e-315a-4bac-8dda-a1db9d79df61.pdf
+      page: 3
+      type: board_item
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 7
+      type: board_item
+  notes: >-
+    One of three actions under "Improve speed and reliability of service," which Staff Report
+    26-209 recommended adopting in whole.
+
+- id: ac-transit-p1-bus-stop-optimization
+  agency: AC Transit
+  phase: 1
+  recommendation: >-
+    Study where bus stop spacing or location slows service, quantify the benefits of changes, and
+    develop a funding and implementation plan.
+  category: service planning
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-10
+    description: >-
+      Board motion (Shaw/McCalley; 6 ayes, 1 absent) to receive the Phase 1 report and adopt the
+      early action strategies as recommended by staff, with the addition of adopting the schedule
+      efficiencies study that benefits riders.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 57
+      type: report
+    - title: "AC Transit Board of Directors, Master Minute Order, Report ID 26-209 (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/28a6060f-8654-4daa-976c-c838ece127de.pdf
+      page: 1
+      type: board_item
+    - title: "AC Transit Staff Report No. 26-209, Bay Area Financial Efficiency Review Phase 1 Report (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/7994623e-315a-4bac-8dda-a1db9d79df61.pdf
+      page: 3
+      type: board_item
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 7
+      type: board_item
+  notes: >-
+    One of three actions under "Improve speed and reliability of service," which Staff Report
+    26-209 recommended adopting in whole.
+
+- id: ac-transit-p1-scheduling-efficiencies
+  agency: AC Transit
+  phase: 1
+  recommendation: >-
+    Examine schedules and adjust how operator shifts are structured, to maintain reliability and
+    minimize operating costs without affecting service to riders.
+  category: labor/overtime
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: null
+  target_completion_basis: null
+  board_action:
+    date: 2026-06-10
+    description: >-
+      Board motion (Shaw/McCalley; 6 ayes, 1 absent) to receive the Phase 1 report and adopt the
+      early action strategies as recommended by staff, with the addition of adopting the schedule
+      efficiencies study that benefits riders.
+  status: null
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 57
+      type: report
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 54
+      type: report
+    - title: "AC Transit Staff Report No. 26-209, Bay Area Financial Efficiency Review Phase 1 Report (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/7994623e-315a-4bac-8dda-a1db9d79df61.pdf
+      page: "3-4"
+      type: board_item
+    - title: "AC Transit Board of Directors, Master Minute Order, Report ID 26-209 (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/28a6060f-8654-4daa-976c-c838ece127de.pdf
+      page: 1
+      type: board_item
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: "5-7"
+      type: board_item
+  notes: >-
+    Needs verification: primary sources conflict. Staff Report 26-209 (pp. 3-4) recommended not
+    adopting this strategy. The Board's motion added "adopting the schedule efficiencies study
+    that benefits riders." MTC Res. 4743, revised Aug. 26, 2026, does not list a scheduling
+    strategy among AC Transit's adopted strategies. Table 25 of the report (p. 54) lists "Examine
+    schedules for efficiencies" as a Strategy for Future Consideration, while the AC Transit
+    section (p. 57) lists this action as an Early Action Strategy.
+
+- id: ac-transit-p1-easypass-expansion
+  agency: AC Transit
+  phase: 1
+  recommendation: >-
+    In consultation with MTC, identify the internal resources and supporting policies needed to
+    expand EasyPass and/or Clipper BayPass to more institutions and employers.
+  category: ridership/customer experience
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-10
+    description: >-
+      Board motion (Shaw/McCalley; 6 ayes, 1 absent) to receive the Phase 1 report and adopt the
+      early action strategies as recommended by staff, with the addition of adopting the schedule
+      efficiencies study that benefits riders.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 57
+      type: report
+    - title: "AC Transit Board of Directors, Master Minute Order, Report ID 26-209 (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/28a6060f-8654-4daa-976c-c838ece127de.pdf
+      page: 1
+      type: board_item
+    - title: "AC Transit Staff Report No. 26-209, Bay Area Financial Efficiency Review Phase 1 Report (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/7994623e-315a-4bac-8dda-a1db9d79df61.pdf
+      page: 3
+      type: board_item
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 7
+      type: board_item
+  notes: >-
+    Adopted in part. Staff Report 26-209 (p. 3) recommended adopting the EasyPass portion and
+    stated that BayPass expansion should be led by MTC. MTC Res. 4743 (p. 7) lists the adopted
+    strategy as "Expand EasyPass to more institutions and employers."
+
+# ---------------------------------------------------------------- BART
+
+- id: bart-p1-fare-gate-optimization
+  agency: BART
+  phase: 1
+  recommendation: >-
+    Optimize the performance of the new fare gates to further reduce fare evasion, and continue
+    the station hardening program.
+  category: revenue
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-11
+    description: >-
+      Board item 26-249: adoption of the early action strategies identified for BART in the Phase
+      1 report, as listed in the Executive Decision Document. Considered at the same meeting as
+      the FY27 budget.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 58
+      type: report
+    - title: "BART Executive Decision Document, Adopt Senate Bill 63 Phase 1 Financial Efficiency Review Early Action Strategies (Board item 26-249, June 11, 2026)"
+      url: https://bart.legistar1.com/bart/attachments/f481d4b4-6b24-4789-92f2-babbcbc4b5d2.pdf
+      page: "2-3"
+      type: board_item
+    - title: "BART Board adopts FY27 budget with $18M in cuts and reductions in employee headcount (June 11, 2026)"
+      url: https://www.bart.gov/news/articles/2026/news20260611
+      page: null
+      type: news_release
+    - title: "BART Board of Directors response to 2025-2026 Contra Costa County Civil Grand Jury Report No. 2608"
+      url: https://contracosta.courts.ca.gov/system/files/general/response-report-no-2608-bart-board-directors.pdf
+      page: 22
+      type: agency_document
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 8
+      type: board_item
+  notes: >-
+    BART Board minutes for June 11, 2026 were not yet published in Legistar when checked. Adoption
+    is documented by BART's June 11 news release, BART's grand jury response (p. 22: "on June 11,
+    2026, the BART Board approved all eight recommendations"), and MTC Res. 4743.
+
+- id: bart-p1-parking-revenue
+  agency: BART
+  phase: 1
+  recommendation: >-
+    Increase parking revenue through measures such as expanded days or hours of paid parking, rate
+    changes, more enforcement, and leasing or permitting parking at under-used facilities.
+  category: revenue
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-11
+    description: >-
+      Board item 26-249: adoption of the early action strategies identified for BART in the Phase
+      1 report, as listed in the Executive Decision Document. Considered at the same meeting as
+      the FY27 budget.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 58
+      type: report
+    - title: "BART Executive Decision Document, Adopt Senate Bill 63 Phase 1 Financial Efficiency Review Early Action Strategies (Board item 26-249, June 11, 2026)"
+      url: https://bart.legistar1.com/bart/attachments/f481d4b4-6b24-4789-92f2-babbcbc4b5d2.pdf
+      page: "2-3"
+      type: board_item
+    - title: "BART Board adopts FY27 budget with $18M in cuts and reductions in employee headcount (June 11, 2026)"
+      url: https://www.bart.gov/news/articles/2026/news20260611
+      page: null
+      type: news_release
+    - title: "BART Board of Directors response to 2025-2026 Contra Costa County Civil Grand Jury Report No. 2608"
+      url: https://contracosta.courts.ca.gov/system/files/general/response-report-no-2608-bart-board-directors.pdf
+      page: 22
+      type: agency_document
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 8
+      type: board_item
+  notes: >-
+    BART Board minutes for June 11, 2026 were not yet published in Legistar when checked. Adoption
+    is documented by BART's June 11 news release, BART's grand jury response (p. 22: "on June 11,
+    2026, the BART Board approved all eight recommendations"), and MTC Res. 4743.
+
+- id: bart-p1-fiber-leasing
+  agency: BART
+  phase: 1
+  recommendation: >-
+    Earn more revenue from fiber-optic and other communications assets, mainly through additional
+    leasing.
+  category: revenue
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-11
+    description: >-
+      Board item 26-249: adoption of the early action strategies identified for BART in the Phase
+      1 report, as listed in the Executive Decision Document. Considered at the same meeting as
+      the FY27 budget.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 58
+      type: report
+    - title: "BART Executive Decision Document, Adopt Senate Bill 63 Phase 1 Financial Efficiency Review Early Action Strategies (Board item 26-249, June 11, 2026)"
+      url: https://bart.legistar1.com/bart/attachments/f481d4b4-6b24-4789-92f2-babbcbc4b5d2.pdf
+      page: "2-3"
+      type: board_item
+    - title: "BART Board adopts FY27 budget with $18M in cuts and reductions in employee headcount (June 11, 2026)"
+      url: https://www.bart.gov/news/articles/2026/news20260611
+      page: null
+      type: news_release
+    - title: "BART Board of Directors response to 2025-2026 Contra Costa County Civil Grand Jury Report No. 2608"
+      url: https://contracosta.courts.ca.gov/system/files/general/response-report-no-2608-bart-board-directors.pdf
+      page: 22
+      type: agency_document
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: "8-9"
+      type: board_item
+  notes: >-
+    BART Board minutes for June 11, 2026 were not yet published in Legistar when checked. Adoption
+    is documented by BART's June 11 news release, BART's grand jury response (p. 22: "on June 11,
+    2026, the BART Board approved all eight recommendations"), and MTC Res. 4743.
+
+- id: bart-p1-retail-amenity-study
+  agency: BART
+  phase: 1
+  recommendation: >-
+    Study the benefits, challenges, and opportunities of expanding retail and amenity partnerships
+    at stations.
+  category: revenue
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-11
+    description: >-
+      Board item 26-249: adoption of the early action strategies identified for BART in the Phase
+      1 report, as listed in the Executive Decision Document. Considered at the same meeting as
+      the FY27 budget.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 58
+      type: report
+    - title: "BART Executive Decision Document, Adopt Senate Bill 63 Phase 1 Financial Efficiency Review Early Action Strategies (Board item 26-249, June 11, 2026)"
+      url: https://bart.legistar1.com/bart/attachments/f481d4b4-6b24-4789-92f2-babbcbc4b5d2.pdf
+      page: "2-3"
+      type: board_item
+    - title: "BART Board adopts FY27 budget with $18M in cuts and reductions in employee headcount (June 11, 2026)"
+      url: https://www.bart.gov/news/articles/2026/news20260611
+      page: null
+      type: news_release
+    - title: "BART Board of Directors response to 2025-2026 Contra Costa County Civil Grand Jury Report No. 2608"
+      url: https://contracosta.courts.ca.gov/system/files/general/response-report-no-2608-bart-board-directors.pdf
+      page: 22
+      type: agency_document
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 9
+      type: board_item
+  notes: >-
+    The Oversight Committee added this strategy by motion on May 22, 2026 (report p. 58, footnote
+    19). BART Board minutes for June 11, 2026 were not yet published in Legistar when checked.
+    Adoption is documented by BART's June 11 news release, BART's grand jury response (p. 22: "on
+    June 11, 2026, the BART Board approved all eight recommendations"), and MTC Res. 4743.
+
+- id: bart-p1-speed-reliability
+  agency: BART
+  phase: 1
+  recommendation: >-
+    Identify more ways to improve travel time and reliability through changes to scheduling,
+    operations, or investment in new systems or capital projects.
+  category: service planning
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-11
+    description: >-
+      Board item 26-249: adoption of the early action strategies identified for BART in the Phase
+      1 report, as listed in the Executive Decision Document. Considered at the same meeting as
+      the FY27 budget.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 58
+      type: report
+    - title: "BART Executive Decision Document, Adopt Senate Bill 63 Phase 1 Financial Efficiency Review Early Action Strategies (Board item 26-249, June 11, 2026)"
+      url: https://bart.legistar1.com/bart/attachments/f481d4b4-6b24-4789-92f2-babbcbc4b5d2.pdf
+      page: "2-3"
+      type: board_item
+    - title: "BART Board adopts FY27 budget with $18M in cuts and reductions in employee headcount (June 11, 2026)"
+      url: https://www.bart.gov/news/articles/2026/news20260611
+      page: null
+      type: news_release
+    - title: "BART Board of Directors response to 2025-2026 Contra Costa County Civil Grand Jury Report No. 2608"
+      url: https://contracosta.courts.ca.gov/system/files/general/response-report-no-2608-bart-board-directors.pdf
+      page: 22
+      type: agency_document
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 9
+      type: board_item
+  notes: >-
+    BART Board minutes for June 11, 2026 were not yet published in Legistar when checked. Adoption
+    is documented by BART's June 11 news release, BART's grand jury response (p. 22: "on June 11,
+    2026, the BART Board approved all eight recommendations"), and MTC Res. 4743.
+
+- id: bart-p1-shorter-trains
+  agency: BART
+  phase: 1
+  recommendation: >-
+    Run shorter trains during lower-demand periods to better match the cost of service to the fare
+    revenue it generates at different times and days.
+  category: service planning
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-11
+    description: >-
+      Board item 26-249: adoption of the early action strategies identified for BART in the Phase
+      1 report, as listed in the Executive Decision Document. Considered at the same meeting as
+      the FY27 budget.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: "58-59"
+      type: report
+    - title: "BART Executive Decision Document, Adopt Senate Bill 63 Phase 1 Financial Efficiency Review Early Action Strategies (Board item 26-249, June 11, 2026)"
+      url: https://bart.legistar1.com/bart/attachments/f481d4b4-6b24-4789-92f2-babbcbc4b5d2.pdf
+      page: "2-3"
+      type: board_item
+    - title: "BART Board adopts FY27 budget with $18M in cuts and reductions in employee headcount (June 11, 2026)"
+      url: https://www.bart.gov/news/articles/2026/news20260611
+      page: null
+      type: news_release
+    - title: "BART Board of Directors response to 2025-2026 Contra Costa County Civil Grand Jury Report No. 2608"
+      url: https://contracosta.courts.ca.gov/system/files/general/response-report-no-2608-bart-board-directors.pdf
+      page: 22
+      type: agency_document
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 10
+      type: board_item
+  notes: >-
+    The report states BART began running shorter trains in September 2023 and realized $12 million
+    in annual savings (p. 58); that figure describes past savings, not an estimate for this
+    strategy. BART Board minutes for June 11, 2026 were not yet published in Legistar when
+    checked. Adoption is documented by BART's June 11 news release, BART's grand jury response (p.
+    22: "on June 11, 2026, the BART Board approved all eight recommendations"), and MTC Res. 4743.
+
+- id: bart-p1-sfo-lease-terms
+  agency: BART
+  phase: 1
+  recommendation: >-
+    Explore renegotiating the SFO lease payment so it better reflects the benefits, costs,
+    incentives, and risks of BART service to the airport for both parties.
+  category: procurement
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-11
+    description: >-
+      Board item 26-249: adoption of the early action strategies identified for BART in the Phase
+      1 report, as listed in the Executive Decision Document. Considered at the same meeting as
+      the FY27 budget.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 59
+      type: report
+    - title: "BART Executive Decision Document, Adopt Senate Bill 63 Phase 1 Financial Efficiency Review Early Action Strategies (Board item 26-249, June 11, 2026)"
+      url: https://bart.legistar1.com/bart/attachments/f481d4b4-6b24-4789-92f2-babbcbc4b5d2.pdf
+      page: "2-3"
+      type: board_item
+    - title: "BART Board adopts FY27 budget with $18M in cuts and reductions in employee headcount (June 11, 2026)"
+      url: https://www.bart.gov/news/articles/2026/news20260611
+      page: null
+      type: news_release
+    - title: "BART Board of Directors response to 2025-2026 Contra Costa County Civil Grand Jury Report No. 2608"
+      url: https://contracosta.courts.ca.gov/system/files/general/response-report-no-2608-bart-board-directors.pdf
+      page: 22
+      type: agency_document
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 10
+      type: board_item
+  notes: >-
+    Table 25 of the report (p. 54) lists "Examine contracts for opportunities to reduce costs" as
+    a Strategy for Future Consideration, while the BART section (p. 59) lists this action as an
+    Early Action Strategy. BART Board minutes for June 11, 2026 were not yet published in Legistar
+    when checked. Adoption is documented by BART's June 11 news release, BART's grand jury
+    response (p. 22: "on June 11, 2026, the BART Board approved all eight recommendations"), and
+    MTC Res. 4743.
+
+- id: bart-p1-insurance-paratransit-contracts
+  agency: BART
+  phase: 1
+  recommendation: >-
+    Identify opportunities to renegotiate contracts, such as insurance and paratransit, to improve
+    flexibility and achieve one-time or long-term savings.
+  category: procurement
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-11
+    description: >-
+      Board item 26-249: adoption of the early action strategies identified for BART in the Phase
+      1 report, as listed in the Executive Decision Document. Considered at the same meeting as
+      the FY27 budget.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 59
+      type: report
+    - title: "BART Executive Decision Document, Adopt Senate Bill 63 Phase 1 Financial Efficiency Review Early Action Strategies (Board item 26-249, June 11, 2026)"
+      url: https://bart.legistar1.com/bart/attachments/f481d4b4-6b24-4789-92f2-babbcbc4b5d2.pdf
+      page: "2-3"
+      type: board_item
+    - title: "BART Board adopts FY27 budget with $18M in cuts and reductions in employee headcount (June 11, 2026)"
+      url: https://www.bart.gov/news/articles/2026/news20260611
+      page: null
+      type: news_release
+    - title: "BART Board of Directors response to 2025-2026 Contra Costa County Civil Grand Jury Report No. 2608"
+      url: https://contracosta.courts.ca.gov/system/files/general/response-report-no-2608-bart-board-directors.pdf
+      page: 22
+      type: agency_document
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 10
+      type: board_item
+  notes: >-
+    Table 25 of the report (p. 54) lists "Examine contracts for opportunities to reduce costs" as
+    a Strategy for Future Consideration, while the BART section (p. 59) lists this action as an
+    Early Action Strategy. BART Board minutes for June 11, 2026 were not yet published in Legistar
+    when checked. Adoption is documented by BART's June 11 news release, BART's grand jury
+    response (p. 22: "on June 11, 2026, the BART Board approved all eight recommendations"), and
+    MTC Res. 4743.
+
+- id: bart-p1-baypass-expansion
+  agency: BART
+  phase: 1
+  recommendation: >-
+    In consultation with MTC, identify the internal resources and supporting policies needed to
+    expand Clipper BayPass to more institutions and employers.
+  category: ridership/customer experience
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-11
+    description: >-
+      Board item 26-249: adoption of the early action strategies identified for BART in the Phase
+      1 report, as listed in the Executive Decision Document. Considered at the same meeting as
+      the FY27 budget.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 59
+      type: report
+    - title: "BART Executive Decision Document, Adopt Senate Bill 63 Phase 1 Financial Efficiency Review Early Action Strategies (Board item 26-249, June 11, 2026)"
+      url: https://bart.legistar1.com/bart/attachments/f481d4b4-6b24-4789-92f2-babbcbc4b5d2.pdf
+      page: "2-3"
+      type: board_item
+    - title: "BART Board adopts FY27 budget with $18M in cuts and reductions in employee headcount (June 11, 2026)"
+      url: https://www.bart.gov/news/articles/2026/news20260611
+      page: null
+      type: news_release
+    - title: "BART Board of Directors response to 2025-2026 Contra Costa County Civil Grand Jury Report No. 2608"
+      url: https://contracosta.courts.ca.gov/system/files/general/response-report-no-2608-bart-board-directors.pdf
+      page: 22
+      type: agency_document
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 10
+      type: board_item
+  notes: >-
+    BART Board minutes for June 11, 2026 were not yet published in Legistar when checked. Adoption
+    is documented by BART's June 11 news release, BART's grand jury response (p. 22: "on June 11,
+    2026, the BART Board approved all eight recommendations"), and MTC Res. 4743.
+
+# ---------------------------------------------------------------- Caltrain
+
+- id: caltrain-p1-parking-revenue
+  agency: Caltrain
+  phase: 1
+  recommendation: >-
+    Increase parking revenue through measures such as expanded days or hours of paid parking, rate
+    changes, more enforcement, and leasing or permitting parking at under-used lots.
+  category: revenue
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-04
+    description: >-
+      Board adopted Resolution No. 2026-28, Adopt Senate Bill 63 Phase 1 Financial Efficiency
+      Review Early Action Strategies (motion Heminger/Cohen; 8 ayes, 0 noes, 1 absent).
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 60
+      type: report
+    - title: "Caltrain (Peninsula Corridor JPB) Board of Directors, Minutes of June 4, 2026, item 12"
+      url: https://www.caltrain.com/media/37536/download
+      page: 5
+      type: board_item
+    - title: "Caltrain staff presentation, Adopt SB63 Phase 1 Financial Efficiency Review Early Action Strategies (June 4, 2026)"
+      url: https://www.caltrain.com/media/37136/download
+      page: 6
+      type: board_item
+    - title: "Caltrain Adopts FY27 Operating Budget and All Independent Efficiency Report Recommendations (June 4, 2026)"
+      url: https://www.caltrain.com/news/caltrain-adopts-fy27-operating-budget-and-all-independent-efficiency-report-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 11
+      type: board_item
+  notes: >-
+    The text of Resolution No. 2026-28 has not been located; the strategy wording is taken from
+    the staff presentation, which differs slightly from the report.
+
+- id: caltrain-p1-fiber-leasing
+  agency: Caltrain
+  phase: 1
+  recommendation: >-
+    Earn more revenue from fiber-optic and other communications assets, mainly through additional
+    leasing.
+  category: revenue
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-04
+    description: >-
+      Board adopted Resolution No. 2026-28, Adopt Senate Bill 63 Phase 1 Financial Efficiency
+      Review Early Action Strategies (motion Heminger/Cohen; 8 ayes, 0 noes, 1 absent).
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 60
+      type: report
+    - title: "Caltrain (Peninsula Corridor JPB) Board of Directors, Minutes of June 4, 2026, item 12"
+      url: https://www.caltrain.com/media/37536/download
+      page: 5
+      type: board_item
+    - title: "Caltrain staff presentation, Adopt SB63 Phase 1 Financial Efficiency Review Early Action Strategies (June 4, 2026)"
+      url: https://www.caltrain.com/media/37136/download
+      page: 6
+      type: board_item
+    - title: "Caltrain Adopts FY27 Operating Budget and All Independent Efficiency Report Recommendations (June 4, 2026)"
+      url: https://www.caltrain.com/news/caltrain-adopts-fy27-operating-budget-and-all-independent-efficiency-report-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 11
+      type: board_item
+  notes: >-
+    The text of Resolution No. 2026-28 has not been located; the strategy wording is taken from
+    the staff presentation, which differs slightly from the report.
+
+- id: caltrain-p1-retail-amenity-study
+  agency: Caltrain
+  phase: 1
+  recommendation: >-
+    Study the benefits, challenges, and opportunities of expanding retail and amenity partnerships
+    at stations.
+  category: revenue
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-04
+    description: >-
+      Board adopted Resolution No. 2026-28, Adopt Senate Bill 63 Phase 1 Financial Efficiency
+      Review Early Action Strategies (motion Heminger/Cohen; 8 ayes, 0 noes, 1 absent).
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 60
+      type: report
+    - title: "Caltrain (Peninsula Corridor JPB) Board of Directors, Minutes of June 4, 2026, item 12"
+      url: https://www.caltrain.com/media/37536/download
+      page: 5
+      type: board_item
+    - title: "Caltrain staff presentation, Adopt SB63 Phase 1 Financial Efficiency Review Early Action Strategies (June 4, 2026)"
+      url: https://www.caltrain.com/media/37136/download
+      page: 7
+      type: board_item
+    - title: "Caltrain Adopts FY27 Operating Budget and All Independent Efficiency Report Recommendations (June 4, 2026)"
+      url: https://www.caltrain.com/news/caltrain-adopts-fy27-operating-budget-and-all-independent-efficiency-report-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: "11-12"
+      type: board_item
+  notes: >-
+    The Oversight Committee added this strategy by motion on May 22, 2026 (report p. 60, footnote
+    20). The text of Resolution No. 2026-28 has not been located; the strategy wording is taken
+    from the staff presentation, which differs slightly from the report.
+
+- id: caltrain-p1-operator-contract-study
+  agency: Caltrain
+  phase: 1
+  recommendation: >-
+    Study where administration of the train operations contract, work practices, or other
+    processes could be made more efficient without affecting safety, reliability, or compliance.
+  category: procurement
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-04
+    description: >-
+      Board adopted Resolution No. 2026-28, Adopt Senate Bill 63 Phase 1 Financial Efficiency
+      Review Early Action Strategies (motion Heminger/Cohen; 8 ayes, 0 noes, 1 absent).
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 60
+      type: report
+    - title: "Caltrain (Peninsula Corridor JPB) Board of Directors, Minutes of June 4, 2026, item 12"
+      url: https://www.caltrain.com/media/37536/download
+      page: 5
+      type: board_item
+    - title: "Caltrain staff presentation, Adopt SB63 Phase 1 Financial Efficiency Review Early Action Strategies (June 4, 2026)"
+      url: https://www.caltrain.com/media/37136/download
+      page: 6
+      type: board_item
+    - title: "Caltrain Adopts FY27 Operating Budget and All Independent Efficiency Report Recommendations (June 4, 2026)"
+      url: https://www.caltrain.com/news/caltrain-adopts-fy27-operating-budget-and-all-independent-efficiency-report-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 12
+      type: board_item
+  notes: >-
+    The report gives the operator contract's annual value as $100-150 million (p. 60); that is the
+    contract's value, not a savings estimate. The text of Resolution No. 2026-28 has not been
+    located; the strategy wording is taken from the staff presentation, which differs slightly
+    from the report.
+
+- id: caltrain-p1-energy-storage-study
+  agency: Caltrain
+  phase: 1
+  recommendation: >-
+    Study the feasibility of storing electricity that trains return to the grid, including the
+    value of the energy, how it could be collected, and costs and benefits.
+  category: energy
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-04
+    description: >-
+      Board adopted Resolution No. 2026-28, Adopt Senate Bill 63 Phase 1 Financial Efficiency
+      Review Early Action Strategies (motion Heminger/Cohen; 8 ayes, 0 noes, 1 absent).
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 60
+      type: report
+    - title: "Caltrain (Peninsula Corridor JPB) Board of Directors, Minutes of June 4, 2026, item 12"
+      url: https://www.caltrain.com/media/37536/download
+      page: 5
+      type: board_item
+    - title: "Caltrain staff presentation, Adopt SB63 Phase 1 Financial Efficiency Review Early Action Strategies (June 4, 2026)"
+      url: https://www.caltrain.com/media/37136/download
+      page: 7
+      type: board_item
+    - title: "Caltrain Adopts FY27 Operating Budget and All Independent Efficiency Report Recommendations (June 4, 2026)"
+      url: https://www.caltrain.com/news/caltrain-adopts-fy27-operating-budget-and-all-independent-efficiency-report-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 12
+      type: board_item
+  notes: >-
+    The text of Resolution No. 2026-28 has not been located; the strategy wording is taken from
+    the staff presentation, which differs slightly from the report.
+
+- id: caltrain-p1-gopass-baypass-expansion
+  agency: Caltrain
+  phase: 1
+  recommendation: >-
+    In consultation with MTC, identify the internal resources and supporting policies needed to
+    expand Clipper BayPass or GoPass to more institutions and employers.
+  category: ridership/customer experience
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-04
+    description: >-
+      Board adopted Resolution No. 2026-28, Adopt Senate Bill 63 Phase 1 Financial Efficiency
+      Review Early Action Strategies (motion Heminger/Cohen; 8 ayes, 0 noes, 1 absent).
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 61
+      type: report
+    - title: "Caltrain (Peninsula Corridor JPB) Board of Directors, Minutes of June 4, 2026, item 12"
+      url: https://www.caltrain.com/media/37536/download
+      page: 5
+      type: board_item
+    - title: "Caltrain staff presentation, Adopt SB63 Phase 1 Financial Efficiency Review Early Action Strategies (June 4, 2026)"
+      url: https://www.caltrain.com/media/37136/download
+      page: 7
+      type: board_item
+    - title: "Caltrain Adopts FY27 Operating Budget and All Independent Efficiency Report Recommendations (June 4, 2026)"
+      url: https://www.caltrain.com/news/caltrain-adopts-fy27-operating-budget-and-all-independent-efficiency-report-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: "12-13"
+      type: board_item
+  notes: >-
+    The text of Resolution No. 2026-28 has not been located; the strategy wording is taken from
+    the staff presentation, which differs slightly from the report.
+
+# ---------------------------------------------------------------- SFMTA
+
+- id: sfmta-p1-fare-compliance-study
+  agency: SFMTA
+  phase: 1
+  recommendation: >-
+    Study fare compliance and enforcement: measure compliance, learn why riders do not pay,
+    identify the staff, technology, and administrative resources needed, and develop a funding and
+    implementation plan.
+  category: revenue
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-16
+    description: >-
+      Board adopted Resolution No. 260616-052, adopting the Recommended Early Action Strategies
+      listed in the resolution (items A through J) as SFMTA policy and directing staff to pursue
+      them.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 62
+      type: report
+    - title: "SFMTA Board of Directors Resolution No. 260616-052 (June 16, 2026)"
+      url: https://www.sfmta.com/media/45289/download?inline
+      page: "2-3"
+      type: board_item
+    - title: "SFMTA Board Adopts MTC Financial Efficiency Recommendations (June 16, 2026)"
+      url: https://www.sfmta.com/press-releases/press-release-sfmta-board-adopts-mtc-financial-efficiency-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 15
+      type: board_item
+  notes: "Item A in Resolution No. 260616-052."
+
+- id: sfmta-p1-parking-revenue
+  agency: SFMTA
+  phase: 1
+  recommendation: >-
+    Increase parking revenue through measures such as expanded days or hours of paid parking, rate
+    changes, more enforcement, and leasing or permitting parking at under-used facilities.
+  category: revenue
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-16
+    description: >-
+      Board adopted Resolution No. 260616-052, adopting the Recommended Early Action Strategies
+      listed in the resolution (items A through J) as SFMTA policy and directing staff to pursue
+      them.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 62
+      type: report
+    - title: "SFMTA Board of Directors Resolution No. 260616-052 (June 16, 2026)"
+      url: https://www.sfmta.com/media/45289/download?inline
+      page: "2-3"
+      type: board_item
+    - title: "SFMTA Board Adopts MTC Financial Efficiency Recommendations (June 16, 2026)"
+      url: https://www.sfmta.com/press-releases/press-release-sfmta-board-adopts-mtc-financial-efficiency-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: "15-16"
+      type: board_item
+  notes: "Item B in Resolution No. 260616-052."
+
+- id: sfmta-p1-retail-amenity-study
+  agency: SFMTA
+  phase: 1
+  recommendation: >-
+    Study the benefits, challenges, and opportunities of expanding retail and amenity partnerships
+    at bus stops and stations.
+  category: revenue
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: null
+  target_completion_basis: null
+  board_action:
+    date: 2026-06-16
+    description: >-
+      Board action on the Phase 1 early action strategies (Resolution No. 260616-052). This
+      strategy was not among those adopted.
+  status: not_adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 62
+      type: report
+    - title: "SFMTA Board of Directors Resolution No. 260616-052 (June 16, 2026)"
+      url: https://www.sfmta.com/media/45289/download?inline
+      page: 2
+      type: board_item
+    - title: "SFMTA Board Adopts MTC Financial Efficiency Recommendations (June 16, 2026)"
+      url: https://www.sfmta.com/press-releases/press-release-sfmta-board-adopts-mtc-financial-efficiency-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: "15-18"
+      type: board_item
+  notes: >-
+    The Oversight Committee added this strategy by motion on May 22, 2026 (report p. 62, footnote
+    21). It is not among items A through J in Resolution No. 260616-052, which the resolution
+    describes as the report's Recommended Early Action Strategies, and MTC Res. 4743 does not list
+    it among SFMTA's adopted strategies. SFMTA's June 16, 2026 press release says the Board "voted
+    to adopt all the recommendations" and lists nine strategy areas; this strategy is not among
+    them.
+
+- id: sfmta-p1-zeb-deferral
+  agency: SFMTA
+  phase: 1
+  recommendation: >-
+    Coordinate with other Bay Area transit agencies to seek a deferral of the state's
+    zero-emission bus transition requirements.
+  category: capital
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-16
+    description: >-
+      Board adopted Resolution No. 260616-052, adopting the Recommended Early Action Strategies
+      listed in the resolution (items A through J) as SFMTA policy and directing staff to pursue
+      them.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 62
+      type: report
+    - title: "SFMTA Board of Directors Resolution No. 260616-052 (June 16, 2026)"
+      url: https://www.sfmta.com/media/45289/download?inline
+      page: "2-3"
+      type: board_item
+    - title: "SFMTA Board Adopts MTC Financial Efficiency Recommendations (June 16, 2026)"
+      url: https://www.sfmta.com/press-releases/press-release-sfmta-board-adopts-mtc-financial-efficiency-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 16
+      type: board_item
+  notes: "Item C in Resolution No. 260616-052."
+
+- id: sfmta-p1-scheduling-efficiencies
+  agency: SFMTA
+  phase: 1
+  recommendation: >-
+    Identify and carry out scheduling efficiencies that do not affect service to riders, such as
+    changing how operator shifts are structured.
+  category: labor/overtime
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-16
+    description: >-
+      Board adopted Resolution No. 260616-052, adopting the Recommended Early Action Strategies
+      listed in the resolution (items A through J) as SFMTA policy and directing staff to pursue
+      them.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 62
+      type: report
+    - title: "SFMTA Board of Directors Resolution No. 260616-052 (June 16, 2026)"
+      url: https://www.sfmta.com/media/45289/download?inline
+      page: "2-3"
+      type: board_item
+    - title: "SFMTA Board Adopts MTC Financial Efficiency Recommendations (June 16, 2026)"
+      url: https://www.sfmta.com/press-releases/press-release-sfmta-board-adopts-mtc-financial-efficiency-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 16
+      type: board_item
+  notes: "Item D in Resolution No. 260616-052."
+
+- id: sfmta-p1-attendance-incentives
+  agency: SFMTA
+  phase: 1
+  recommendation: "Offer operator attendance incentives on high-priority routes."
+  category: labor/overtime
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-16
+    description: >-
+      Board adopted Resolution No. 260616-052, adopting the Recommended Early Action Strategies
+      listed in the resolution (items A through J) as SFMTA policy and directing staff to pursue
+      them.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 62
+      type: report
+    - title: "SFMTA Board of Directors Resolution No. 260616-052 (June 16, 2026)"
+      url: https://www.sfmta.com/media/45289/download?inline
+      page: "2-3"
+      type: board_item
+    - title: "SFMTA Board Adopts MTC Financial Efficiency Recommendations (June 16, 2026)"
+      url: https://www.sfmta.com/press-releases/press-release-sfmta-board-adopts-mtc-financial-efficiency-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 16
+      type: board_item
+  notes: "Item E in Resolution No. 260616-052."
+
+- id: sfmta-p1-bus-stop-optimization
+  agency: SFMTA
+  phase: 1
+  recommendation: >-
+    Study where bus stop spacing or location slows service, quantify the benefits of changes, and
+    develop a funding and implementation plan.
+  category: service planning
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-16
+    description: >-
+      Board adopted Resolution No. 260616-052, adopting the Recommended Early Action Strategies
+      listed in the resolution (items A through J) as SFMTA policy and directing staff to pursue
+      them.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 63
+      type: report
+    - title: "SFMTA Board of Directors Resolution No. 260616-052 (June 16, 2026)"
+      url: https://www.sfmta.com/media/45289/download?inline
+      page: "2-3"
+      type: board_item
+    - title: "SFMTA Board Adopts MTC Financial Efficiency Recommendations (June 16, 2026)"
+      url: https://www.sfmta.com/press-releases/press-release-sfmta-board-adopts-mtc-financial-efficiency-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 17
+      type: board_item
+  notes: "Item F in Resolution No. 260616-052."
+
+- id: sfmta-p1-transit-priority-reinvestment
+  agency: SFMTA
+  phase: 1
+  recommendation: "Continue reinvesting savings from transit priority projects back into service."
+  category: service planning
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-16
+    description: >-
+      Board adopted Resolution No. 260616-052, adopting the Recommended Early Action Strategies
+      listed in the resolution (items A through J) as SFMTA policy and directing staff to pursue
+      them.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 63
+      type: report
+    - title: "SFMTA Board of Directors Resolution No. 260616-052 (June 16, 2026)"
+      url: https://www.sfmta.com/media/45289/download?inline
+      page: "2-3"
+      type: board_item
+    - title: "SFMTA Board Adopts MTC Financial Efficiency Recommendations (June 16, 2026)"
+      url: https://www.sfmta.com/press-releases/press-release-sfmta-board-adopts-mtc-financial-efficiency-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 17
+      type: board_item
+  notes: "Item G in Resolution No. 260616-052."
+
+- id: sfmta-p1-shorter-trains
+  agency: SFMTA
+  phase: 1
+  recommendation: >-
+    Identify more opportunities to run shorter light-rail trains during lower-demand periods.
+  category: service planning
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-16
+    description: >-
+      Board adopted Resolution No. 260616-052, adopting the Recommended Early Action Strategies
+      listed in the resolution (items A through J) as SFMTA policy and directing staff to pursue
+      them.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 63
+      type: report
+    - title: "SFMTA Board of Directors Resolution No. 260616-052 (June 16, 2026)"
+      url: https://www.sfmta.com/media/45289/download?inline
+      page: "2-3"
+      type: board_item
+    - title: "SFMTA Board Adopts MTC Financial Efficiency Recommendations (June 16, 2026)"
+      url: https://www.sfmta.com/press-releases/press-release-sfmta-board-adopts-mtc-financial-efficiency-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 17
+      type: board_item
+  notes: "Item H in Resolution No. 260616-052."
+
+- id: sfmta-p1-contract-review
+  agency: SFMTA
+  phase: 1
+  recommendation: >-
+    Review high-spend contracts to determine whether the services can be provided at lower cost.
+  category: procurement
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-16
+    description: >-
+      Board adopted Resolution No. 260616-052, adopting the Recommended Early Action Strategies
+      listed in the resolution (items A through J) as SFMTA policy and directing staff to pursue
+      them.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 63
+      type: report
+    - title: "SFMTA Board of Directors Resolution No. 260616-052 (June 16, 2026)"
+      url: https://www.sfmta.com/media/45289/download?inline
+      page: "2-3"
+      type: board_item
+    - title: "SFMTA Board Adopts MTC Financial Efficiency Recommendations (June 16, 2026)"
+      url: https://www.sfmta.com/press-releases/press-release-sfmta-board-adopts-mtc-financial-efficiency-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: "17-18"
+      type: board_item
+  notes: "Item I in Resolution No. 260616-052."
+
+- id: sfmta-p1-baypass-expansion
+  agency: SFMTA
+  phase: 1
+  recommendation: >-
+    In consultation with MTC, identify the internal resources and supporting policies needed to
+    adopt or expand pass programs like Clipper BayPass with more institutions and employers.
+  category: ridership/customer experience
+  estimated_savings_usd: null
+  savings_basis: "The Phase 1 report does not estimate savings for this strategy."
+  required_by: m-2026-07-01-operator-adoption
+  target_completion: "2029-06"
+  target_completion_basis: "Estimated completion date in MTC Res. 4743, Attachment A."
+  board_action:
+    date: 2026-06-16
+    description: >-
+      Board adopted Resolution No. 260616-052, adopting the Recommended Early Action Strategies
+      listed in the resolution (items A through J) as SFMTA policy and directing staff to pursue
+      them.
+  status: adopted
+  status_as_of: 2026-11-04
+  sources:
+    - title: "Bay Area Financial Efficiency Review, Final Report (Phase 1), posted May 27, 2026"
+      url: https://mtc.ca.gov/sites/default/files/documents/2026-05/Final%20Phase%20One%20Financial%20Efficiency%20Review%20Report_20260527.pdf
+      page: 63
+      type: report
+    - title: "SFMTA Board of Directors Resolution No. 260616-052 (June 16, 2026)"
+      url: https://www.sfmta.com/media/45289/download?inline
+      page: "2-3"
+      type: board_item
+    - title: "SFMTA Board Adopts MTC Financial Efficiency Recommendations (June 16, 2026)"
+      url: https://www.sfmta.com/press-releases/press-release-sfmta-board-adopts-mtc-financial-efficiency-recommendations
+      page: null
+      type: news_release
+    - title: "MTC Resolution No. 4743, Revised Aug. 26, 2026, Attachment A (Productivity Improvement Program)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_2_MTC_Resolution_4743.pdf
+      page: 18
+      type: board_item
+  notes: "Item J in Resolution No. 260616-052."

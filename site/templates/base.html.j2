@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>(function(){var s=null;try{s=localStorage.getItem('theme')}catch(e){}var r=document.documentElement;r.setAttribute('data-theme',s||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'));})();</script>
+<title>{% block title %}{{ cfg.site_title }}{% endblock %}</title>
+<meta name="description" content="{% block description %}Tracks whether Muni (SFMTA), BART, AC Transit, and Caltrain carry out the cost-saving commitments required by California SB 63. Every entry links to a primary source.{% endblock %}">
+<link rel="canonical" href="{{ cfg.site_url }}{{ base }}{% if current %}{{ current }}/{% endif %}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Max Mautner">
+<meta property="og:title" content="{{ self.title() }}">
+<meta property="og:description" content="{{ self.description() }}">
+{% set og_name = agency.slug if agency is defined else "index" %}
+<meta property="og:url" content="{{ cfg.site_url }}{{ base }}{% if current %}{{ current }}/{% endif %}">
+{% if og_ver[og_name] is defined %}
+<meta property="og:image" content="{{ cfg.site_url }}{{ base }}og/{{ og_name }}.png?v={{ og_ver[og_name] }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ self.description() }}">
+<meta name="twitter:card" content="summary_large_image">
+{% endif %}
+<link rel="icon" href="/favicon.png">
+<link rel="preload" href="{{ cfg.blog_fonts }}newsreader-v5.1.1-latin-opsz.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ cfg.blog_fonts }}ibm-plex-sans-v5.1.1-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Newsreader";font-style:normal;font-weight:200 800;font-display:swap;src:url({{ cfg.blog_fonts }}newsreader-v5.1.1-latin-opsz.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;font-display:swap;src:url({{ cfg.blog_fonts }}ibm-plex-sans-v5.1.1-latin-400.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:500;font-display:swap;src:url({{ cfg.blog_fonts }}ibm-plex-sans-v5.1.1-latin-500.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:600;font-display:swap;src:url({{ cfg.blog_fonts }}ibm-plex-sans-v5.1.1-latin-600.woff2) format("woff2")}
+</style>
+<link rel="stylesheet" href="{{ base }}static/rtm.css?v={{ ver }}">
+<link rel="stylesheet" href="{{ cfg.site_css }}">
+<link rel="alternate" type="text/csv" href="{{ base }}data/commitments.csv" title="All entries (CSV)">
+<link rel="alternate" type="application/json" href="{{ base }}data/commitments.json" title="All entries (JSON)">
+<link rel="alternate" type="application/atom+xml" href="{{ base }}changelog.xml" title="{{ cfg.site_title }}: changes">
+</head>
+
+<body>
+<a class="rt-skip" href="#content">Skip to content</a>
+<main role="main">
+<header role="banner">
+  <a href="/" class="site-title">Max Mautner</a>
+  <nav role="navigation" aria-label="maxmautner.com"><ul>
+    <li><a href="/writing/">Essays</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/subscribe/" class="nav-button">Subscribe</a></li>
+    <li><button class="dark-mode-toggle" id="darkModeToggle" type="button" aria-label="Dark mode" aria-pressed="false">
+      <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button></li>
+  </ul></nav>
+</header>
+<script>(function(){var t=document.getElementById('darkModeToggle'),r=document.documentElement;function sync(){t.setAttribute('aria-pressed',r.getAttribute('data-theme')==='dark'?'true':'false')}sync();t.addEventListener('click',function(){var d=r.getAttribute('data-theme')!=='dark';r.setAttribute('data-theme',d?'dark':'light');try{localStorage.setItem('theme',d?'dark':'light')}catch(e){}sync()});})();</script>
+
+<div class="rt">
+  <nav class="rt-nav" aria-label="Tracker">
+    <a class="rt-nav-title" href="{{ base }}">{{ cfg.site_title }}</a>
+    <ul>
+      <li><a href="{{ base }}"{% if current == "" %} aria-current="page"{% endif %}>Overview</a></li>
+      <li><a href="{{ base }}how-it-works/"{% if current == "how-it-works" %} aria-current="page"{% endif %}>How it works</a></li>
+      {% for a in agencies %}
+      <li><a href="{{ base }}{{ a.slug }}/" style="--agency: {{ a.color }}"{% if current == a.slug %} aria-current="page"{% endif %}><span class="rt-dot" aria-hidden="true"></span>{{ a.display }}</a></li>
+      {% endfor %}
+      <li><a href="{{ base }}methodology/"{% if current == "methodology" %} aria-current="page"{% endif %}>Methodology</a></li>
+      <li><a href="{{ base }}changelog/"{% if current == "changelog" %} aria-current="page"{% endif %}>Changelog</a></li>
+    </ul>
+  </nav>
+
+  <div id="content" class="rt-content">
+{% block main %}{% endblock %}
+  </div>
+
+  <footer class="rt-foot">
+    <p><strong>Download the data:</strong>
+      <a href="{{ base }}data/commitments.csv">commitments.csv</a> ·
+      <a href="{{ base }}data/commitments.json">commitments.json</a> ·
+      <a href="{{ base }}data/milestones.json">milestones.json</a></p>
+    <p><strong>Follow changes:</strong> <a href="{{ base }}changelog.xml">RSS/Atom feed</a> of every status change and correction ·
+      <a href="/subscribe/">get Max's posts by email</a></p>
+    <p>Most recent check of any entry: {{ last_verified | date }}. Each entry shows its own “last verified” date.</p>
+    <p>Found an error? See the <a href="{{ base }}methodology/#corrections">corrections policy</a> or email
+      <a href="mailto:{{ cfg.contact_email }}?subject=Correction%3A%20RTM%20tracker">{{ cfg.contact_email }}</a>.
+      Source data and full edit history: <a href="{{ cfg.repo_url }}">{{ cfg.repo_url | replace("https://", "") }}</a>.</p>
+    <p>Made by <a href="{{ cfg.maintainer_url }}">{{ cfg.maintainer }}</a>. Independent: not affiliated with or endorsed by MTC or any agency;
+      agency names and colors are used only to identify them. <a href="{{ base }}methodology/#about">About this tracker</a>.</p>
+  </footer>
+</div>
+</main>
+{% block scripts %}{% endblock %}
+<script src="{{ base }}static/print.js?v={{ ver }}" defer></script>
+</body>
+</html>

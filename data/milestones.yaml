@@ -1,0 +1,217 @@
+# Statutory milestones for the SB 63 financial efficiency review (Gov. Code §67766).
+#
+# A milestone has either a fixed `deadline` or a `deadline_rule` ("N days after milestone X").
+# When X gets a `completed_on` date, the site computes this milestone's deadline from it.
+# Example: set completed_on on m-election-certified and the Phase 2 deadline appears.
+#
+# `estimates` are timelines that MTC or an agency has published. The site shows them
+# beside the statutory rule, labeled as estimates, with their source.
+# Page numbers for the statute refer to the PDF of the chaptered bill (Ch. 740), also
+# kept in sources/sb63-chaptered.pdf.
+
+- id: m-2026-05-22-phase1-final
+  title: Oversight committee adopts final Phase 1 analysis
+  short_title: Final Phase 1 analysis adopted
+  responsible: oversight committee
+  statute: Gov. Code §67766(a)
+  deadline: null
+  deadline_rule: null
+  completed_on: 2026-05-22
+  outcome: >-
+    The Financial Efficiency Review Independent Oversight Committee adopted the Phase 1 report on
+    May 22, 2026, and directed staff to make minor revisions and add one early action strategy.
+    The revised report was posted May 27, 2026.
+  estimates: []
+  status_as_of: 2026-11-04
+  sources:
+    - title: "SB 63 (Wiener), Stats. 2025, Ch. 740, Gov. Code §67766(a)"
+      url: https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB63
+      page: 14
+      type: statute
+    - title: "MTC: Independent Oversight Committee Approves Transit Agencies' Financial Efficiency Review (May 27, 2026)"
+      url: https://mtc.ca.gov/news/independent-oversight-committee-approves-transit-agencies-financial-efficiency-review
+      page: null
+      type: news_release
+
+- id: m-2026-07-01-operator-adoption
+  title: Each agency identifies the Phase 1 strategies it commits to and adopts them as policy or budget actions
+  short_title: Agencies adopt Phase 1 strategies
+  responsible: operators
+  statute: Gov. Code §67766(b)
+  deadline: 2026-07-01
+  deadline_rule: null
+  completed_on: 2026-06-16
+  outcome: >-
+    All four boards acted before the deadline: Caltrain on June 4, AC Transit on June 10, BART on
+    June 11, and SFMTA on June 16, 2026. MTC reports that 29 of 32 early action strategies were
+    adopted in whole or in part. The completion date shown is the last of the four actions.
+  estimates: []
+  status_as_of: 2026-11-04
+  sources:
+    - title: "SB 63 (Wiener), Stats. 2025, Ch. 740, Gov. Code §67766(b)"
+      url: https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB63
+      page: 14
+      type: statute
+    - title: "MTC Programming and Allocations Committee, Agenda Item 3a-26-0808, Summary Sheet (Aug. 12, 2026)"
+      url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_1_Summary_Sheet_FY25_26_PIP_ACTransit_SFMTA_BART.pdf
+      page: 2
+      type: board_item
+    - title: "Caltrain (Peninsula Corridor JPB) Board of Directors, Minutes of June 4, 2026, item 12"
+      url: https://www.caltrain.com/media/37536/download
+      page: 5
+      type: board_item
+    - title: "AC Transit Board of Directors, Master Minute Order, Report ID 26-209 (June 10, 2026)"
+      url: https://actransit.legistar1.com/actransit/attachments/28a6060f-8654-4daa-976c-c838ece127de.pdf
+      page: 1
+      type: board_item
+    - title: "BART Board adopts FY27 budget with $18M in cuts and reductions in employee headcount (June 11, 2026)"
+      url: https://www.bart.gov/news/articles/2026/news20260611
+      page: null
+      type: news_release
+    - title: "SFMTA Board of Directors Resolution No. 260616-052 (June 16, 2026)"
+      url: https://www.sfmta.com/media/45289/download?inline
+      page: 3
+      type: board_item
+
+- id: m-2026-11-03-election
+  title: Election on the Regional Transit Measure (RTM)
+  short_title: Election
+  responsible: voters
+  statute: Gov. Code §67740(a)
+  deadline: 2026-11-03
+  deadline_rule: null
+  completed_on: 2026-11-03
+  outcome: >-
+    The election was held November 3, 2026. MTC's November 4, 2026 release, based on results
+    reported so far, states that voters "appear to have approved the Regional Transit Measure
+    (RTM)." Certified results have not yet been recorded here.
+  estimates: []
+  status_as_of: 2026-11-04
+  sources:
+    - title: "SB 63 (Wiener), Stats. 2025, Ch. 740, Gov. Code §67740(a)"
+      url: https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB63
+      page: 7
+      type: statute
+    - title: "MTC: Bay Area Voters Show Strong Support for Public Transit (Nov. 4, 2026)"
+      url: https://mtc.ca.gov/news/bay-area-voters-show-strong-support-public-transit
+      page: null
+      type: news_release
+
+- id: m-election-certified
+  title: Election results certified
+  short_title: Election results certified
+  responsible: county elections officials
+  statute: Gov. Code §67766(c)
+  deadline: null
+  deadline_rule: null
+  completed_on: null
+  outcome: >-
+    Not yet recorded. The Phase 2 deadline is counted from the date the results are certified.
+  estimates: []
+  status_as_of: 2026-11-04
+  sources:
+    - title: "SB 63 (Wiener), Stats. 2025, Ch. 740, Gov. Code §67766(c)"
+      url: https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB63
+      page: 14
+      type: statute
+
+- id: m-phase2-final
+  title: Oversight committee adopts final Phase 2 analysis, including a regional development and financing strategy
+  short_title: Final Phase 2 analysis adopted
+  responsible: oversight committee
+  statute: Gov. Code §67766(c)(1)
+  deadline: null
+  deadline_rule:
+    after: m-election-certified
+    days: 480
+  completed_on: null
+  outcome: ""
+  estimates:
+    - text: "MTC: the second phase of the review \"would be undertaken in 2027.\""
+      source:
+        title: "MTC: Bay Area Voters Show Strong Support for Public Transit (Nov. 4, 2026)"
+        url: https://mtc.ca.gov/news/bay-area-voters-show-strong-support-public-transit
+        page: null
+        type: news_release
+    - text: "MTC staff: Phase 2 \"is expected to be completed in spring 2028.\""
+      source:
+        title: "MTC Programming and Allocations Committee, Agenda Item 3a-26-0808, Summary Sheet (Aug. 12, 2026)"
+        url: https://mtc.ca.gov/sites/default/files/meetings/attachments/6681/9a_26_0946_1_Summary_Sheet_FY25_26_PIP_ACTransit_SFMTA_BART.pdf
+        page: 2
+        type: board_item
+  status_as_of: 2026-11-04
+  sources:
+    - title: "SB 63 (Wiener), Stats. 2025, Ch. 740, Gov. Code §67766(c)"
+      url: https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB63
+      page: 14
+      type: statute
+
+- id: m-impl-plan-draft
+  title: Each agency submits a draft implementation plan to the oversight committee
+  short_title: Draft implementation plans due
+  responsible: operators
+  statute: Gov. Code §67766(d)
+  deadline: null
+  deadline_rule:
+    after: m-phase2-final
+    days: 120
+  completed_on: null
+  outcome: ""
+  estimates: []
+  status_as_of: 2026-11-04
+  sources:
+    - title: "SB 63 (Wiener), Stats. 2025, Ch. 740, Gov. Code §67766(d)"
+      url: https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB63
+      page: 14
+      type: statute
+
+- id: m-impl-plan-ioc-review
+  title: Oversight committee approves each draft plan or recommends revisions
+  short_title: Oversight committee acts on draft plans
+  responsible: oversight committee
+  statute: Gov. Code §67766(e)
+  deadline: null
+  deadline_rule: null
+  completed_on: null
+  outcome: "The statute sets no deadline for this step."
+  estimates: []
+  status_as_of: 2026-11-04
+  sources:
+    - title: "SB 63 (Wiener), Stats. 2025, Ch. 740, Gov. Code §67766(e)"
+      url: https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB63
+      page: 14
+      type: statute
+
+- id: m-impl-plan-final
+  title: Each agency's board adopts a final implementation plan
+  short_title: Final implementation plans adopted
+  responsible: operators
+  statute: Gov. Code §67766(f)
+  deadline: null
+  deadline_rule:
+    after: m-impl-plan-ioc-review
+    days: 60
+  completed_on: null
+  outcome: >-
+    After adoption, each agency must follow its plan until the tax expires, and must verify its
+    compliance with MTC as a condition of continued funding. MTC must give an agency 90 days to
+    comply before withholding funds (§67766(g)-(h)).
+  estimates:
+    - text: "MTC: \"by early 2028, all four agencies supported by the measure would be required to adopt and adhere\" to cost-savings plans."
+      source:
+        title: "MTC: Bay Area Voters Show Strong Support for Public Transit (Nov. 4, 2026)"
+        url: https://mtc.ca.gov/news/bay-area-voters-show-strong-support-public-transit
+        page: null
+        type: news_release
+    - text: "Caltrain staff: \"Operators must adopt an implementation plan by August 2028.\""
+      source:
+        title: "Caltrain staff presentation, Adopt SB63 Phase 1 Financial Efficiency Review Early Action Strategies (June 4, 2026)"
+        url: https://www.caltrain.com/media/37136/download
+        page: 8
+        type: board_item
+  status_as_of: 2026-11-04
+  sources:
+    - title: "SB 63 (Wiener), Stats. 2025, Ch. 740, Gov. Code §67766(f)-(h)"
+      url: https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB63
+      page: "15-16"
+      type: statute

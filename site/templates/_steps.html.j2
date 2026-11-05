@@ -1,0 +1,28 @@
+{# The five stages of SB 63's efficiency requirements, with where things stand. Shared by the home page
+   (compact) and the How it works page (each step links to its section). #}
+{% set m_p1 = ms_by_id["m-2026-05-22-phase1-final"] %}
+{% set m_adopt = ms_by_id["m-2026-07-01-operator-adoption"] %}
+{% set m_cert = ms_by_id["m-election-certified"] %}
+{% set m_p2 = ms_by_id["m-phase2-final"] %}
+{% set m_plan = ms_by_id["m-impl-plan-final"] %}
+{% set steps = [
+  {"id": "review", "title": "Independent review, Phase 1", "text": "A consultant hired by MTC lists cost-saving “early action strategies” for each agency.", "done": m_p1.completed_on, "when": m_p1.completed_on},
+  {"id": "commit", "title": "Agencies commit", "text": "Each agency's board adopts the Phase 1 strategies it commits to carrying out.", "done": m_adopt.completed_on, "when": m_adopt.completed_on},
+  {"id": "phase2", "title": "Independent review, Phase 2", "text": "Only if the tax passes: a deeper menu of cost-saving measures, due 480 days after the election is certified.", "done": m_p2.completed_on, "when": m_p2.completed_on},
+  {"id": "plans", "title": "Implementation plans", "text": "Each agency adopts a plan saying which Phase 2 measures it will carry out, and must follow it.", "done": m_plan.completed_on, "when": m_plan.completed_on},
+  {"id": "funding", "title": "Funding depends on it", "text": "To keep receiving tax money, each agency must show MTC it is complying.", "done": none, "when": none},
+] %}
+{% set ns = namespace(current=none) %}
+{% for s in steps %}{% if not s.done and ns.current is none %}{% set ns.current = s.id %}{% endif %}{% endfor %}
+<ol class="rt-steps{{ ' is-compact' if compact }}">
+  {% for s in steps %}
+  <li class="rt-step {{ 'is-done' if s.done else ('is-current' if s.id == ns.current else 'is-later') }}">
+    <span class="rt-step-n" aria-hidden="true">{{ loop.index }}</span>
+    <div>
+      <p class="rt-step-state">{% if s.done %}Done {{ s.when | date }}{% elif s.id == ns.current %}Up next{% else %}Later{% endif %}</p>
+      <h3>{% if link_base is not none %}<a href="{{ link_base }}#{{ s.id }}">{{ s.title }}</a>{% else %}{{ s.title }}{% endif %}</h3>
+      <p>{{ s.text }}</p>
+    </div>
+  </li>
+  {% endfor %}
+</ol>

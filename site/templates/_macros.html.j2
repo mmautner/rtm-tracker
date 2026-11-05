@@ -1,0 +1,28 @@
+{% macro badge(key) -%}
+{% set m = status_meta[key] %}<span class="rt-badge rt-s-{{ key }}"><span class="rt-badge-glyph" aria-hidden="true">{{ m.glyph }}</span> {{ m.label }}</span>
+{%- endmacro %}
+
+{# Proportional bar of statuses. Decorative: the counts are always given as text next to it. #}
+{% macro status_bar(segments) -%}
+<div class="rt-bar" aria-hidden="true">{% for seg in segments %}<span class="rt-bar-seg rt-s-{{ seg.key }}" style="width: {{ seg.pct }}%"></span>{% endfor %}</div>
+{%- endmacro %}
+
+{% macro source_list(sources) -%}
+<ul class="rt-sources">
+  {% for s in sources %}
+  <li>
+    <a href="{{ s.url }}">{{ s.title }}</a>{% if s.page is not none %}, p. {{ s.page }}{% endif %}
+    <span class="rt-source-type">{{ source_types[s.type] }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{%- endmacro %}
+
+{% macro entry_link(ch) -%}
+{% if ch.id in entry_agency %}<a href="{{ base }}{{ entry_agency[ch.id][0] }}/#{{ ch.id }}"><code>{{ ch.id }}</code></a>{% else %}<code>{{ ch.id }}</code>{% endif %}
+{%- endmacro %}
+
+{# Agency logo on a backing tile. Decorative (alt=""): the agency's name is always written next to it. #}
+{% macro logo(a, size="md") -%}
+{% if a.logo %}<span class="rt-logo rt-logo-{{ size }}" style="--tile: {{ a.logo_tile }}"><img src="{{ base }}static/logos/{{ a.logo }}?v={{ ver }}" alt=""></span>{% endif %}
+{%- endmacro %}

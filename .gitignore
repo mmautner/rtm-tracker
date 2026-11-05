@@ -1,0 +1,8 @@
+dist/
+.venv/
+.deploy/
+.deploy-changed/
+.deploy-remote.json
+__pycache__/
+*.pyc
+.DS_Store
