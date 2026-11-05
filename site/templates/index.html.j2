@@ -21,6 +21,9 @@
   <div><dt>{{ badge("implemented") }}</dt><dd>{{ totals["implemented"] }}</dd>{% if target %}<p class="rt-tile-note">MTC target: {{ target.text }}</p>{% endif %}</div>
   <div><dt>{{ badge("missed") }}</dt><dd>{{ totals["missed"] }}</dd></div>
 </dl>
+<p class="rt-meta"><strong>What was committed:</strong> of the {{ n_total }} recommendations, {{ kind_totals["action"] }} are direct
+  actions, {{ kind_totals["study"] }} are studies or plans, and {{ kind_totals["advocacy"] }} ask the state to act, classified from each
+  recommendation's own wording (<a href="{{ base }}methodology/#kinds">how</a>).</p>
 <p class="rt-meta"><strong>Savings estimated so far:</strong> {{ savings.n_estimated }} of {{ n_total }} recommendations
   have a dollar estimate; the Phase 1 report gives none. <a href="{{ base }}oversight/">Who oversees the agencies, and what
   they can enforce →</a></p>
@@ -54,6 +57,7 @@
       <h3>{{ logo(a, "md") }}<a href="{{ base }}{{ a.slug }}/">{{ a.display }}</a></h3>
       <p class="rt-card-sub">{{ a.total }} recommendations{% if a.actions and a.actions[0][0] %} · board action {{ a.actions[0][0] | date }}{% endif %}</p>
       {% if a.ridership %}<p class="rt-card-sub">{{ "%.1f" | format(a.ridership.millions) }} million annual riders (FY 2024–25)</p>{% endif %}
+      <p class="rt-card-kinds">{% for k, t in action_types.items() %}{% if a.kinds[k] %}<span><strong>{{ a.kinds[k] }}</strong> {{ t.label | lower }}</span>{% endif %}{% endfor %}<span><strong>{{ a.n_revenue }}</strong> aimed at revenue</span></p>
       {{ status_bar(a.bar) }}
       <dl class="rt-counts">
         {% for s in statuses %}

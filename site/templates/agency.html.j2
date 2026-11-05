@@ -16,6 +16,9 @@
   <li>{{ badge(s.key) }} <strong>{{ agency.counts[s.key] }}</strong></li>
   {% endif %}{% endfor %}
 </ul>
+<p class="rt-kinds-line"><span class="rt-kinds-k">Kind of commitment:</span>
+  {% for k, t in action_types.items() %}{% if agency.kinds[k] %}<span class="rt-tag rt-kind rt-kind-{{ k }}">{{ t.label }}</span> <strong>{{ agency.kinds[k] }}</strong>{% if not loop.last %} &nbsp;{% endif %}{% endif %}{% endfor %}
+  <span class="rt-meta">· {{ agency.n_revenue }} of {{ agency.total }} aimed at revenue · <a href="{{ base }}methodology/#kinds">how this is classified</a></span></p>
 {% if target and (agency.counts["adopted"] or agency.counts["in_progress"]) %}
 <p class="rt-meta">MTC's estimated completion date for {{ agency.display }}'s adopted strategies: {{ target.text }}
   (<a href="{{ cfg.pip_url }}">MTC Res. 4743</a>).</p>
@@ -46,17 +49,25 @@
       {% for s in statuses %}<option value="{{ s.key }}">{{ s.label }}</option>{% endfor %}
     </select>
   </div>
+  <div>
+    <label for="f-kind">Kind</label>
+    <select id="f-kind" name="kind">
+      <option value="">All kinds</option>
+      {% for k, t in action_types.items() %}<option value="{{ k }}">{{ t.label }}</option>{% endfor %}
+    </select>
+  </div>
   <p id="filter-count" class="rt-meta" aria-live="polite"></p>
 </form>
 
 <ol class="rt-list" id="commitments" aria-labelledby="list-h">
   {% for c in agency.rows %}
-  <li class="rt-item" id="{{ c.id }}" data-phase="{{ c.phase_key }}" data-status="{{ c.skey }}">
+  <li class="rt-item" id="{{ c.id }}" data-phase="{{ c.phase_key }}" data-status="{{ c.skey }}" data-kind="{{ c.action_type }}">
     <details>
       <summary>
         <span class="rt-item-rec">{{ c.recommendation }}</span>
         <span class="rt-item-meta">
           {{ badge(c.skey) }}
+          <span class="rt-tag rt-kind rt-kind-{{ c.action_type }}">{{ action_types[c.action_type].label }}</span>
           <span class="rt-tag">{{ c.phase_label }}</span>
           <span class="rt-tag">{{ c.category }}</span>
           <span class="rt-verified">Last verified {{ c.status_as_of | date }}</span>
@@ -65,6 +76,7 @@
       <div class="rt-item-body">
         <dl class="rt-facts">
           <dt>Status</dt><dd>{{ badge(c.skey) }} as of {{ c.status_as_of | date }}</dd>
+          <dt>Kind</dt><dd>{{ action_types[c.action_type].label }} <span class="rt-cite">(based on the words “{{ c.action_type_basis }}”; <a href="{{ base }}methodology/#kinds">how this is classified</a>)</span></dd>
           <dt>Board action</dt>
           <dd>{% if c.board_action %}{% if c.board_action.date %}{{ c.board_action.date | date }}: {% else %}Date not recorded: {% endif %}{{ c.board_action.description }}{% else %}None recorded{% endif %}</dd>
           <dt>Required by</dt>

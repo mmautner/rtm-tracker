@@ -10,6 +10,7 @@
   <ul>
     <li><a href="#tracked">What is tracked</a></li>
     <li><a href="#statuses">Status definitions</a></li>
+    <li><a href="#kinds">Kind of commitment</a></li>
     <li><a href="#adopted-implemented">Adopted versus implemented</a></li>
     <li><a href="#sources">Sources and evidence rules</a></li>
     <li><a href="#checking">How often the data is checked</a></li>
@@ -48,6 +49,24 @@
     <dd>{{ s.definition }}</dd>
     {% endfor %}
   </dl>
+</section>
+
+<section class="rt-section" id="kinds">
+  <h2>Kind of commitment</h2>
+  <p>Each recommendation is also classified by what it commits the agency to do. The classification comes only
+    from the recommendation's own wording, not from a judgment about intent or likely results. Each entry shows the
+    words it was classified from, and the data checks require those words to appear in the recommendation.</p>
+  <dl class="rt-status-defs">
+    {% for k, t in action_types.items() %}
+    <dt><span class="rt-tag rt-kind rt-kind-{{ k }}">{{ t.label }}</span></dt>
+    <dd>{{ t.definition }} <span class="rt-cite">{{ kind_totals[k] }} of {{ n_total }} tracked recommendations.</span></dd>
+    {% endfor %}
+  </dl>
+  <p>When a recommendation contains both a study verb and an action verb (for example, “examine schedules and adjust
+    how operator shifts are structured”), the commitment to act decides it. A study can still lead to savings, and a
+    direct action can still produce none; the classification describes the commitment, not its value.</p>
+  <p>“Aimed at revenue” counts recommendations in the revenue category: measures to raise fare, parking, leasing, or
+    other income rather than to reduce costs.</p>
 </section>
 
 <section class="rt-section" id="adopted-implemented">

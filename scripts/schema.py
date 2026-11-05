@@ -98,8 +98,28 @@ SOURCE_TYPES = {
 
 MILESTONE_RESPONSIBLE = ["MTC", "oversight committee", "operators", "voters", "county elections officials"]
 
+# What a recommendation commits the agency to do, classified only from its wording (action_type_basis
+# quotes the words, and the validator checks they appear in the recommendation). Where a recommendation
+# has both a study verb and an action verb ("examine schedules and adjust"), the action decides it.
+ACTION_TYPES = {
+    "action": {
+        "label": "Direct action",
+        "definition": "The agency changes its own prices, service, contracts, practices, or programs "
+        "(for example: increase, earn, run, extend, offer, continue, adjust, carry out).",
+    },
+    "study": {
+        "label": "Study or plan",
+        "definition": "The agency produces an analysis or a plan without committing to a change "
+        "(for example: study, identify, examine, explore, review, develop a vision or plan).",
+    },
+    "advocacy": {
+        "label": "Ask another government",
+        "definition": "The agency asks another body, such as the state, to act (for example: seek a deferral).",
+    },
+}
+
 COMMITMENT_FIELDS = [
-    "id", "agency", "phase", "recommendation", "category",
+    "id", "agency", "phase", "recommendation", "category", "action_type", "action_type_basis",
     "estimated_savings_usd", "savings_basis", "required_by",
     "target_completion", "target_completion_basis",
     "board_action", "status", "status_as_of", "sources", "notes",

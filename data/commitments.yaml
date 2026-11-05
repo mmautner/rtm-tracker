@@ -1,6 +1,7 @@
 # Commitments tracked for SB 63 / Measure RTM.
 # One entry per recommended action. See README.md for how to add or update an entry,
 # and the Methodology page for what each status means.
+# action_type: action | study | advocacy  (what the recommendation commits the agency to do; see schema.py)
 # status: null | not_adopted | not_started | adopted | in_progress | implemented | missed | superseded
 
 # ---------------------------------------------------------------- AC Transit
@@ -13,6 +14,8 @@
     the staff, technology, and administrative resources needed to improve compliance, and develop
     a funding and implementation plan.
   category: revenue
+  action_type: study
+  action_type_basis: "Study fare compliance and enforcement"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -52,6 +55,8 @@
     Study the benefits, challenges, and opportunities of expanding retail and amenity partnerships
     at bus stops and stations.
   category: revenue
+  action_type: study
+  action_type_basis: "Study the benefits, challenges, and opportunities"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -95,6 +100,8 @@
     Coordinate with other Bay Area transit agencies to seek a deferral of the state's
     zero-emission bus transition requirements.
   category: capital
+  action_type: advocacy
+  action_type_basis: "seek a deferral of the state's zero-emission bus transition requirements"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -134,6 +141,8 @@
     Extend operator attendance incentives to other high-priority routes, such as school trippers
     and transbay routes.
   category: labor/overtime
+  action_type: action
+  action_type_basis: "Extend operator attendance incentives"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -174,6 +183,8 @@
     or unreliable, identify and quantify bus priority measures, and develop a funding and
     implementation plan.
   category: service planning
+  action_type: study
+  action_type_basis: "Develop a bus speed and reliability vision"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -215,6 +226,8 @@
     Study the costs, benefits, and need to expand all-door boarding pilots to more routes,
     including staffing, technology, risks, and possible funding sources.
   category: service planning
+  action_type: study
+  action_type_basis: "Study the costs, benefits, and need to expand all-door boarding pilots"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -256,6 +269,8 @@
     Study where bus stop spacing or location slows service, quantify the benefits of changes, and
     develop a funding and implementation plan.
   category: service planning
+  action_type: study
+  action_type_basis: "Study where bus stop spacing or location slows service"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -297,6 +312,8 @@
     Examine schedules and adjust how operator shifts are structured, to maintain reliability and
     minimize operating costs without affecting service to riders.
   category: labor/overtime
+  action_type: action
+  action_type_basis: "adjust how operator shifts are structured"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -346,6 +363,8 @@
     In consultation with MTC, identify the internal resources and supporting policies needed to
     expand EasyPass and/or Clipper BayPass to more institutions and employers.
   category: ridership/customer experience
+  action_type: study
+  action_type_basis: "identify the internal resources and supporting policies needed"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -390,6 +409,8 @@
     Optimize the performance of the new fare gates to further reduce fare evasion, and continue
     the station hardening program.
   category: revenue
+  action_type: action
+  action_type_basis: "Optimize the performance of the new fare gates"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -436,6 +457,8 @@
     Increase parking revenue through measures such as expanded days or hours of paid parking, rate
     changes, more enforcement, and leasing or permitting parking at under-used facilities.
   category: revenue
+  action_type: action
+  action_type_basis: "Increase parking revenue"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -482,6 +505,8 @@
     Earn more revenue from fiber-optic and other communications assets, mainly through additional
     leasing.
   category: revenue
+  action_type: action
+  action_type_basis: "Earn more revenue from fiber-optic and other communications assets"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -528,6 +553,8 @@
     Study the benefits, challenges, and opportunities of expanding retail and amenity partnerships
     at stations.
   category: revenue
+  action_type: study
+  action_type_basis: "Study the benefits, challenges, and opportunities"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -575,6 +602,8 @@
     Identify more ways to improve travel time and reliability through changes to scheduling,
     operations, or investment in new systems or capital projects.
   category: service planning
+  action_type: study
+  action_type_basis: "Identify more ways to improve travel time and reliability"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -621,6 +650,8 @@
     Run shorter trains during lower-demand periods to better match the cost of service to the fare
     revenue it generates at different times and days.
   category: service planning
+  action_type: action
+  action_type_basis: "Run shorter trains during lower-demand periods"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -669,6 +700,8 @@
     Explore renegotiating the SFO lease payment so it better reflects the benefits, costs,
     incentives, and risks of BART service to the airport for both parties.
   category: procurement
+  action_type: study
+  action_type_basis: "Explore renegotiating the SFO lease payment"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -718,6 +751,8 @@
     Identify opportunities to renegotiate contracts, such as insurance and paratransit, to improve
     flexibility and achieve one-time or long-term savings.
   category: procurement
+  action_type: study
+  action_type_basis: "Identify opportunities to renegotiate contracts"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -767,6 +802,8 @@
     In consultation with MTC, identify the internal resources and supporting policies needed to
     expand Clipper BayPass to more institutions and employers.
   category: ridership/customer experience
+  action_type: study
+  action_type_basis: "identify the internal resources and supporting policies needed"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -815,6 +852,8 @@
     Increase parking revenue through measures such as expanded days or hours of paid parking, rate
     changes, more enforcement, and leasing or permitting parking at under-used lots.
   category: revenue
+  action_type: action
+  action_type_basis: "Increase parking revenue"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -859,6 +898,8 @@
     Earn more revenue from fiber-optic and other communications assets, mainly through additional
     leasing.
   category: revenue
+  action_type: action
+  action_type_basis: "Earn more revenue from fiber-optic and other communications assets"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -903,6 +944,8 @@
     Study the benefits, challenges, and opportunities of expanding retail and amenity partnerships
     at stations.
   category: revenue
+  action_type: study
+  action_type_basis: "Study the benefits, challenges, and opportunities"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -948,6 +991,8 @@
     Study where administration of the train operations contract, work practices, or other
     processes could be made more efficient without affecting safety, reliability, or compliance.
   category: procurement
+  action_type: study
+  action_type_basis: "Study where administration of the train operations contract"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -994,6 +1039,8 @@
     Study the feasibility of storing electricity that trains return to the grid, including the
     value of the energy, how it could be collected, and costs and benefits.
   category: energy
+  action_type: study
+  action_type_basis: "Study the feasibility of storing electricity"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1038,6 +1085,8 @@
     In consultation with MTC, identify the internal resources and supporting policies needed to
     expand Clipper BayPass or GoPass to more institutions and employers.
   category: ridership/customer experience
+  action_type: study
+  action_type_basis: "identify the internal resources and supporting policies needed"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1085,6 +1134,8 @@
     identify the staff, technology, and administrative resources needed, and develop a funding and
     implementation plan.
   category: revenue
+  action_type: study
+  action_type_basis: "Study fare compliance and enforcement"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1124,6 +1175,8 @@
     Increase parking revenue through measures such as expanded days or hours of paid parking, rate
     changes, more enforcement, and leasing or permitting parking at under-used facilities.
   category: revenue
+  action_type: action
+  action_type_basis: "Increase parking revenue"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1163,6 +1216,8 @@
     Study the benefits, challenges, and opportunities of expanding retail and amenity partnerships
     at bus stops and stations.
   category: revenue
+  action_type: study
+  action_type_basis: "Study the benefits, challenges, and opportunities"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1207,6 +1262,8 @@
     Coordinate with other Bay Area transit agencies to seek a deferral of the state's
     zero-emission bus transition requirements.
   category: capital
+  action_type: advocacy
+  action_type_basis: "seek a deferral of the state's zero-emission bus transition requirements"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1246,6 +1303,8 @@
     Identify and carry out scheduling efficiencies that do not affect service to riders, such as
     changing how operator shifts are structured.
   category: labor/overtime
+  action_type: action
+  action_type_basis: "Identify and carry out scheduling efficiencies"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1283,6 +1342,8 @@
   phase: 1
   recommendation: "Offer operator attendance incentives on high-priority routes."
   category: labor/overtime
+  action_type: action
+  action_type_basis: "Offer operator attendance incentives"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1322,6 +1383,8 @@
     Study where bus stop spacing or location slows service, quantify the benefits of changes, and
     develop a funding and implementation plan.
   category: service planning
+  action_type: study
+  action_type_basis: "Study where bus stop spacing or location slows service"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1359,6 +1422,8 @@
   phase: 1
   recommendation: "Continue reinvesting savings from transit priority projects back into service."
   category: service planning
+  action_type: action
+  action_type_basis: "Continue reinvesting savings from transit priority projects back into service"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1397,6 +1462,8 @@
   recommendation: >-
     Identify more opportunities to run shorter light-rail trains during lower-demand periods.
   category: service planning
+  action_type: study
+  action_type_basis: "Identify more opportunities to run shorter light-rail trains"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1435,6 +1502,8 @@
   recommendation: >-
     Review high-spend contracts to determine whether the services can be provided at lower cost.
   category: procurement
+  action_type: study
+  action_type_basis: "Review high-spend contracts"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption
@@ -1474,6 +1543,8 @@
     In consultation with MTC, identify the internal resources and supporting policies needed to
     adopt or expand pass programs like Clipper BayPass with more institutions and employers.
   category: ridership/customer experience
+  action_type: study
+  action_type_basis: "identify the internal resources and supporting policies needed"
   estimated_savings_usd: null
   savings_basis: "The Phase 1 report does not estimate savings for this strategy."
   required_by: m-2026-07-01-operator-adoption

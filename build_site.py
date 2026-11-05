@@ -29,7 +29,7 @@ sys.path.insert(0, str(ROOT))
 from scripts import changelog  # noqa: E402
 from scripts import og  # noqa: E402
 from scripts.schema import (  # noqa: E402
-    AGENCIES, CATEGORIES, FINDING_BASES, IOC_SEATS, PHASES, SOURCE_TYPES, STATUSES,
+    ACTION_TYPES, AGENCIES, CATEGORIES, FINDING_BASES, IOC_SEATS, PHASES, SOURCE_TYPES, STATUSES,
 )
 from scripts.validate import validate, validate_oversight  # noqa: E402
 
@@ -123,7 +123,7 @@ def next_operator_deadline(milestones):
 
 def to_csv(commitments, ms_by_id):
     buf = io.StringIO()
-    cols = ["id", "agency", "phase", "recommendation", "category", "estimated_savings_usd",
+    cols = ["id", "agency", "phase", "recommendation", "category", "action_type", "action_type_basis", "estimated_savings_usd",
             "savings_basis", "required_by", "required_by_date", "target_completion",
             "target_completion_basis", "board_action_date", "board_action_description", "status",
             "status_as_of", "source_count", "sources", "notes"]
@@ -136,6 +136,7 @@ def to_csv(commitments, ms_by_id):
         w.writerow({
             "id": c["id"], "agency": c["agency"], "phase": c["phase"],
             "recommendation": c["recommendation"], "category": c["category"],
+            "action_type": c["action_type"], "action_type_basis": c["action_type_basis"],
             "estimated_savings_usd": "" if c["estimated_savings_usd"] is None else c["estimated_savings_usd"],
             "savings_basis": c["savings_basis"], "required_by": rb,
             "required_by_date": rb_date or "",
@@ -257,6 +258,8 @@ def main():
             "name": name, "slug": slug, "display": display, "rows": rows, "bar": bar,
             "color": CFG["agency_colors"].get(name, "currentColor"),
             "ridership": CFG["agency_ridership"].get(name),
+            "kinds": {k: sum(1 for c in rows if c["action_type"] == k) for k in ACTION_TYPES},
+            "n_revenue": sum(1 for c in rows if c["category"] == "revenue"),
             "logo": CFG["agency_logos"].get(name, {}).get("file"),
             "logo_tile": CFG["agency_logos"].get(name, {}).get("tile", "#ffffff"),
             "counts": counts, "total": len(rows),
@@ -300,7 +303,8 @@ def main():
     env.globals.update(
         cfg=CFG, base=BASE, ver=static_version(), statuses=statuses, status_meta={status_key(k): v for k, v in STATUSES.items()},
         source_types=SOURCE_TYPES, categories=CATEGORIES, phases=PHASES, agencies=agencies,
-        last_verified=last_verified, totals=totals, target=target, out_of_scope=out_of_scope, savings=savings,
+        last_verified=last_verified, totals=totals, target=target, out_of_scope=out_of_scope, savings=savings, action_types=ACTION_TYPES,
+        kind_totals={k: sum(1 for c in commitments if c["action_type"] == k) for k in ACTION_TYPES},
         committee=committee, ioc_seats=IOC_SEATS, finding_bases=FINDING_BASES, n_total=len(commitments), build_date=datetime.date.today(),
         status_label=lambda s: STATUSES[None if s in (None, "unverified") else s]["label"],
     )

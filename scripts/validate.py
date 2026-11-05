@@ -16,7 +16,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from scripts.schema import (  # noqa: E402
-    AGENCIES, CATEGORIES, COMMITMENT_FIELDS, FINDING_BASES, IOC_SEATS, MILESTONE_RESPONSIBLE,
+    ACTION_TYPES, AGENCIES, CATEGORIES, COMMITMENT_FIELDS, FINDING_BASES, IOC_SEATS, MILESTONE_RESPONSIBLE,
     OPTIONAL_FIELDS, OVERSIGHT_FIELDS, OVERSIGHT_KINDS, PHASES, SOURCE_TYPES, STATUSES,
 )
 
@@ -140,6 +140,13 @@ def validate(commitments, milestones, hosts, today=None):
             errors.append(f"{where}: recommendation is empty")
         if c.get("category") not in CATEGORIES:
             errors.append(f"{where}: category must be one of {CATEGORIES}")
+        if c.get("action_type") not in ACTION_TYPES:
+            errors.append(f"{where}: action_type must be one of {list(ACTION_TYPES)}")
+        basis = " ".join(str(c.get("action_type_basis") or "").split())
+        if not basis:
+            errors.append(f"{where}: action_type_basis must quote the words the action_type rests on")
+        elif basis not in " ".join(str(c.get("recommendation") or "").split()):
+            errors.append(f"{where}: action_type_basis must be words copied from the recommendation")
         sv = c.get("estimated_savings_usd")
         if sv is not None and (isinstance(sv, bool) or not isinstance(sv, (int, float))):
             errors.append(f"{where}: estimated_savings_usd must be a number or null")

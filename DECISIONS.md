@@ -60,3 +60,8 @@
   of the agencies under review), what it can and cannot require under §67766, every written finding
   rejecting its recommendations (§67766(f)(3)), meetings and votes, and how many recommendations carry
   a dollar savings estimate (none yet). Data in `data/oversight.yaml`, validated and in the changelog.
+- **Kind of commitment** (2026-11-05). Each recommendation is classified as a direct action, a study
+  or plan, or a request to another government, using only its wording, with the deciding words quoted
+  in `action_type_basis` and checked by the validator. Prompted by a reader's (partly inaccurate)
+  observation that Caltrain's six commitments are revenue measures and studies; the counts let readers
+  make that kind of point accurately. 35 entries: 12 action, 21 study or plan, 2 advocacy.

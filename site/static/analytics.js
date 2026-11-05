@@ -46,6 +46,6 @@
   // Filters on agency pages
   document.addEventListener("change", function (ev) {
     var t = ev.target;
-    if (t.id === "f-phase" || t.id === "f-status") track("filter_changed", { filter: t.name, value: t.value || "all" });
+    if (t.id === "f-phase" || t.id === "f-status" || t.id === "f-kind") track("filter_changed", { filter: t.name, value: t.value || "all" });
   });
 })();

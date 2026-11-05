@@ -296,6 +296,16 @@ header nav a { font-size: 16px; color: var(--text-2); text-decoration: none; }
 .rt-faq dt { color: var(--text); font-weight: 600; margin-top: 16px; }
 .rt-faq dd { margin: 4px 0 0; max-width: 42rem; }
 
+/* kind of commitment: neutral tags, distinguished by border style rather than color */
+.rt-kind { color: var(--text); border: 1px solid var(--text-3); background: transparent !important; }
+.rt-kind-study { border-style: dashed; }
+.rt-kind-advocacy { border-style: dotted; }
+.rt-kinds-line { font-size: 15px; color: var(--text); margin: 4px 0 8px !important; }
+.rt-kinds-line .rt-tag { margin-right: 4px; }
+.rt-kinds-k { color: var(--text-3); margin-right: 6px; }
+.rt-card-kinds { display: flex; flex-wrap: wrap; gap: 2px 14px; font-size: 14px; color: var(--text-2); margin: 8px 0 0 !important; }
+.rt-card-kinds strong { color: var(--text); }
+
 /* ---------- oversight ---------- */
 .rt-seats { display: flex; gap: 6px; margin: 14px 0 10px; flex-wrap: wrap; }
 .rt-seat { display: inline-block; width: 34px; height: 34px; border-radius: 50%; flex: none; }

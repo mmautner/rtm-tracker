@@ -37,6 +37,13 @@ Published at `https://maxmautner.com/rtm-tracker/` (S3 + CloudFront, same setup 
    ```
 5. Publish: `./deploy.sh` (use `./deploy.sh --dry-run` first to see what would upload).
 
+### Kind of commitment
+
+Every entry has `action_type` (`action`, `study`, or `advocacy`) and `action_type_basis`, the words
+from the recommendation it was classified from. The rule is in `scripts/schema.py` (`ACTION_TYPES`)
+and on the Methodology page. When adding an entry, copy the deciding verb phrase exactly; the
+validator rejects a basis that doesn't appear in the recommendation.
+
 ### Rules the validator enforces
 
 - Every entry has at least one source with a URL, a page (or `null`), and a type.
